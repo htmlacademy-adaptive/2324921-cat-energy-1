@@ -9,7 +9,8 @@
 <body class="page__body">
   <header class="main-header">
     <a class="main-header__logo">
-      <img src="../source/img/mainlogo-mobile.svg" width="70" height="59" alt="Логотип canergy">
+      <!-- Какой логотип здесь будет уместнее? desktop или mobile? -->
+      <img src="../source/img/mainlogo-desktop.svg" width="70" height="59" alt="Логотип canergy">
     </a>
     <a class="main-header__logo-title">
       <img src="../source/img/mainlogo-title.svg" width="101" height="18" alt="Заголовок логотипа">
@@ -19,39 +20,56 @@
       <button class="main-nav__toogle" type="button">
         <span class="visually-hidden"> Открыть меню</span>
       </button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item site-list__item--current">
+            <a>Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a href="Catalog.html">Каталог продукции</a>
+          </li>
+          <li class="site-list__item">
+            <a href="form.html">Подбор программы</a>
+          </li>
+        </ul>
+      </div>
     </nav>
-    <div class="main-nav__wrapper">
-      <ul class="main-nav__list site-list">
-        <li class="site-list__item site-list__item--current">
-          <a>
-            Главная
-          </a>
-        <li class="site-list__item">
-          <a href="Catalog.html">
-            Каталог продукции
-          </a>
-        </li>
-        <li class="site-list__item">
-          <a href="form.html">
-            Подбор программы
-          </a>
-        </li>
-        </li>
-      </ul>
-    </div>
   </header>
   <main class="main-container">
     <h1 class="visually-hidden">Cat Energy - Функциональное питание для котов</h1>
     <section class="intro">
       <div class="intro__wrapper">
         <header class="intro__header">
-          <h2 class="visually-hidden">Промо сайта Cat Energy
-            <p class="intro__title">Функциональное <br> питание для котов
-            </p>
-            <p class="intro__slogan">Занялся собой? Займись котом!
-            </p>
+          <h2 class="visually-hidden">Интро сайта Cat Energy
           </h2>
+          <p class="intro__title">Функциональное <br> питание для котов</p>
+          <p class="intro__slogan">Занялся собой? Займись котом!</p>
+          <img class="intro__img intro__img--size" src="../source/img/mainphoto-intro.svg" width="280" height="270" alt="Питание для котов cat energy">
+          <button class="intro__button" type="button">подобрать программу</button>
         </header>
+      </div>
+    </section>
+    <section class="advantages">
+      <div class="advantages__wrapper">
+        <h2 class="visually-hidden">Наши преимущества</h2>
+        <ul class="advantages__list">
+          <li class="advantages__item">
+            <h3 class="advantages__title">Похудение</h3>
+            <p class="advantages__description">
+              Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim
+              поможет вашему питомцу сбросить лишний вес.
+            </p>
+            <a href="#">каталог slim</a>
+          </li>
+          <li class="advantages__item">
+            <h3 class="advantages__title">Набор массы</h3>
+            <p class="advantages__description">
+              Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить
+              необходимые мышцы!
+            </p>
+            <a href="#">каталог pro</a>
+          </li>
+        </ul>
       </div>
 
     </section>
