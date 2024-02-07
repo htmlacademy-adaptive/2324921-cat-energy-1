@@ -7,6 +7,8 @@
 </head>
 
 <body class="page__body">
+
+  <!-- Шапка -->
   <header class="main-header">
     <a class="main-header__logo" href="#">
       <img src="img/main-logo-mobile.svg" width="70" height="59" alt="Логотип canergy">
@@ -39,13 +41,14 @@
   </header>
 
   <main class="main-container">
-    <h1 class="visually-hidden">Cat Energy - Функциональное питание для котов</h1>
+
+    <!-- Блок "Интро" -->
     <section class="intro">
       <div class="intro__wrapper">
         <header class="intro__header">
-          <p class="intro__title">
+          <h1 class="intro__title">
             Функциональное <br> питание для котов
-          </p>
+          </h1>
           <p class="intro__slogan">
             Занялся собой? Займись котом!
           </p>
@@ -56,6 +59,8 @@
         </header>
       </div>
     </section>
+
+    <!-- Блок преимуществ -->
     <section class="advantages">
       <div class="advantages__wrapper">
         <h2 class="visually-hidden">Наши преимущества</h2>
@@ -81,28 +86,29 @@
       </div>
     </section>
 
+    <!-- Блок "Как это работает" -->
     <section class="advantages-process">
       <div class="advantages-process__wrapper">
         <h3 class="advantages-process__title">Как это работает</h3>
         <ul class="advantages-process__list">
-          <li class="advantages-process__item">
+          <li class="advantages-process__item advantages-process__item--eco">
             <p class="advantages-process__description">
               Функциональное питание содержит только полезные питательные вещества.
             </p>
           </li>
-          <li class="advantages-process__item">
+          <li class="advantages-process__item advantages-process__item--quickly">
             <p class="advantages-process__description">
               Выпускается в виде порошка, который нужно лишь залить кипятком и
               готово.
             </p>
           </li>
-          <li class="advantages-process__item">
+          <li class="advantages-process__item advantages-process__item--eating">
             <p class="advantages-process__description">
               Замените один-два приема обычной еды на наше функциональное
               питание.
             </p>
           </li>
-          <li class="advantages-process__item">
+          <li class="advantages-process__item advantages-process__item--change">
             <p class="advantages-process__description">
               Уже через месяц наслаждайтесь изменениями к лучшему вашего
               питомца!
@@ -112,57 +118,47 @@
       </div>
     </section>
 
+    <!-- Блок-статистика "Живой пример" -->
     <section class="stats-example">
       <div class="stats-example__wrapper">
-
-        <!-- Уместно ли здесь будет сделать?
-           По примеру академии - например: через тэг <header>...
-      <header class="stats-example__header">
-        <h2 class="visually-hidden">Живое доказательство (живой пример)...
-          а далее через тэг <p> (хотя по макету прям напрашивается  <h2> )
-         <p class="stats-example__slogan">Живой пример</p>
-        <p class="stats-example__intro">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat
-          Energy
-          Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по
-          16 часов в день.
-        </p>
-        -->
-        <!-- Ниже я оставил такой вид семантики -->
-        <h3 class="stats-example__title">Живой пример</h3>
-        <p class="stats-example__intro">
-          Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat
-          Energy
-          Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по
-          16 часов в день.
-        </p>
-        <dl class="stats-example__list">
-          <div class="stats-example__item">
-            <dt class="stats-example__number">
-              5 кг
-            </dt>
-            <dd class="stats-example__description">
-              снижение веса
-            </dd>
+        <header class="stats-example__header">
+          <h3 class="stats-example__title">Живой пример</h3>
+          <p class="stats-example__intro">
+            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat
+            Energy
+            Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит
+            по
+            16 часов в день.
+          </p>
+          <dl class="stats-example__list">
+            <div class="stats-example__item">
+              <dt class="stats-example__number">
+                5 кг
+              </dt>
+              <dd class="stats-example__description">
+                снижение веса
+              </dd>
+            </div>
+            <div class="stats-example__item">
+              <dt class="stats-example__number">
+                60 дней
+              </dt>
+              <dd class="stats-example__description">
+                затрачено времени
+              </dd>
+            </div>
+          </dl>
+          <p class="stats-example__text">
+            Затраты на питание: 15 000 руб.
+          </p>
+          <div class="stats-example__slider-wrapper">
+            <img class="stats-example__slider stats-example__slider--images" src="img/cat-slider-mobile.svg"
+              alt="Толстый и худой котик">
           </div>
-          <div class="stats-example__item">
-            <dt class="stats-example__number">
-              60 дней
-            </dt>
-            <dd class="stats-example__description">
-              затрачено времени
-            </dd>
-          </div>
-        </dl>
-        <!-- нужно подумать с выбором класса -->
-        <p class="stats-example__desc">
-          Затраты на питание: 15 000 руб.
-        </p>
-        <div class="stats-example__slider-wrapper">
-          <img class="stats-example__slider stats-example__slider--images" src="img/cat-slider-mobile.svg"
-            alt="Толстый и худой котик">
-        </div>
       </div>
     </section>
+
+    <!--  Блок "Приглашение к сотруднечиству" -->
     <section class="invitation">
       <h2 class="visually-hidden">Приглашение к сотрудничеству </h2>
       <div class="invitation__wrapper">
@@ -181,37 +177,39 @@
     </section>
     <section class="map">
       <div class="map__wrapper">
-        <img class="map__item map__item--images" src="img/map.svg" alt="Карта с местоположением">
+        <img class="map__images" src="img/map.svg" alt="Карта с местоположением">
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="main-footer">
     <div class="main-footer__wrapper">
       <img src="img/main-logo-title.svg" alt="Заголовок логотипа">
       <div class="main-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте
+            </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">Мы в
-              Ютубе</a>
+              Ютубе
+            </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">Мы в Телеграме</a>
+            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">Мы в Телеграме
+            </a>
           </li>
         </ul>
       </div>
       <div class="main-footer__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
+        </a>
       </div>
     </div>
     </div>
-
   </footer>
-
-
 
 </body>
 
