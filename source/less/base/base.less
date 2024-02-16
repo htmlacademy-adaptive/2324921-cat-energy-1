@@ -1,12 +1,41 @@
-// базовые стили //здесь не работают
-
-img {
-  width: 100%;
+// базовые стили
+body {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
   height: auto;
+  margin: 0;
 }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+// переменные
+@color-green:#68b738d9;
+@color-text-white:#ffffff;
+@font-title:"Oswald", sans-serif;
+@font-text:"Lato", sans-serif;
 
 ul {
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style-type: none;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+img {
+  // width: 100%;
+  // height: auto;
 }
