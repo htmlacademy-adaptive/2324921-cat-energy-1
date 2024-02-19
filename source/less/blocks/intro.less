@@ -1,9 +1,18 @@
 .intro {
-  background-color: @base-color;
+  background-image: url("../img/photo-cat-intro.jpg");
+  background-repeat: no-repeat;
   margin-bottom: 20px;
+
+  //далее пытаюсь обрезать зеленый фон
+  &::after {
+    background-color: @base-color;
+    width: 302px;
+    height: 302px;
+  }
 }
 
 .intro__wrapper {
+  background-color: @base-color;
   padding: 0 20px;
 }
 
