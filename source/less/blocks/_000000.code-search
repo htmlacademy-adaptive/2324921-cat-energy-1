@@ -1,0 +1,48 @@
+# Query: #000000
+# Flags: CaseSensitive WordMatch RegExp
+# Excluding: #ffffff
+# ContextLines: 1
+
+9 results - 6 files
+
+source\less\base\base.less:
+  31  a {
+  32:   color: #ffffff
+  33    text-decoration: none;
+
+source\less\blocks\advantages-process.less:
+   9  .advantages-process__title {
+  10:   color:#ffffff;
+  11    font-family: @font-title;
+
+source\less\blocks\advantages.less:
+  18    margin: 0 0 30px;
+  19:   color:#ffffff;
+  20    font-family: @font-title;
+
+  41    margin: 0;
+  42:   color:#ffffff;
+  43    font-family: @font-title;
+
+source\less\blocks\catalog.less:
+  10  .catalog__main-title {
+  11:   color: #000000;
+  12    font-family: @font-title;
+
+source\less\blocks\main-nav.less:
+  1  .main-nav {
+  2:   color: #000000;
+  3  }
+
+source\less\blocks\stats-example.less:
+   8    margin-bottom: 40px;
+   9:   color: #000000;
+  10    font-family: @font-title;
+
+  36    margin-bottom: 20px;
+  37:   color: #000000;
+  38    font-family: @font-title;
+
+  46  .stats-example__number {
+  47:   color: #000000;
+  48    font-family: @font-title;
