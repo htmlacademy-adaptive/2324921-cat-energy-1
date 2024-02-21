@@ -1,0 +1,73 @@
+.intro {
+  position: relative;
+  background-image: url("../img/photo-cat-intro.jpg");
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+
+  //далее  обрезаю зеленый фон. Пока оставил такой вариант реализации
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    background-color: @button-color;
+    width: 320px;
+    height: 302px;
+  }
+}
+
+.intro__wrapper {
+  padding: 0 20px;
+}
+
+.intro__header {
+  display: flex;
+  min-height: 480px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro__title {
+  min-width: 249px;
+  min-height: 72px;
+  margin: 27px 0 25px;
+  color: @text-color;
+  font-family: @font-title;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: center;
+  z-index: 1;
+}
+
+.intro__slogan {
+  min-width: 198px;
+  min-height: 14px;
+  margin: 0 0 29px;
+  color: @text-color;
+  font-family: @font-title;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.intro__img {
+  margin-bottom: 3px;
+  z-index: 1;
+}
+
+.intro__button {
+  padding: 10px 20px;
+  width: 100%;
+  min-height: 40px;
+  background-color: @button-color;
+  color: @text-color;
+  font-family: @font-title;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
