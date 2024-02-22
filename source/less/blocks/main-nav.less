@@ -9,3 +9,40 @@
   line-height: 20px;
   text-transform: uppercase;
 }
+
+@media (min-width: @tablet-width) {
+  .main-nav__wrapper {
+    margin: 0 auto;
+    width: 640px; //width или min-width?
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__wrapper {
+    width: 960px;  //width или min-width?
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 436px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 475px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__toggle {
+    display: none;
+  }
+}

@@ -3,7 +3,24 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  min-height: 64px;
   padding: 13px 20px;
   text-align: center;
   align-items: center;
+}
+
+.main-header__logo .main-header__logo-title {
+  height: 38px;
+}
+
+@media (min-width: @tablet-width) {
+  .main-header__logo .main-header__logo-title {
+    height: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-header__logo .main-header__logo-title {
+    height: 59px;
+  }
 }
