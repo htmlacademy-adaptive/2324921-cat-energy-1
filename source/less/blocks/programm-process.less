@@ -22,3 +22,19 @@
   line-height: 18px;
   text-align: left;
 }
+
+@media (min-width: @tablet-width) {
+  .programm-process__list {
+    display: grid;
+    grid-template-columns: 240px 245px; //Взял пока среднее значение
+    gap: 37px 140px; //Взял пока среднее значение
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programm-process__list {
+    display: grid;
+    grid-template-columns: 230px 246px 247px 249px;
+    gap: 77px; //Здесь будут марджины
+  }
+}
