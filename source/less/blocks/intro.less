@@ -4,7 +4,6 @@
   background-repeat: no-repeat;
   margin-bottom: 20px;
 
-  //далее  обрезаю зеленый фон. Пока оставил такой вариант реализации
   &::after {
     content: "";
     position: absolute;
@@ -70,4 +69,94 @@
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .intro {
+    background-image: none;
+    background-color: @text-color;
+    margin: 0 auto;
+    width: 640px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .intro::after {
+    background-color: @text-color;
+    width: 100%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .intro {
+    margin: 0 auto;
+    width: 960px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .intro__header {
+    display: flex;
+    align-items: flex-start;
+    margin: 0 auto;
+    width: 640px;
+  }
+
+  .intro__title {
+    min-width: 414px;
+    height: 120px;
+    color: @title-color;
+    font-family: @font-title;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 60px;
+    text-align: left;
+  }
+
+  .intro__slogan {
+    min-width: 283px;
+    height: 20px;
+    color: @title-color;
+    font-family: @font-title;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .intro__header {
+    display: flex;
+    align-items: flex-start;
+    margin: 0 auto;
+    width: 960px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .intro__img {
+    width: 709px;
+    height: 609px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .intro__img {
+    min-width: 552px;
+    height: 499px;
+  }
+}
+
+@media (min-width: @tablet-width), (min-width: @desktop-width) {
+  .intro__button {
+    position: absolute;
+    top: 232px;
+    background: #68b738;
+    z-index: 2;
+    width: 244px;
+    padding: 10px 20px;
+    text-align: center;
+  }
 }

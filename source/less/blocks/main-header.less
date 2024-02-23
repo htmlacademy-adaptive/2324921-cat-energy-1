@@ -9,18 +9,43 @@
   align-items: center;
 }
 
+.main-header__logo-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .main-header__logo .main-header__logo-title {
   height: 38px;
 }
 
+// Обертка для логотипа-ссылок
+// @media (min-width: @tablet-width) {
+//   .main-header__logo-wrapper {
+//     height: 50px;
+//     display: flex;
+//     align-items: center;
+//     gap: 13px;
+//   }
+// }
+
+// @media (min-width: @desktop-width) {
+//   .main-header__logo-wrapper {
+//     height: 50px;
+//     display: flex;
+//     align-items: center;
+//     gap: 13px;
+//   }
+// }
+
 @media (min-width: @tablet-width) {
   .main-header__logo .main-header__logo-title {
-    height: 50px;
+    min-height: 50px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .main-header__logo .main-header__logo-title {
-    height: 59px;
+    min-height: 59px;
   }
 }
