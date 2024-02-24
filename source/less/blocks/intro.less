@@ -15,6 +15,7 @@
 }
 
 .intro__wrapper {
+  position: relative;
   padding: 0 20px;
 }
 
@@ -142,8 +143,11 @@
   }
 }
 
-@media (min-width: @tablet-width) {
+@media (min-width: @desktop-width) {
   .intro__img {
+    position: absolute;
+    background-color: #68b738;
+    left: 331px;
     min-width: 552px;
     height: 499px;
   }
