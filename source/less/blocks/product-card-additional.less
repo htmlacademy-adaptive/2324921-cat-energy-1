@@ -4,7 +4,6 @@
   min-height: 98px;
   display: flex;
   flex-direction: column;
-  align-items: start;
   padding-bottom: 35px;
 }
 
@@ -25,7 +24,7 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
-  text-align: center;
+  text-align: start;
   text-transform: uppercase;
 }
 
@@ -43,7 +42,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-width: 280px;
+  // min-width: 280px;
+  width: 100%;
 }
 
 .product-card-additional__text {
@@ -70,4 +70,89 @@
   text-align: center;
   text-transform: uppercase;
   margin-top: 25px;
+}
+
+@media (min-width: @tablet-width) {
+  .product-card-additional__wrapper {
+    // display: flex;
+    // flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 316px);
+    align-items: center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product-card-additional__wrapper {
+    // display: flex;
+    // flex-direction: row;
+    display: grid;
+    grid-template-columns: 200px 200px 244px;
+    align-items: center;
+    gap: 45px;
+    width: 894px;
+  }
+}
+
+// @media (min-width: @tablet-width) {
+//   .product-card-additional__item {
+
+//   }
+// }
+
+@media (min-width: @desktop-width) {
+  .product-card-additional__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .product-card-additional__title {
+    color: @title-color;
+    font-family: @font-title;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: start;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product-card-additional__title {
+    color: @title-color;
+    font-family: @font-title;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: start;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .product-card-additional__subtitle {
+    margin: 0;
+    text-align: start;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product-card-additional__subtitle {
+    // min-width: 244px;
+    margin: 0;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .product-card-additional__button {
+    min-width: 632px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product-card-additional__button {
+    min-width: 244px;
+    margin: 0;
+  }
 }
