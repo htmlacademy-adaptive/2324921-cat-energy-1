@@ -8,11 +8,9 @@
     background-image: none;
     background-color: @text-color;
     margin: 0 auto;
-    width: 640px;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0 auto;
     width: 960px;
   }
 }
@@ -31,7 +29,6 @@
   }
 }
 
-
 .intro__wrapper {
   position: relative;
   padding: 0 20px;
@@ -44,46 +41,13 @@
   align-items: center;
 
   @media (min-width: @tablet-width) {
-    display: flex;
     align-items: flex-start;
     margin: 0 auto;
     width: 640px;
-
-    .intro__title {
-      min-width: 414px;
-      height: 120px;
-      color: @title-color;
-      font-family: @font-title;
-      font-size: 60px;
-      font-weight: 400;
-      line-height: 60px;
-      text-align: left;
-    }
-
-    .intro__slogan {
-      min-width: 283px;
-      height: 20px;
-      color: @title-color;
-      font-family: @font-title;
-      font-size: 20px;
-      font-weight: 400;
-      line-height: 20px;
-      text-align: left;
-      text-transform: uppercase;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    display: flex;
-    align-items: flex-start;
-    margin: 0 auto;
-    width: 960px;
   }
 }
 
 .intro__title {
-  min-width: 249px;
-  min-height: 72px;
   margin: 27px 0 25px;
   color: @text-color;
   font-family: @font-title;
@@ -92,11 +56,16 @@
   line-height: 36px;
   text-align: center;
   z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    color: @title-color;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+  }
 }
 
 .intro__slogan {
-  min-width: 198px;
-  min-height: 14px;
   margin: 0 0 29px;
   color: @text-color;
   font-family: @font-title;
@@ -106,6 +75,12 @@
   text-align: center;
   text-transform: uppercase;
   z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    color: @title-color;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .intro__img {
@@ -149,46 +124,3 @@
     text-align: center;
   }
 }
-
-// @media (min-width: @tablet-width) {
-//   .intro__header {
-//     display: flex;
-//     align-items: flex-start;
-//     margin: 0 auto;
-//     width: 640px;
-//   }
-
-//   .intro__title {
-//     min-width: 414px;
-//     height: 120px;
-//     color: @title-color;
-//     font-family: @font-title;
-//     font-size: 60px;
-//     font-weight: 400;
-//     line-height: 60px;
-//     text-align: left;
-//   }
-
-//   .intro__slogan {
-//     min-width: 283px;
-//     height: 20px;
-//     color: @title-color;
-//     font-family: @font-title;
-//     font-size: 20px;
-//     font-weight: 400;
-//     line-height: 20px;
-//     text-align: left;
-//     text-transform: uppercase;
-//   }
-// }
-
-// @media (min-width: @desktop-width) {
-//   .intro__header {
-//     display: flex;
-//     align-items: flex-start;
-//     margin: 0 auto;
-//     width: 960px;
-//   }
-// }
-
-
