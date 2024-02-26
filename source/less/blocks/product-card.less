@@ -27,7 +27,7 @@
 
 .product-card___list {
   width: 100%;
-  color: #444444;
+  color: @paragraph-color;
   font-family: @font-text;
   font-size: 12px;
   font-weight: 400;
@@ -41,7 +41,7 @@
   padding: 10px 20px;
   width: 100%;
   min-height: 40px;
-  background-color: @button-color;
+  background-color: @accent-color;
   color: @text-color;
   font-family: @font-title;
   font-size: 16px;
@@ -53,7 +53,7 @@
 
 @media (min-width: @tablet-width), (min-width: @desktop-width) {
   .product-card {
-    background-color: @basic-grey;
+    background-color: @extra-button-color;
     padding: 10px 37px 40px;
   }
 }
@@ -80,7 +80,7 @@
 }
 
 .product-card-extra__description {
-  color: #444444;
+  color: @paragraph-color;
   font-family: @font-text;
   font-size: 12px;
   font-weight: 400;
@@ -91,8 +91,8 @@
 
 .product-card-extra__button {
   padding: 10px 20px;
-  background-color: @basic-grey;
-  color: #444444;
+  background-color: @extra-button-color;
+  color: @paragraph-color;
   margin: 21px 0 25px;
   min-width: 100%;
   min-height: 40px;
