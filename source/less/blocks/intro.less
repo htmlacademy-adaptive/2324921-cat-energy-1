@@ -4,15 +4,33 @@
   background-repeat: no-repeat;
   margin-bottom: 20px;
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    background-color: @accent-color;
-    width: 100%;
-    height: 302px;
+  @media (min-width: @tablet-width) {
+    background-image: none;
+    background-color: @text-color;
+    margin: 0 auto;
+    width: 640px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    width: 960px;
   }
 }
+
+.intro::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  background-color: @accent-color;
+  width: 100%;
+  height: 302px;
+
+  @media (min-width: @tablet-width) {
+    background-color: @text-color;
+    width: 100%;
+  }
+}
+
 
 .intro__wrapper {
   position: relative;
@@ -24,6 +42,43 @@
   min-height: 480px;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: flex-start;
+    margin: 0 auto;
+    width: 640px;
+
+    .intro__title {
+      min-width: 414px;
+      height: 120px;
+      color: @title-color;
+      font-family: @font-title;
+      font-size: 60px;
+      font-weight: 400;
+      line-height: 60px;
+      text-align: left;
+    }
+
+    .intro__slogan {
+      min-width: 283px;
+      height: 20px;
+      color: @title-color;
+      font-family: @font-title;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 20px;
+      text-align: left;
+      text-transform: uppercase;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    align-items: flex-start;
+    margin: 0 auto;
+    width: 960px;
+  }
 }
 
 .intro__title {
@@ -56,6 +111,19 @@
 .intro__img {
   margin-bottom: 3px;
   z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    width: 709px;
+    height: 609px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    // background-color: #68b738;
+    left: 331px;
+    min-width: 552px;
+    height: 499px;
+  }
 }
 
 .intro__button {
@@ -70,91 +138,8 @@
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
-}
 
-@media (min-width: @tablet-width) {
-  .intro {
-    background-image: none;
-    background-color: @text-color;
-    margin: 0 auto;
-    width: 640px;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .intro::after {
-    background-color: @text-color;
-    width: 100%;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .intro {
-    margin: 0 auto;
-    width: 960px;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .intro__header {
-    display: flex;
-    align-items: flex-start;
-    margin: 0 auto;
-    width: 640px;
-  }
-
-  .intro__title {
-    min-width: 414px;
-    height: 120px;
-    color: @title-color;
-    font-family: @font-title;
-    font-size: 60px;
-    font-weight: 400;
-    line-height: 60px;
-    text-align: left;
-  }
-
-  .intro__slogan {
-    min-width: 283px;
-    height: 20px;
-    color: @title-color;
-    font-family: @font-title;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 20px;
-    text-align: left;
-    text-transform: uppercase;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .intro__header {
-    display: flex;
-    align-items: flex-start;
-    margin: 0 auto;
-    width: 960px;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .intro__img {
-    width: 709px;
-    height: 609px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .intro__img {
-    position: absolute;
-    // background-color: #68b738;
-    left: 331px;
-    min-width: 552px;
-    height: 499px;
-  }
-}
-
-@media (min-width: @tablet-width), (min-width: @desktop-width) {
-  .intro__button {
+  @media (min-width: @tablet-width), (min-width: @desktop-width) {
     position: absolute;
     top: 232px;
     background: #68b738;
@@ -164,3 +149,46 @@
     text-align: center;
   }
 }
+
+// @media (min-width: @tablet-width) {
+//   .intro__header {
+//     display: flex;
+//     align-items: flex-start;
+//     margin: 0 auto;
+//     width: 640px;
+//   }
+
+//   .intro__title {
+//     min-width: 414px;
+//     height: 120px;
+//     color: @title-color;
+//     font-family: @font-title;
+//     font-size: 60px;
+//     font-weight: 400;
+//     line-height: 60px;
+//     text-align: left;
+//   }
+
+//   .intro__slogan {
+//     min-width: 283px;
+//     height: 20px;
+//     color: @title-color;
+//     font-family: @font-title;
+//     font-size: 20px;
+//     font-weight: 400;
+//     line-height: 20px;
+//     text-align: left;
+//     text-transform: uppercase;
+//   }
+// }
+
+// @media (min-width: @desktop-width) {
+//   .intro__header {
+//     display: flex;
+//     align-items: flex-start;
+//     margin: 0 auto;
+//     width: 960px;
+//   }
+// }
+
+
