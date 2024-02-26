@@ -17,6 +17,14 @@
 
 .main-header__logo .main-header__logo-title {
   height: 38px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 59px;
+  }
 }
 
 // Обертка для логотипа-ссылок
@@ -37,15 +45,3 @@
 //     gap: 13px;
 //   }
 // }
-
-@media (min-width: @tablet-width) {
-  .main-header__logo .main-header__logo-title {
-    min-height: 50px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .main-header__logo .main-header__logo-title {
-    min-height: 59px;
-  }
-}
