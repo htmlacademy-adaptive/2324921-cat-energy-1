@@ -1,16 +1,33 @@
+
 .invitation {
-  min-height: 112px;
-  padding: 26px 20px;
+  position: relative;
 }
 
 .invitation__wrapper {
+  width: 320px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 26px 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    min-height: 200px;
+    padding: 60px 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    width: 565px;
+    min-height: 200px;
+    top: 95px;
+    left: 110px;
+    background-color: @text-color;
+  }
 }
 
 .invitation__subtitle {
-  min-width: 170px;
+  // min-width: 170px;
   margin: 0;
   color: #111111;
   font-family: @font-title;
@@ -19,6 +36,22 @@
   line-height: 20px;
   text-align: left;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    width: 163px;
+    height: 78px;
+  }
+}
+
+.invitation__content-wrapper {
+  @media (min-width: @tablet-width) {
+    width: 157px;
+    min-height: 80px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 
 .invitation__text {
@@ -28,48 +61,21 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
+
+  @media (min-width: @tablet-width) {
+    text-align: right;
+  }
+}
+
+.invitation__text-city {
+  color: @paragraph-color;
+  font-family: @font-text;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
   text-align: left;
 }
 
-@media (min-width: @tablet-width) {
-  .invitation {
-    min-height: 200px;
-    padding: 60px 70px;
-  }
+.invitation__map-images {
+  width: 100%;
 }
-
-@media (min-width: @desktop-width) {
-  .invitation {
-    width: 565px;
-    min-height: 200px;
-    position: relative;
-    top: 380px;
-    background-color: @text-color;
-    border: 1px dashed #bababa;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .invitation__subtitle {
-    width: 163px;
-    height: 78px;
-  }
-}
-
-// @media (min-width: @desktop-width) {
-//   .invitation__subtitle {
-//   }
-// }
-
-@media (min-width: @tablet-width) {
-  .invitation__text {
-    width: 157px;
-    height: 80px;
-  }
-}
-
-// @media (min-width: @desktop-width) {
-//   .invitation__text {
-//     //
-//   }
-// }
