@@ -2,17 +2,20 @@
   background-color: @text-color;
   display: flex;
   justify-content: space-between;
-  width: 100%;
   min-height: 64px;
-  padding: 13px 20px;
-  text-align: center;
+  padding: 0 20px;
   align-items: center;
-}
 
-.main-header__logo-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @media (min-width: @tablet-width) {
+    width: 704px;
+    padding: 0 30px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    padding: 0 110px;
+  }
 }
 
 .main-header__logo .main-header__logo-title {
@@ -28,6 +31,11 @@
 }
 
 // Обертка для логотипа-ссылок
+// .main-header__logo-wrapper {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+// }
 // @media (min-width: @tablet-width) {
 //   .main-header__logo-wrapper {
 //     height: 50px;
