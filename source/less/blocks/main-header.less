@@ -1,15 +1,16 @@
 .main-header {
+  width: 320px;
   background-color: @text-color;
   display: flex;
   justify-content: space-between;
   min-height: 64px;
   padding: 0 20px;
   align-items: center;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     width: 768px;
     padding: 0 30px;
-    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
@@ -30,26 +31,3 @@
   }
 }
 
-// Обертка для логотипа-ссылок
-// .main-header__logo-wrapper {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-// }
-// @media (min-width: @tablet-width) {
-//   .main-header__logo-wrapper {
-//     height: 50px;
-//     display: flex;
-//     align-items: center;
-//     gap: 13px;
-//   }
-// }
-
-// @media (min-width: @desktop-width) {
-//   .main-header__logo-wrapper {
-//     height: 50px;
-//     display: flex;
-//     align-items: center;
-//     gap: 13px;
-//   }
-// }
