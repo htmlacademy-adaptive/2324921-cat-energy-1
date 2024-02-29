@@ -1,10 +1,14 @@
 .product-card {
-  min-height: 209px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid #ebebeb;
+  border-top: 2px solid #ebebeb;
   padding: 20px 0 42px;
+
+  @media (min-width: @tablet-width), (min-width: @desktop-width) {
+    background-color: @extra-button-color;
+    padding: 10px 37px 40px;
+  }
 }
 
 .product-card___item {
@@ -22,6 +26,11 @@
   line-height: 20px;
   text-align: left;
   text-transform: uppercase;
+}
+
+.product-card___info,
+.product-card__description {
+  margin: 0;
 }
 
 .product-card___list {
@@ -50,21 +59,21 @@
   text-transform: uppercase;
 }
 
-@media (min-width: @tablet-width), (min-width: @desktop-width) {
-  .product-card {
-    background-color: @extra-button-color;
-    padding: 10px 37px 40px;
-  }
-}
-
 // Показать еще больше товаров
 .product-card-extra {
   padding-top: 78px;
+  padding-bottom: 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   min-height: 209px;
-  border: 1px solid #ebebeb;
+  border-top: 2px solid #ebebeb;
+  border-bottom: 2px solid #ebebeb;
+
+  @media (min-width: @tablet-width) {
+    padding: 10px 37px 40px;
+    border: 2px solid #ebebeb;
+  }
 }
 
 .product-card-extra__title {
@@ -85,14 +94,13 @@
   font-weight: 400;
   line-height: 16px;
   text-align: center;
-  margin: 0;
+  margin: 0 0 22px;
 }
 
 .product-card-extra__button {
   padding: 10px 20px;
   background-color: @extra-button-color;
   color: @paragraph-color;
-  margin: 21px 0 25px;
   min-width: 100%;
   min-height: 40px;
   font-family: @font-title;
@@ -101,10 +109,4 @@
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
-}
-
-@media (min-width: @tablet-width), (min-width: @desktop-width) {
-  .product-card-extra {
-    padding: 10px 37px 40px;
-  }
 }
