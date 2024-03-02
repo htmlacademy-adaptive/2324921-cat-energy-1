@@ -8,10 +8,12 @@
   flex-direction: column;
   margin: 0 auto;
   width: 320px;
+  padding: 0 20px;
 
 
   @media (min-width: @tablet-width) {
     width: 786px;
+    padding: 0 30px;
     display: grid;
     grid-template-columns: repeat(2, 324px);
     // grid-template-columns: repeat(2, 1fr);
@@ -20,6 +22,7 @@
 
   @media (min-width: @desktop-width) {
     width: 1440px;
+    padding: 0 110px;
     grid-template-columns: repeat(4, 245px);
     gap: 80px;
   }
@@ -33,5 +36,13 @@
   font-weight: 400;
   line-height: 36px;
   text-align: left;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px;
+  }
 }
 
