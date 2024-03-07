@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи. Каталог</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-cat.png">
@@ -12,13 +13,15 @@
 
   <!-- Шапка -->
   <header class="main-header">
-    <a class="main-header__logo-link" href="index.html">
-      <img src="img/main-logo-mobile.svg" width="70" height="59" alt="Логотип canergy">
-    </a>
-    <a class="main-header__logo-title" href="index.html">
-      <img src="img/main-logo-title.svg" width="101" height="18" alt="Заголовок логотипа">
-    </a>
-    <nav class="main-nav">
+    <div class="main-header__logo-wrapper">
+      <a class="main-header__logo-link" href="index.html">
+        <img src="img/main-logo-mobile.svg" width="33" height="38" alt="Логотип canergy">
+      </a>
+      <a class="main-header__logo-text" href="index.html">
+        <img src="img/main-logo-text.svg" width="101" height="18" alt="Заголовок логотипа">
+      </a>
+    </div>
+    <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden"> Открыть меню
         </span>
@@ -29,7 +32,7 @@
             <a href="index.html">Главная
             </a>
           </li>
-          <li class="site-list__item site-list__item--current">
+          <li class="site-list__item site-list__item--active">
             <a>Каталог продукции
             </a>
           </li>
@@ -45,9 +48,9 @@
   <!-- Главная 'Каталог продукции' -->
   <main class="main-container main-inner">
     <section class="catalog">
-      <div class="catalog__wrapper">
-        <h1 class="catalog__main-title">Каталог продукции</h1>
+      <h1 class="catalog__main-title">Каталог продукции</h1>
 
+      <div class="catalog__wrapper">
         <div class="catalog__product-card product-card">
           <a class="product-card__link" href="#">
             <img src="img/product-card/chicken-500g.svg" alt="Питание для котиков с курицей">
@@ -293,119 +296,114 @@
           </ul>
           <a class="product-card__button" href="#">Заказать</a>
         </div>
-      </div>
-    </section>
 
-    <!-- Блок "Показать больше"  -->
-    <section class="product-card-extra ">
-      <div class="product-card-extra__wrapper">
-        <h3 class="product-card-extra__title">Показать еще 100500 товаров</h3>
-        <p class="product-card-extra__description">На самом деле вкусов гораздо больше!
-        </p>
-        <a class="product-card-extra__button" href="#">Показать все</a>
+        <div class="catalog__product-card product-card-extra">
+          <a class="product-card-extra__link" href="#">
+            <h3 class="product-card-extra__title">Показать еще 100500 товаров</h3>
+          </a>
+          <p class="product-card-extra__description">На самом деле вкусов гораздо больше!
+          </p>
+          <a class="product-card-extra__button" href="#">Показать все</a>
+        </div>
       </div>
     </section>
 
     <!-- Блок доптоваров -->
     <section class="product-card-additional">
-      <h2 class="product-card-additional__title">Дополнительные товары
-      </h2>
-
       <div class="product-card-additional__wrapper">
-        <h3 class="product-card-additional__subtitle">Сахарозаменитель
-        </h3>
+        <h2 class="product-card-additional__title">Дополнительные товары
+        </h2>
         <ul class="product-card-additional__list">
           <li class="product-card-additional__item">
-            <p class="product-card-additional__text">
-              1 упаковка (100 г)
-            </p>
-            <p class="product-card-additional__text">
-              200 ₽
-            </p>
+            <h3 class="product-card-additional__subtitle">Сахарозаменитель
+            </h3>
+            <div class="product-card-additional__content">
+              <p class="product-card-additional__text">
+                1 упаковка (100 г)
+              </p>
+              <p class="product-card-additional__text">
+                200 ₽
+              </p>
+            </div>
+            <a class="product-card-additional__button" href="#">Заказать</a>
           </li>
-        </ul>
-        <a class="product-card-additional__button" href="#">Заказать</a>
-      </div>
 
-      <div class="product-card-additional__wrapper">
-        <h3 class="product-card-additional__subtitle">Питьевая вода
-        </h3>
-        <ul class="product-card-additional__list">
           <li class="product-card-additional__item">
-            <p class="product-card-additional__text">
-              5 литров
-            </p>
-            <p class="product-card-additional__text">
-              50 ₽
-            </p>
+            <h3 class="product-card-additional__subtitle">Питьевая вода
+            </h3>
+            <div class="product-card-additional__content">
+              <p class="product-card-additional__text">
+                5 литров
+              </p>
+              <p class="product-card-additional__text">
+                50 ₽
+              </p>
+            </div>
+            <a class="product-card-additional__button" href="#">Заказать</a>
           </li>
-        </ul>
-        <a class="product-card-additional__button" href="#">Заказать</a>
-      </div>
 
-      <div class="product-card-additional__wrapper">
-        <h3 class="product-card-additional__subtitle">Молоко
-        </h3>
-        <ul class="product-card-additional__list">
           <li class="product-card-additional__item">
-            <p class="product-card-additional__text">
-              1 литр
-            </p>
-            <p class="product-card-additional__text">
-              100 ₽
-            </p>
+            <h3 class="product-card-additional__subtitle">Молоко
+            </h3>
+            <div class="product-card-additional__content">
+              <p class="product-card-additional__text">
+                1 литр
+              </p>
+              <p class="product-card-additional__text">
+                100 ₽
+              </p>
+            </div>
+            <a class="product-card-additional__button" href="#">Заказать</a>
           </li>
-        </ul>
-        <a class="product-card-additional__button" href="#">Заказать</a>
-      </div>
 
-      <div class="product-card-additional__wrapper">
-        <h3 class="product-card-additional__subtitle">Витамины
-        </h3>
-        <ul class="product-card-additional__list">
           <li class="product-card-additional__item">
-            <p class="product-card-additional__text">
-              1 упаковка (30 г)
-            </p>
-            <p class="product-card-additional__text">
-              300 ₽
-            </p>
+            <h3 class="product-card-additional__subtitle">Витамины
+            </h3>
+            <div class="product-card-additional__content">
+              <p class="product-card-additional__text">
+                1 упаковка (30 г)
+              </p>
+              <p class="product-card-additional__text">
+                300 ₽
+              </p>
+            </div>
+            <a class="product-card-additional__button" href="#">Заказать</a>
           </li>
+          <div class="product-card-promo">
+            <div class="product-card-promo__wrapper">
+              <p class="product-card-promo__description">
+                Закажите все<br> и получите чехол для
+                кота в подарок
+              </p>
+            </div>
+          </div>
         </ul>
-          <a class="product-card-additional__button" href="#">Заказать</a>
       </div>
     </section>
 
-      <!-- Promo -->
-      <section class="product-card-promo">
-        <div class="product-card-promo__wrapper">
-          <p class="product-card-promo__description">
-            Закажите все и получите чехол для
-            кота в подарок
-          </p>
-        </div>
-      </section>
-
-    <!--  Блок "Приглашение к сотруднечиству" -->
+    <!--  Блок "Приглашение к сотруднечиству с картой" -->
     <section class="invitation">
-      <h2 class="visually-hidden">Приглашение к сотрудничеству </h2>
+      <h2 class="visually-hidden">Приглашение к сотрудничеству и карта с местоположением. </h2>
       <div class="invitation__wrapper">
         <p class="invitation__subtitle ">
           приглашаем
           к сотрудничеству
           дилеров!
         </p>
-        <p class="invitation__text">
-          ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
-        </p>
+        <div class="invitation__content-wrapper">
+          <p class="invitation__text">
+            ул. Большая Конюшенная, д. 19/8
+          </p>
+          <span class="invitation__text-city">
+            Санкт-Петербург
+          </span>
+        </div>
       </div>
-    </section>
-
-    <!-- Карта -->
-    <section class="map">
-      <h2 class="visually-hidden">Карта с местоположением производителя</h2>
-      <div class="map__wrapper">
-        <img class="map__images" src="img/location-map.jpg" alt="Карта с местоположением">
+      <div class="invitation__map-wrapper">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.2738725013924!2d30.3210116966363!3d59.938166461211026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1709559703245!5m2!1sru!2sru"
+          width="766" height="560" allowfullscreen
+          title="Офис компании по адресу: ул. Большая Конюшенная, д. 19/8, Санкт-Петербург"></iframe>
       </div>
     </section>
   </main>
@@ -439,6 +437,9 @@
       </div>
     </div>
   </footer>
+
+  <script src="script.js"></script>
+
 </body>
 
 </html>

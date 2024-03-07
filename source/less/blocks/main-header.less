@@ -1,9 +1,50 @@
 .main-header {
+  width: 320px;
   background-color: @text-color;
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  padding: 13px 20px;
-  text-align: center;
+  min-height: 64px;
+  padding: 0 20px;
   align-items: center;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    padding: 0 110px;
+  }
+}
+
+.main-header__logo-wrapper {
+  display: flex;
+  align-items: center;
+  width: 190px;
+  justify-content: space-between;
+}
+
+.main-header__logo .main-header__logo-text {
+  height: 38px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 59px;
+  }
+}
+
+.main-header__logo,
+.main-header__logo-text {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
