@@ -15,10 +15,11 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 1440px;
+    width: 1200px;
+    padding: 0 40px;
     display: grid;
-    grid-template-columns: 440px 500px;
-    padding: 0 110px;
+    justify-content: space-between;
+    grid-template-columns: 440px auto;
   }
 }
 
@@ -137,6 +138,5 @@
 @media (min-width: @tablet-width) {
   .stats-example__slider {
     width: 560px;
-    height: 512px;
   }
 }
