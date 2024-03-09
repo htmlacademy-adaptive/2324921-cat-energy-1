@@ -1,11 +1,26 @@
 
 .invitation {
   position: relative;
+  background-color: @extra-button-color;
+}
+
+.invitation__container {
+  // width: 320px;
+
+  @media (min-width: @tablet-width) {
+    // width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    position: absolute;
+    top: 95px;
+    left: 0;
+  }
 }
 
 .invitation__wrapper {
   width: 320px;
-  background-color: @extra-button-color;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -16,15 +31,15 @@
     width: 768px;
     min-height: 200px;
     padding: 60px 70px;
-    background-color: @text-color;
   }
 
   @media (min-width: @desktop-width) {
-    position: absolute;
+    // position: absolute;
     width: 565px;
     min-height: 200px;
     top: 95px;
-    left: 110px;
+    left: 0;
+    // left: 110px;
     background-color: @text-color;
   }
 }
