@@ -2,6 +2,7 @@
   width: 320px;
   background-color: @text-color;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   min-height: 64px;
   padding: 0 20px;
@@ -9,6 +10,8 @@
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
     width: 768px;
     padding: 0 30px;
   }
@@ -25,6 +28,7 @@
   width: 190px;
   justify-content: space-between;
 }
+
 
 .main-header__logo .main-header__logo-text {
   height: 38px;
