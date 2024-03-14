@@ -55,18 +55,32 @@
     margin-right: 0;
   }
 
-  &--active {
-    position: relative;
+  // &--active {
+  //   position: relative;
 
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 9px;
-      right: 0;
-      left: 0;
-      height: 2px;
-      background-color: @accent-color;
-    }
+  //   &::after {
+  //     content: "";
+  //     position: absolute;
+  //     bottom: 9px;
+  //     right: 0;
+  //     left: 0;
+  //     height: 2px;
+  //     background-color: @accent-color;
+  //   }
+  // }
+}
+
+.site-list__item-current {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 9px;
+    right: 0;
+    left: 0;
+    height: 2px;
+    background-color: @accent-color;
   }
 }
 
