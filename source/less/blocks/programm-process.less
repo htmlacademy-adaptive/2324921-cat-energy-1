@@ -1,5 +1,5 @@
 .programm-process {
-  margin-bottom: 85px;
+  margin-bottom: 50px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 47px;
@@ -56,24 +56,45 @@
   font-weight: 400;
   line-height: 18px;
   text-align: left;
+  margin: 0;
+  padding-left: 80px;
 
   @media (min-width: @tablet-width) {
     margin: 0;
-    width: 230px;
-    min-height: 72px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin: 0;
-    width: 207px;
-    min-height: 72px;
+    padding-left: 0;
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
 .programm-process__item {
-  @media (min-width: @tablet-width), (min-width: @desktop-width) {
-    padding: 151px 26px 57px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px;
+  padding-bottom: 20px;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  &--eco::before {
+    position: absolute;
+    content: url("../img/programms/icon-eco.svg");
+    width: 60px;
+    height: 60px;
+    padding: 15px;
+    background-color: #68b738;
+
+    @media (min-width: @tablet-width) {
+      top: 40px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 151px 26px 37px 0;
     min-height: 280px;
+    position: relative;
   }
 }
 
@@ -84,6 +105,18 @@
     background-position: right;
     background-repeat: no-repeat;
   }
+
+  // &::before {
+  //   position: absolute;
+  //   content: url("../img/programms/icon-eco.svg");
+  //   width: 60px;
+  //   height: 60px;
+  //   padding: 15px;
+  //   background-color: #68b738;
+
+  // @media (min-width: @tablet-width) {
+  //   top: 40px;
+  // }
 }
 
 .programm-process__item--quickly {
@@ -92,13 +125,31 @@
     background-position: right;
     background-repeat: no-repeat;
   }
+
+  &::before {
+    position: absolute;
+    content: url("../img/programms/icon-water.svg");
+    width: 60px;
+    height: 60px;
+    padding: 15px;
+    background-color: #68b738;
+  }
 }
 
-.programm-process__item--eating {
+.programm-process__item--eat {
   @media (min-width: @tablet-width), (min-width: @desktop-width) {
     background-image: url("../img/programms/number-block-3.svg");
     background-position: right;
     background-repeat: no-repeat;
+  }
+
+  &::before {
+    position: absolute;
+    content: url("../img/programms/icon-eat.svg");
+    width: 60px;
+    height: 60px;
+    padding: 15px;
+    background-color: #68b738;
   }
 }
 
@@ -107,5 +158,14 @@
     background-image: url("../img/programms/number-block-4.svg");
     background-position: right;
     background-repeat: no-repeat;
+  }
+
+  &::before {
+    position: absolute;
+    content: url("../img/programms/icon-clock.svg");
+    width: 60px;
+    height: 60px;
+    padding: 15px;
+    background-color: #68b738;
   }
 }

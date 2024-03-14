@@ -10,121 +10,6 @@
   }
 }
 
-.main-header__toggle {
-  position: absolute;
-  content: "";
-  width: 24px;
-  height: 24px;
-  top: 21px;
-  right: 20px;
-  z-index: 2;
-  background-color: #ffffff;
-  display: block;
-  border: none;
-  cursor: pointer;
-
-  &:hover,
-  &:active {
-    opacity: 0.7;
-  }
-
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
-}
-
-.main-header--closed .main-header__toggle::before {
-  content: "";
-  position: absolute;
-  top: 2px;
-  right: 0;
-  width: 24px;
-  height: 2px;
-  background-color: #000000;
-  box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
-}
-
-.main-header--closed .main-header__toggle:active::before {
-  background-color: fade(#000000, 30%);
-  box-shadow:
-    0 8px 0 0 fade(#000000, 30%),
-    0 16px 0 0 fade(#000000, 30%);
-}
-
-@media (max-width: @mobile-width-only) {
-  .main-header--closed .site-list__item {
-    display: none;
-
-    &--active {
-      display: block;
-    }
-  }
-
-  .main-header--closed .site-list__item--active a {
-    padding-right: 70px;
-    padding-left: 70px;
-    text-align: center;
-  }
-
-  .main-header--opened .main-nav__wrapper {
-    width: 320px;
-    position: absolute;
-    top: 64px;
-    right: 0;
-    z-index: 10;
-    text-align: center;
-    background-color: #ffffff;
-  }
-
-  .main-header--closed .main-nav__wrapper {
-    display: none;
-  }
-
-  .main-header--nojs .main-header__toggle {
-    display: none;
-  }
-
-  .main-header--nojs .main-nav__wrapper {
-    position: static;
-    min-height: 0;
-  }
-
-  .main-header--nojs .site-list__item {
-    display: block;
-  }
-
-  .main-header--nojs .site-list__item--active a {
-    padding-right: 21px;
-    padding-left: 21px;
-    text-align: center;
-  }
-}
-
-.main-header--opened .main-header__toggle {
-  // right: 0;
-  background-color: #ffffff;
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    top: 11px;
-    right: 0;
-    width: 24px;
-    height: 1px;
-    background-color: #000000;
-  }
-
-  &::before {
-    transform: rotate(50grad);
-  }
-
-  &::after {
-    transform: rotate(-50grad);
-    box-shadow: none;
-  }
-}
-
 .main-nav__list {
   margin: 0;
   padding: 0;
@@ -163,7 +48,7 @@
 
 .site-list__item {
   @media (min-width: @tablet-width) {
-    margin-right: 33px;
+    margin-right: 32px;
   }
 
   &:last-child {
