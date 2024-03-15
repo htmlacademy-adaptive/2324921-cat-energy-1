@@ -204,18 +204,35 @@
   line-height: 20px;
   text-align: center;
   padding-bottom: 43px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
-    display: flex;
+    min-height: 200px;
     justify-content: flex-end;
     align-items: center;
-    padding-right: 125px;
+    padding: 0 125px 0;
     // padding: 70px 125px 70px;
   }
 
   @media (min-width: @desktop-width) {
+    min-height: 288px;
     padding: 0 42px 43px;
     flex-direction: column;
+  }
+}
+
+.product-card-promo__wrapper::before {
+  position: absolute;
+  content: url("../img/product-card/icon-promo.svg");
+  top: 60px;
+
+  @media (min-width: @tablet-width) {
+    left: 77px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 56px;
+    left: 86px;
   }
 }
 
