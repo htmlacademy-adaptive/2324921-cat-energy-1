@@ -1,31 +1,31 @@
 
 .invitation {
-  position: relative;
   background-color: @extra-button-color;
 }
 
-.invitation__container {
-  // width: 320px;
-
-  @media (min-width: @tablet-width) {
-    // width: 768px;
-  }
-
+.invitation__wrapper {
   @media (min-width: @desktop-width) {
-    width: 1220px;
+    position: relative;
+    width: 1300px;
+    margin: 0 auto;
+  }
+}
+
+.invitation__container {
+  @media (min-width: @desktop-width) {
     position: absolute;
     top: 95px;
     left: 0;
   }
 }
 
-.invitation__wrapper {
+.invitation__content-wrapper {
   width: 320px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 26px 20px;
-  margin: 0 auto;
+  margin: 0;
 
   @media (min-width: @tablet-width) {
     width: 768px;
@@ -34,12 +34,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    // position: absolute;
     width: 565px;
     min-height: 200px;
-    top: 95px;
-    left: 0;
-    // left: 110px;
     background-color: @text-color;
   }
 }
@@ -61,7 +57,7 @@
   }
 }
 
-.invitation__content-wrapper {
+.invitation__text-wrapper {
   @media (min-width: @tablet-width) {
     width: 157px;
     min-height: 80px;
