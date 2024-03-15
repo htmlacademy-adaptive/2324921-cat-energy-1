@@ -73,14 +73,16 @@
 .site-list__item-current {
   position: relative;
 
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 9px;
-    right: 0;
-    left: 0;
-    height: 2px;
-    background-color: @accent-color;
+  @media (min-width: @tablet-width) {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 9px;
+      right: 0;
+      left: 0;
+      height: 2px;
+      background-color: @accent-color;
+    }
   }
 }
 
