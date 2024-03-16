@@ -1,5 +1,10 @@
 .stats-example {
-  background-color: #f2f2f2;
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: @mobile-width-only) {
+    background-color: @extra-button-color;
+  }
 
   @media (min-width: @tablet-width) {
     border-top: 1px solid #e6e6e6;
@@ -8,6 +13,17 @@
 
   @media (min-width: @desktop-width) {
     border: none;
+  }
+}
+
+.stats-example::after {
+  @media (min-width: @desktop-width) {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background-color: @extra-button-color;
+    height: 462px;
+    width: 1500%;
   }
 }
 
@@ -28,7 +44,6 @@
     display: grid;
     justify-content: space-between;
     grid-template-columns: 433px auto;
-    background-color: #f2f2f2;
   }
 }
 
@@ -45,6 +60,7 @@
   font-size: 36px;
   font-weight: 400;
   line-height: 40px;
+  z-index: 2;
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
@@ -64,6 +80,7 @@
   font-weight: 400;
   line-height: 18px;
   text-align: left;
+  z-index: 2;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
@@ -97,6 +114,7 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0;
+  z-index: 2;
 }
 
 .stats-example__item {
@@ -135,6 +153,7 @@
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
+  z-index: 2;
 
   @media (min-width: @tablet-width) {
     width: 130px;
@@ -180,6 +199,7 @@
   text-align: center;
   width: 92px;
   background-color: #f2f2f2;
+  z-index: 2;
 
 
   @media (min-width: @tablet-width) {
@@ -215,6 +235,8 @@
 }
 
 .stats-example__slider-wrapper {
+  z-index: 2;
+
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: center;
