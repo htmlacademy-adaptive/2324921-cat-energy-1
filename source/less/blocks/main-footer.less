@@ -36,3 +36,40 @@
     flex-direction: row;
   }
 }
+
+.main-footer__copyright {
+  width: 200px;
+  min-height: 34px;
+  display: flex;
+  align-items: center;
+}
+
+.copyright {
+  // position: relative;
+
+  // &::after {
+  //   position: absolute;
+  //   content: url("../img/social-icons/html-academy-logo.svg");
+  //   height: 34px;
+  //   top: 0;
+  //   right: 0;
+  // }
+}
+
+.copyright__link {
+  position: relative;
+  min-width: 114px;
+  color: #444444;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+
+  &::after {
+    position: absolute;
+    content: url("../img/social-icons/html-academy-logo.svg");
+    top: -6px;
+    right: -86px;
+  }
+}
