@@ -63,20 +63,6 @@
   margin-bottom: 17px;
 }
 
-.product-card__button {
-  padding: 10px 20px;
-  width: 100%;
-  min-height: 40px;
-  background-color: @accent-color;
-  color: @text-color;
-  font-family: @font-title;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
-  text-align: center;
-  text-transform: uppercase;
-}
-
 // Показать еще больше товаров
 .product-card-extra {
   padding-top: 78px;
@@ -145,15 +131,15 @@
 }
 
 .product-card-extra__button {
-  padding: 10px 20px;
   background-color: @extra-button-color;
   color: @paragraph-color;
-  min-width: 100%;
-  min-height: 40px;
-  font-family: @font-title;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
-  text-align: center;
-  text-transform: uppercase;
+
+  &:hover {
+    background: #ebebeb;
+  }
+
+  &:active {
+    background: #ebebeb;
+    opacity: 1;
+  }
 }

@@ -28,6 +28,13 @@
     display: grid;
     justify-content: space-between;
     grid-template-columns: 433px auto;
+    background-color: #f2f2f2;
+  }
+}
+
+.stats-example-color {
+  @media (min-width: @desktop-width) {
+    background-color: #f2f2f2;
   }
 }
 
@@ -43,10 +50,14 @@
     font-size: 60px;
     line-height: 60px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 76px;
+  }
 }
 
 .stats-example__intro {
-  margin: 0 0 70px;
+  margin: 0 0 20px;
   color: @paragraph-color;
   font-family: @font-text;
   font-size: 14px;
@@ -57,6 +68,7 @@
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
+    margin-bottom: 55px;
   }
 
   @media (min-width: @desktop-width) {
@@ -84,28 +96,24 @@
   min-width: 280px;
   display: flex;
   flex-wrap: wrap;
+  margin: 0;
 }
 
 .stats-example__item {
   min-width: 124px;
   min-height: 70px;
-  padding: 14px 20px 17px;
-  position: relative;
+  // padding: 14px 20px 17px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid #cdcdcd;
-  border-radius: 3px;
+  // border: 1px solid #cdcdcd;
+  // border-radius: 3px;
 
   @media (min-width: @tablet-width) {
     min-width: 162px;
     min-height: 77px;
-    position: relative;
     display: flex;
     justify-content: center;
-    padding: 15px 30px 20px;
-    border: 1px solid #cdcdcd;
-    border-radius: 3px;
   }
 
   &:not(:last-child) {
@@ -141,7 +149,10 @@
 
 
 .stats-example__number {
-  min-width: 82px;
+  min-width: 124px;
+  padding: 16px 13px 25px;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
   color: @title-color;
   font-family: @font-title;
   font-size: 24px;
@@ -151,37 +162,45 @@
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    min-width: 102px;
+    min-width: 164px;
+    padding: 8px 0 25px;
     font-size: 30px;
     line-height: 37px;
   }
 }
 
 .stats-example__description {
-  margin: 0;
+  margin: -13px;
+  padding: 0 18px;
   color: @paragraph-color;
   font-family: @font-text;
   font-size: 12px;
   line-height: 12px;
   font-weight: 400;
   text-align: center;
-  width: 77px;
-  position: absolute;
-  top: 56px;
+  width: 92px;
   background-color: #f2f2f2;
 
 
   @media (min-width: @tablet-width) {
     width: 142px;
     padding: 0 8px;
-    position: absolute;
-    top: 66px;
+    margin: -9px;
     background-color: #ffffff;
     font-size: 14px;
     line-height: 14px;
   }
+
+  @media (min-width: @desktop-width) {
+    background-color: #f2f2f2;
+  }
 }
 
+@media (min-width: @tablet-width) {
+  .stats-example__description-size {
+    width: 112px;
+  }
+}
 
 @media (min-width: @tablet-width) {
   .stats-example__list {
