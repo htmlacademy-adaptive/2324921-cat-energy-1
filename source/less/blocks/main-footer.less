@@ -10,7 +10,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 20px;
+  padding: 40px 20px;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
@@ -28,57 +28,58 @@
 }
 
 .main-footer__logo-wrapper {
-  min-height: 44px;
-  border-bottom: 1px solid #d9d9d9;
+  @media (max-width: @mobile-width-only) {
+    min-height: 44px;
+  }
 }
 
 .main-footer__social {
-  width: 132px;
+  @media (max-width: @mobile-width-only) {
+    width: 100%;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .social__list {
+  width: 134px;
+  min-height: 64px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .main-footer__copyright {
   width: 100%;
-  min-height: 34px;
+  min-height: 54px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 
   @media (min-width: @tablet-width) {
-    width: 200px;
+    width: 168px;
+    flex-wrap: nowrap;
   }
 }
 
-.copyright {
-  position: relative;
-
-  // &::after {
-  //   position: absolute;
-  //   content: "";
-  //   bottom: 58px;
-  //   width: 100%;
-  //   height: 1px;
-  //   background-color: #d9d9d9;
-  // }
+.social__item {
+  padding: 5px;
 }
 
 .copyright__link {
-  position: relative;
-  min-width: 114px;
+  min-width: 145px;
   color: #444444;
   font-family: "Lato", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
   text-align: left;
+}
 
-  &::after {
-    position: absolute;
-    content: url("../img/social-icons/html-academy-logo.svg");
-    top: -6px;
-    right: -166px;
-  }
+.copyright__link-logo {
+  height: 34px;
 }
