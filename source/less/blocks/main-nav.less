@@ -66,20 +66,6 @@
   &:last-child {
     margin-right: 0;
   }
-
-  // &--active {
-  //   position: relative;
-
-  //   &::after {
-  //     content: "";
-  //     position: absolute;
-  //     bottom: 9px;
-  //     right: 0;
-  //     left: 0;
-  //     height: 2px;
-  //     background-color: @accent-color;
-  //   }
-  // }
 }
 
 .site-list__item-current {
@@ -95,10 +81,18 @@
       height: 2px;
       background-color: @accent-color;
     }
+  }
 
-    // @media (min-width: @desktop-width) {
-    //   background-color: #ffffff;
-    // }
+  &--bg-index::after {
+    @media (min-width: @desktop-width) {
+      background-color: @text-color;
+    }
+  }
+}
+
+.site-list__link--bg-index {
+  @media (min-width: @desktop-width) {
+    color: @text-color;
   }
 }
 
