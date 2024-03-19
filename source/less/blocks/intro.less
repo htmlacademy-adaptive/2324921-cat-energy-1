@@ -1,5 +1,4 @@
 .intro {
-
   margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
@@ -11,12 +10,8 @@
   @media (min-width: @desktop-width) {
     margin-bottom: 85px;
   }
-}
 
-.intro--bg-index {
-  // position: relative;
-
-  &::after {
+  &--bg-index::after {
     @media (min-width: @desktop-width) {
       content: "";
       position: absolute;
@@ -32,18 +27,6 @@
       // top: -77px;
       right: 0;
     }
-  }
-}
-
-.intro::after {
-  @media (min-width: @desktop-width) {
-    // width: 720px;
-    // position: absolute;
-    // height: 111%;
-    // top: -77px;
-    // right: 0;
-    // background-color: @accent-color
-    /* margin: 0 auto; */
   }
 }
 
@@ -94,16 +77,6 @@
     height: 303px;
     z-index: 2;
   }
-
-  // @media (min-width: @desktop-width) {
-  //   content: "";
-  //   position: absolute;
-  //   top: 0;
-  //   background-color: @accent-color;
-  //   width: 100%;
-  //   height: 303px;
-  //   z-index: 2;
-  // }
 }
 
 .intro__title {
