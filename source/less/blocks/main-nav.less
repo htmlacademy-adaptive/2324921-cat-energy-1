@@ -24,7 +24,7 @@
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
-  border-top: 1px solid #e6e6e6;
+  // border-top: 1px solid #e6e6e6;
 
   @media (min-width: @tablet-width) {
     border: none;
@@ -58,6 +58,7 @@
 
 .site-list__item {
   z-index: 10;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     margin-right: 32px;
@@ -65,6 +66,18 @@
 
   &:last-child {
     margin-right: 0;
+  }
+}
+
+.site-list__item::before {
+  @media (max-width: @mobile-width-only) {
+    position: absolute;
+    content: "";
+    width: 1000%;
+    bottom: 0;
+    left: -500%;
+    height: 1px;
+    background-color: #e6e6e6;
   }
 }
 

@@ -22,6 +22,23 @@
   }
 }
 
+.main-header--opened,
+.main-header--closed-line {
+  // overflow: hidden;
+
+  &::before {
+    @media (max-width: @mobile-width-only) {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      height: 1px;
+      width: 500%;
+      left: -100%;
+      background-color: #ebebeb;
+    }
+  }
+}
+
 .main-header__logo-wrapper {
   display: flex;
   align-items: center;
@@ -119,7 +136,7 @@
   .main-header--opened .main-nav__wrapper {
     width: 320px;
     position: absolute;
-    top: 64px;
+    top: 66px;
     right: 0;
     z-index: 10;
     text-align: center;
@@ -149,6 +166,7 @@
     text-align: center;
   }
 }
+
 
 .main-header--opened .main-header__toggle {
   // right: 0;
