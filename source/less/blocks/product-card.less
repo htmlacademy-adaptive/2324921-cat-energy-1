@@ -102,11 +102,20 @@
   }
 }
 
+.product-card-extra__link {
+  position: relative;
+}
+
 .product-card-extra__link::before {
+  content: url("../img/product-card/icon-plus-mobile.svg");
+  position: absolute;
+  bottom: 40px;
+  right: 100px;
+  width: 30px;
+
   @media (min-width: @tablet-width) {
-    content: url("../img/product-card/icon-extra-plus.svg");
-    position: absolute;
-    top: 0;
+    content: url("../img/product-card/icon-plus-tablet.svg");
+    bottom: 115px;
     right: 54px;
     width: 60px;
   }
