@@ -17,14 +17,18 @@
 }
 
 .stats-example::after {
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     content: "";
     position: absolute;
     bottom: 0;
     background-color: @extra-button-color;
     // height: 462px;
-    height: 73%;
+    height: 50%;
     width: 1500%;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 73%;
   }
 }
 
@@ -236,8 +240,6 @@
 }
 
 .stats-example__slider-wrapper {
-  z-index: 2;
-
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: center;
@@ -249,5 +251,6 @@
 @media (min-width: @tablet-width) {
   .stats-example__slider {
     width: 560px;
+    z-index: 2;
   }
 }
