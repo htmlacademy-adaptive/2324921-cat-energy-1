@@ -14,18 +14,20 @@
   <!-- Шапка -->
   <header class="main-header main-header--closed main-header--nojs main-header--closed-line">
     <!-- Добавить допкласс main-nav--opened для открытия меню без js-->
-    <div class="main-header__logo-wrapper">
-      <a class="main-header__logo" href="index.html">
-        <img src="img/main-logo-mobile.svg" width="33" height="38" alt="Логотип canergy">
-      </a>
-      <a class="main-header__logo-text" href="index.html">
-        <img src="img/main-logo-text.svg" width="101" height="18" alt="Заголовок логотипа">
-      </a>
+    <div class="main-header__wrapper">
+      <div class="main-header__logo-wrapper">
+        <a class="main-header__logo" href="index.html">
+          <img src="img/main-logo-mobile.svg" width="33" height="38" alt="Логотип canergy">
+        </a>
+        <a class="main-header__logo-text main-logo-text" href="index.html">
+          <img src="img/main-logo-text.svg" width="101" height="18" alt="Заголовок логотипа">
+        </a>
+      </div>
+      <button class="main-header__toggle" type="button">
+        <span class="visually-hidden"> Открыть меню
+        </span>
+      </button>
     </div>
-    <button class="main-header__toggle" type="button">
-      <span class="visually-hidden"> Открыть меню
-      </span>
-    </button>
     <nav class="main-nav">
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
@@ -45,6 +47,7 @@
         </ul>
       </div>
     </nav>
+    </div>
   </header>
 
   <!-- Главная 'Каталог продукции' -->

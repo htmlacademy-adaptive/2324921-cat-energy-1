@@ -1,7 +1,3 @@
-.main-nav {
-  width: auto;
-}
-
 .main-nav__wrapper {
   @media (min-width: @tablet-width) {
     width: 478px;
@@ -22,7 +18,7 @@
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
-  // border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
 
   @media (min-width: @tablet-width) {
     border: none;
@@ -64,18 +60,6 @@
 
   &:last-child {
     margin-right: 0;
-  }
-}
-
-.site-list__item::before {
-  @media (max-width: @mobile-width-only) {
-    position: absolute;
-    content: "";
-    width: 1000%;
-    bottom: 0;
-    left: -500%;
-    height: 1px;
-    background-color: #e6e6e6;
   }
 }
 

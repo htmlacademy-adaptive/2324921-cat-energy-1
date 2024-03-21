@@ -1,37 +1,4 @@
 .main-header {
-
-  position: relative;
-  //   width: 320px;
-  //   background-color: @text-color;
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: space-between;
-  //   padding: 0 20px;
-  //   align-items: center;
-  //   margin: 0 auto;
-
-  //   @media (min-width: @tablet-width) {
-  //     display: flex;
-  //     flex-direction: row;
-  //     width: 768px;
-  //     padding: 0 30px;
-  //   }
-
-  //   @media (min-width: @desktop-width) {
-  //     width: 1300px;
-  //     padding: 0 40px;
-  //   }
-}
-
-.main-header__wrapper {
-  position: relative;
-  width: 320px;
-  background-color: @text-color;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 0 20px;
-  align-items: center;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
@@ -48,21 +15,24 @@
 }
 
 .main-header--opened,
-.main-header--closed-line .main-header__wrapper {
-  // overflow: hidden;
+.main-header--closed-line {
+  @media (max-width: @mobile-width-only) {
+    border-bottom: 1px solid #e6e6e6;
+  }
+}
 
-  &::before {
-    @media (max-width: @mobile-width-only) {
-      content: "";
-      position: absolute;
-      bottom: 1px;
-      height: 1px;
-      width: 500%;
-      left: -100%;
-      background-color: #ebebeb;
-      z-index: 1;
-      // overflow: hidden;
-    }
+.main-header__wrapper {
+  @media (max-width: @mobile-width-only) {
+    position: relative;
+    width: 320px;
+    background-color: @text-color;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    display: flex;
   }
 }
 
@@ -161,14 +131,13 @@
   }
 
   .main-header--opened .main-nav__wrapper {
-    width: 320px;
+    width: 100%;
     position: absolute;
-    top: 65px;
+    top: 67px;
     right: 0;
     z-index: 10;
     text-align: center;
     background-color: #ffffff;
-    overflow: hidden;
   }
 
   .main-header--closed .main-nav__wrapper {
@@ -197,7 +166,6 @@
 
 
 .main-header--opened .main-header__toggle {
-  // right: 0;
   background-color: #ffffff;
 
   &::before,
