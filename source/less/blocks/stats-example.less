@@ -9,10 +9,12 @@
   @media (min-width: @tablet-width) {
     border-top: 1px solid #e6e6e6;
     background-color: #ffffff;
+    padding-bottom: 100px;
   }
 
   @media (min-width: @desktop-width) {
     border: none;
+    padding-bottom: 75px;
   }
 }
 
@@ -48,7 +50,8 @@
     padding: 0 40px;
     display: grid;
     justify-content: space-between;
-    grid-template-columns: 433px auto;
+    grid-template-columns: 433px 244px auto;
+    // grid-template-rows: ;
   }
 }
 
@@ -105,7 +108,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 0 100px;
+    // margin: 0 0 100px;
   }
 
   @media (min-width: @desktop-width) {
@@ -148,9 +151,46 @@
   }
 }
 
+.stats-example__price-wrapper {
+  @media (max-width: @mobile-width-only) {
+    margin-left: 3px;
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: flex-end;
+    width: 180px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    width: 330px;
+    justify-content: space-between;
+  }
+}
+
+.stats-example__text-expenses {
+  margin: 0;
+}
+
+.stats-example__text-price {
+  margin: 0 0 0 3px;
+
+  @media (max-width: @mobile-width-only) {
+    margin-left: 3px;
+  }
+}
 
 .stats-example__text {
-  margin: 34px 0 0;
+  // margin: 34px 0 0;
+  // margin: 0;
   color: @title-color;
   font-family: @font-title;
   font-size: 14px;
@@ -161,13 +201,13 @@
   z-index: 2;
 
   @media (min-width: @tablet-width) {
-    width: 130px;
+    // width: 130px;
     text-align: right;
   }
 
   @media (min-width: @desktop-width) {
-    width: 330px;
-    text-align: left;
+    // width: 330px;
+    // text-align: left;
   }
 }
 
@@ -243,7 +283,7 @@
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: center;
-    grid-column: 2/3;
+    grid-column: 2/4;
     grid-row: 1/4;
   }
 }
