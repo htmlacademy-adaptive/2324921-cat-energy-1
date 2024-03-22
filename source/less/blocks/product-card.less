@@ -1,4 +1,4 @@
-.catalog__product-card {
+.catalog__product-card-list {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,8 +21,9 @@
   }
 }
 
-.product-card__item {
-  display: flex;
+.product-card__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   justify-content: space-between;
   align-items: center;
   min-width: 140px;
@@ -55,13 +56,19 @@
   }
 }
 
-.product-card__info,
-.product-card__description {
+.product-card__info {
   margin: 0;
+  text-align: left;
 }
 
-.product-card__list {
+.product-card__description {
+  margin: 0;
+  text-align: right;
+}
+
+.product-card__item {
   width: 100%;
+  display: grid;
   color: @paragraph-color;
   font-family: @font-text;
   font-size: 12px;
