@@ -1,10 +1,8 @@
 .catalog__product-card-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  justify-content: center;
   // border-top: 2px solid #ebebeb;
-  padding: 20px 0 42px;
+  // padding: 20px 0 42px;
 
   // @media (min-width: @tablet-width), (min-width: @desktop-width) {
   //   background-color: @extra-button-color;
@@ -13,8 +11,6 @@
 }
 
 .product-card {
-  border-top: 2px solid #ebebeb;
-
   @media (min-width: @tablet-width), (min-width: @desktop-width) {
     background-color: @extra-button-color;
     padding: 10px 37px 40px;
@@ -33,13 +29,40 @@
   }
 }
 
-.product-card__link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.product-card__item {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto 14px auto 21px auto;
+  padding: 20px 0 42px;
+  border-top: 2px solid #ebebeb;
+
+  @media (min-width: @tablet-width) {
+    //
+  }
+
+  @media (min-width: @desktop-width) {
+    //
+  }
 }
 
-.product-card__title {
+
+.product-card__link {
+  grid-row: 1/4;
+  margin-top: 10px;
+  width: 86px;
+
+  @media (min-width: @tablet-width) {
+    //
+  }
+
+  @media (min-width: @desktop-width) {
+    //
+  }
+}
+
+.product-card__link-text {
+  margin: 0;
   color: #222222;
   font-family: @font-title;
   font-size: 16px;
@@ -47,6 +70,8 @@
   line-height: 20px;
   text-align: left;
   text-transform: uppercase;
+  width: 76px;
+  grid-row: 1/2;
 
   @media (min-width: @tablet-width) {
     width: 135px;
@@ -56,19 +81,13 @@
   }
 }
 
+.product-card__content-wrapper {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+
+.product-card__description,
 .product-card__info {
-  margin: 0;
-  text-align: left;
-}
-
-.product-card__description {
-  margin: 0;
-  text-align: right;
-}
-
-.product-card__item {
-  width: 100%;
-  display: grid;
   color: @paragraph-color;
   font-family: @font-text;
   font-size: 12px;
@@ -76,7 +95,27 @@
   line-height: 16px;
   text-align: center;
   margin: 0;
-  margin-bottom: 17px;
+}
+
+.product-card__info {
+  text-align: left;
+}
+
+.product-card__description {
+  text-align: right;
+}
+
+.product-card__button {
+  grid-column: 1/3;
+  grid-row: 5/6;
+
+  @media (min-width: @tablet-width) {
+    //
+  }
+
+  @media (min-width: @desktop-width) {
+    //
+  }
 }
 
 // Показать еще больше товаров
