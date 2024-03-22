@@ -9,24 +9,21 @@
 
   @media (min-width: @desktop-width) {
     padding-bottom: 82px;
-    position: relative;
+    position: static;
   }
 
   &--bg-index::after {
     @media (min-width: @desktop-width) {
       content: "";
       position: absolute;
-      // top: 0;
+      top: 0;
+      width: 50%;
+      height: 790px;
+      right: 0;
       background-image: linear-gradient(rgba(104, 183, 56, 0.85),
       rgba(104, 183, 56, 0.85)),
-        url("../img/photo-cat-intro.jpg");
+        url("../img/bg-index-desktop-cat.jpg");
       background-size: cover;
-      background-position: left;
-      width: 50%;
-      // height: 786px;
-      height: 100%;
-      top: -77px;
-      right: 0;
     }
   }
 }
