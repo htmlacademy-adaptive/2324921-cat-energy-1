@@ -69,6 +69,7 @@
 
 .product-card__item:last-child {
   background-color: #ffffff;
+  margin-top: 76px;
 }
 
 .product-card__link {
@@ -163,10 +164,6 @@
   @media (min-width: @tablet-width) {
     grid-row: 7/8;
   }
-
-  @media (min-width: @desktop-width) {
-    //
-  }
 }
 
 // Показать еще больше товаров
@@ -186,14 +183,20 @@
 }
 
 .product-card-extra__content-wrapper {
+  margin-bottom: 22px;
+
   @media (min-width: @tablet-width) {
     width: 168px;
     min-height: 218px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    margin-bottom: 64px;
+    margin-bottom: 82px;
     position: relative;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 90px;
   }
 }
 
@@ -210,9 +213,13 @@
 
   @media (min-width: @tablet-width) {
     content: url("../img/product-card/icon-plus-tablet.svg");
-    bottom: 80px;
+    bottom: 110px;
     right: 54px;
     width: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    bottom: 100px;
   }
 }
 
@@ -229,7 +236,11 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
-    margin-bottom: 24px;
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 26px;
   }
 }
 
@@ -240,7 +251,7 @@
   font-weight: 400;
   line-height: 16px;
   text-align: center;
-  margin: 0 0 22px;
+  margin: 0;
 }
 
 .product-card-extra__button {
