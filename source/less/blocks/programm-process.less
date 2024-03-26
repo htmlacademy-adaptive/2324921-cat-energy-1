@@ -35,17 +35,17 @@
 }
 
 .programm-process__list {
+  .list-reset;
+
   @media (min-width: @tablet-width) {
     display: grid;
-    // grid-template-columns: repeat(2, 1fr);
-    grid-template-columns: repeat(2, 248px); //Взял пока среднее значение
-    gap: 37px 137px; //Взял пока среднее значение
+    grid-template-columns: repeat(2, 248px);
+    gap: 37px 137px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 1fr);
-    // grid-template-columns: 230px 246px 248px 250px;
-    gap: 70px; //Здесь будут марджины
+    gap: 70px;
   }
 }
 
