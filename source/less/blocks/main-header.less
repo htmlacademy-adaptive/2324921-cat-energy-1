@@ -104,15 +104,15 @@
   right: 0;
   width: 24px;
   height: 2px;
-  background-color: #000000;
-  box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+  background-color: @title-color;
+  box-shadow: 0 8px 0 0 @title-color, 0 16px 0 0 @title-color;
 }
 
 .main-header--closed .main-header__toggle:active::before {
-  background-color: fade(#000000, 30%);
+  background-color: fade(@title-color, 30%);
   box-shadow:
-    0 8px 0 0 fade(#000000, 30%),
-    0 16px 0 0 fade(#000000, 30%);
+    0 8px 0 0 fade(@title-color, 30%),
+    0 16px 0 0 fade(@title-color, 30%);
 }
 
 @media (max-width: @mobile-width-only) {
@@ -176,7 +176,7 @@
     right: 0;
     width: 24px;
     height: 1px;
-    background-color: #000000;
+    background-color: @title-color;
   }
 
   &::before {

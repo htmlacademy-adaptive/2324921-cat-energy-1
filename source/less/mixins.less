@@ -1,0 +1,19 @@
+// Сброс маркеров у списков (ul)
+.list-reset () {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// Декоративные полосы у заголовков на десктопной версии
+.decoration-line () {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 22px;
+    width: 500%;
+    height: 2px;
+    background-color: @accent-color;
+  }
+}
