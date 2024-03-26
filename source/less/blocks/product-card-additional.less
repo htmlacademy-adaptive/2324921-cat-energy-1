@@ -57,32 +57,10 @@
 .product-card-additional-line {
   position: relative;
   overflow: hidden;
+
+  .decoration-line-mobile;
 }
 
-.product-card-additional-line::after {
-  @media (max-width: @mobile-width-only) {
-    content: "";
-    position: absolute;
-    top: 39px;
-    left: 50%;
-    width: 1000%;
-    height: 2px;
-    background-color: @accent-color;
-  }
-
-  @media (min-width: @tablet-width) {
-    content: "";
-    position: absolute;
-    top: 45px;
-    width: 100%;
-    height: 2px;
-    background-color: @accent-color;
-  }
-
-  @media (min-width: @desktop-width) {
-    content: none;
-  }
-}
 
 .product-card-additional__container {
   width: 320px;
