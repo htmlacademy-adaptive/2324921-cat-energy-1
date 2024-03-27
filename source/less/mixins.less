@@ -1,13 +1,12 @@
 // Сброс маркеров у списков (ul)
-.list-reset () {
+.list-reset() {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 // Декоративные полосы у заголовков на мобильной и планшетной версиях
-
-.decoration-line-mobile () {
+.decoration-line-mobile() {
   &::after {
     @media (max-width: @mobile-width-only) {
       content: "";
@@ -35,7 +34,7 @@
 }
 
 // Декоративные полосы у заголовков на десктопной версии
-.decoration-line () {
+.decoration-line() {
   &::before,
   &::after {
     content: "";
