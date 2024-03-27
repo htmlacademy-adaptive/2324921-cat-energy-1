@@ -12,7 +12,8 @@
   <!-- <link rel="icon" href="favicon.ico"> 32×32 -->
   <!-- <link rel="icon" type="image/svg+xml" href="images/favicons/icon.svg"> -->
   <link rel="apple-touch-icon" href="images/favicons/apple.png">
-  <link rel="manifest" href="manifest.webmanifest"></head>
+  <link rel="manifest" href="manifest.webmanifest">
+</head>
 
 <body class="page__body">
 
@@ -22,7 +23,11 @@
     <div class="main-header__wrapper">
       <div class="main-header__logo-wrapper">
         <a class="main-header__logo" href="index.html">
-          <img src="img/main-logo-mobile.svg" width="33" height="38" alt="Логотип canergy">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/logotypes/main-logo-desktop.svg" width="70" height="59">
+            <source media="(min-width: 768px)" width="60" height="50" srcset="img/logotypes/main-logo-tablet.svg">
+            <img src="img/logotypes/main-logo-mobile.svg" width="33" height="38" alt="Логотип canergy">
+          </picture>
         </a>
         <a class="main-header__logo-text main-logo-text" href="index.html">
           <img src="img/main-logo-text.svg" width="101" height="18" alt="Заголовок логотипа">
@@ -65,9 +70,9 @@
         <ul class="catalog__product-card-list product-card">
 
           <li class="product-card__item">
-              <a class="product-card__link" href="#">
-                <img src="img/product-card/chicken-500g.png" width="68" height="86" alt="Питание для котиков с курицей">
-              </a>
+            <a class="product-card__link" href="#">
+              <img src="img/product-card/chicken-500g.png" width="68" height="86" alt="Питание для котиков с курицей">
+            </a>
             <a class="product-card__link-text" href="#">Cat Energy PRO 500 г
             </a>
             <div class="product-card__content-wrapper">

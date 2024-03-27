@@ -23,7 +23,11 @@
     <div class="main-header__wrapper">
       <div class="main-header__logo-wrapper">
         <a class="main-header__logo" href="index.html">
-          <img src="img/main-logo-mobile.svg" width="33" height="38" alt="Логотип canergy">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/logotypes/main-logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logotypes/main-logo-tablet.svg">
+            <img src="img/logotypes/main-logo-mobile.svg" width="33" height="38" alt="Логотип canergy">
+          </picture>
         </a>
         <a class="main-header__logo-text main-logo-text" href="index.html">
           <img src="img/main-logo-text.svg" width="101" height="18" alt="Заголовок логотипа">
