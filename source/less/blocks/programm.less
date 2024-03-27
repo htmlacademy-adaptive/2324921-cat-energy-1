@@ -8,14 +8,25 @@
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    margin: 0 auto;
+    width: 768px;
     padding: 0 30px;
-    min-width: 768px;
+    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 110px;
-    min-width: 1440px;
+    width: 1300px;
+    padding: 0 40px;
+  }
+}
+
+.programm__list {
+  .list-reset;
+  display: grid;
+  gap: 20px;
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(2, 570px);
+    gap: 20px 80px;
   }
 }
 
@@ -23,13 +34,24 @@
   position: relative;
   padding: 30px 20px 22px 20px;
   background-color: #f2f2f2;
-  margin-bottom: 20px;
 
   &--slim::before {
     position: absolute;
     content: url("../img/programms/cat-sit.svg");
     top: 21px;
     left: 20px;
+
+    @media (min-width: @tablet-width) {
+      content: url("../img/programms/cat-sit-tablet.svg");
+      top: 92px;
+      left: 446px;
+    }
+
+    @media (min-width: @desktop-width) {
+      content: url("../img/programms/cat-sit-desktop.svg");
+      top: 41px;
+      left: 52px;
+    }
   }
 
   &--mass::before {
@@ -37,17 +59,19 @@
     content: url("../img/programms/cat-stay.svg");
     top: 24px;
     left: 12px;
-  }
 
-  // &::after {
-  //   position: absolute;
-  //   content: "";
-  //   bottom: 58px;
-  //   left: 20px;
-  //   width: 240px;
-  //   height: 1px;
-  //   background-color: #d9d9d9;
-  // }
+    @media (min-width: @tablet-width) {
+      content: url("../img/programms/cat-stay-tablet.svg");
+      top: 92px;
+      left: 420px;
+    }
+
+    @media (min-width: @desktop-width) {
+      content: url("../img/programms/cat-stay-desktop.svg");
+      top: 41px;
+      left: 32px;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     padding: 77px 63px 57px 52px;
@@ -84,11 +108,16 @@
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
+    width: 340px;
+    margin: 0 0 30px 0;
     text-align: left;
+    font-size: 36px;
+    line-height: 36px;
   }
 
   @media (min-width: @desktop-width) {
     text-align: center;
+    margin: 0 0 73px 85px;
   }
 }
 
@@ -104,8 +133,15 @@
   text-align: left;
 
   @media (min-width: @tablet-width) {
-    min-width: 340px;
+    width: 340px;
     height: 96px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 457px;
+    margin-bottom: 23px;
   }
 }
 
@@ -119,6 +155,11 @@
   text-align: left;
   text-transform: uppercase;
 
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   &::after {
     content: url("../img/programms/icon-arrow.svg");
     margin-left: 15px;
@@ -130,24 +171,5 @@
 
   &:active {
     opacity: 0.3;
-  }
-}
-
-// @media (min-width: @tablet-width) {
-//   .programm__list {
-//     padding: 77px 63px 57px 52px;
-//   }
-// }
-
-// @media (min-width: @desktop-width) {
-//   .programm__list {
-//   }
-// }
-
-@media (min-width: @desktop-width) {
-  .programm__list {
-    display: grid;
-    grid-template-columns: repeat(2, 570px);
-    gap: 80px;
   }
 }

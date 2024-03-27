@@ -6,15 +6,7 @@
 }
 
 body {
-  background-color: #e5e5e5;
-  // width: 320px;
   margin: 0 auto;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
 }
 
 a {
@@ -26,4 +18,27 @@ img {
   display: block;
   min-width: 100%;
   height: auto;
+}
+
+.button {
+  padding: 10px 20px;
+  width: 100%;
+  min-height: 40px;
+  background-color: @accent-color;
+  color: @text-color;
+  font-family: @font-title;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:hover {
+    background-image: #5eaa2f;
+  }
+
+  &:active {
+    background-image: #5eaa2f;
+    opacity: 0.6;
+  }
 }

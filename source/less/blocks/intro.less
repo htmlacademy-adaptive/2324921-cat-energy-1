@@ -1,30 +1,30 @@
 .intro {
-  position: relative;
-  background-image: url("../img/photo-cat-intro.jpg");
-  background-repeat: no-repeat;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 
   @media (min-width: @tablet-width) {
     background-image: none;
     background-color: @text-color;
+    margin: 0;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 85px;
+    padding-bottom: 82px;
+    position: static;
   }
-}
 
-.intro::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  background-color: @accent-color;
-  width: 100%;
-  height: 302px;
-
-  @media (min-width: @tablet-width) {
-    background-color: @text-color;
-    width: 100%;
+  &--bg-index::after {
+    @media (min-width: @desktop-width) {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 50%;
+      height: 790px;
+      right: 0;
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85),
+      rgba(104, 183, 56, 0.85)),
+        url("../img/bg-index-desktop-cat.jpg");
+      background-size: cover;
+    }
   }
 }
 
@@ -35,21 +35,40 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+
+  @media (max-width: @mobile-width-only) {
+    background-image: url("../img/photo-cat-intro.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+  }
 
   @media (min-width: @tablet-width) {
     width: 768px;
     padding: 0 30px;
     display: grid;
-    // grid-template-rows: max-content;
     grid-template-columns: 60px auto;
+    grid-template-rows: 65px auto 40px auto 50px auto;
     justify-items: start;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 60px max-content auto;
+    width: 1300px;
+    padding: 30px 40px 0;
+    grid-template-columns: 60px 370px 50px max-content;
+    grid-template-rows: 100px auto 40px auto 50px auto;
+  }
+}
 
-    width: 1440px;
-    padding: 30px 110px 0;
+.intro__wrapper::after {
+  @media (max-width: @mobile-width-only) {
+    content: "";
+    position: absolute;
+    top: 0;
+    background-color: @accent-color-transparent;
+    width: 100%;
+    height: 303px;
+    z-index: 2;
   }
 }
 
@@ -60,21 +79,22 @@
   font-weight: 400;
   line-height: 36px;
   text-align: center;
-  z-index: 1;
+  z-index: 5;
   margin-top: 27px;
 
 
   @media (min-width: @tablet-width) {
-    grid-column: 2/3;
+    grid-row: 2/3;
+    grid-column: 2/4;
     color: @title-color;
     font-size: 60px;
     line-height: 60px;
     text-align: left;
-    margin: 65px 0 0;
+    margin: 0;
   }
 
   @media (min-width: @desktop-width) {
-    grid-row: 1/2;
+    grid-row: 2/3;
     grid-column: 2/4;
     margin: 0;
   }
@@ -88,66 +108,55 @@
   line-height: 14px;
   text-align: center;
   text-transform: uppercase;
-  z-index: 1;
-  margin-bottom: 25px;
+  z-index: 5;
 
   @media (min-width: @tablet-width) {
-    grid-row: 2/3;
-    grid-column: 2/3;
+    grid-column: 2/4;
+    grid-row: 4/5;
     color: @title-color;
     font-size: 20px;
     line-height: 20px;
+    margin: 0;
   }
 
   @media (min-width: @desktop-width) {
     grid-column: 2/4;
+    grid-row: 4/5;
     margin: 0;
   }
 }
 
 .intro__img {
-  z-index: 1;
+  z-index: 5;
 
   @media (min-width: @tablet-width) {
-    grid-row: 3/5;
     grid-column: 1/2;
+    grid-row: 5/8;
     width: 709px;
-    height: 609px;
+    margin-top: 20px;
   }
 
   @media (min-width: @desktop-width) {
     // background-color: #68b738;
-    grid-column: 3/4;
-    grid-row: 1/4;
+    grid-column: 3/5;
+    grid-row: 1/8;
     min-width: 552px;
-    height: 499px;
+    margin: 0;
   }
 }
 
 .intro__button {
-  padding: 10px 20px;
-  width: 100%;
-  min-height: 40px;
-  background-color: @accent-color;
-  color: @text-color;
-  font-family: @font-title;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
-  text-align: center;
-  text-transform: uppercase;
-
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 26px;
-    text-align: center;
-    grid-row: 3/4;
+    grid-row: 6/7;
     grid-column: 2/3;
-    background: #68b738;
-    z-index: 2;
+    z-index: 5;
     width: 244px;
-    padding: 10px 20px;
     align-self: start;
-    margin-top: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row: 6/7;
   }
 }

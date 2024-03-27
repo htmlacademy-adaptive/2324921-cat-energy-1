@@ -1,0 +1,48 @@
+// Сброс маркеров у списков (ul)
+.list-reset () {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// Декоративные полосы у заголовков на мобильной и планшетной версиях
+
+.decoration-line-mobile () {
+  &::after {
+    @media (max-width: @mobile-width-only) {
+      content: "";
+      position: absolute;
+      top: 39px;
+      left: 50%;
+      width: 1000%;
+      height: 2px;
+      background-color: @accent-color;
+    }
+
+    @media (min-width: @tablet-width) {
+      content: "";
+      position: absolute;
+      top: 45px;
+      width: 100%;
+      height: 2px;
+      background-color: @accent-color;
+    }
+
+    @media (min-width: @desktop-width) {
+      content: none;
+    }
+  }
+}
+
+// Декоративные полосы у заголовков на десктопной версии
+.decoration-line () {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 22px;
+    width: 500%;
+    height: 1px;
+    background-color: @accent-color;
+  }
+}

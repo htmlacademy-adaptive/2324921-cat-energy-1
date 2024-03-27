@@ -1,35 +1,48 @@
 
-.invitation {
-  position: relative;
-}
-
 .invitation__wrapper {
   width: 320px;
-  background-color: @extra-button-color;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 26px 20px;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    width: 708px;
+    width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    width: 1300px;
+  }
+}
+
+.invitation__container {
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 95px;
+  }
+}
+
+.invitation__content-wrapper {
+  width: 320px;
+  margin: 0;
+  padding: 26px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
     min-height: 200px;
     padding: 60px 70px;
   }
 
   @media (min-width: @desktop-width) {
-    position: absolute;
     width: 565px;
     min-height: 200px;
-    top: 95px;
-    left: 110px;
     background-color: @text-color;
   }
 }
 
 .invitation__subtitle {
-  // min-width: 170px;
   margin: 0;
   color: #111111;
   font-family: @font-title;
@@ -42,10 +55,14 @@
   @media (min-width: @tablet-width) {
     width: 163px;
     height: 78px;
+    font-size: 20px;
+    line-height: 26px;
   }
 }
 
-.invitation__content-wrapper {
+.invitation__text-wrapper {
+  min-width: 138px;
+
   @media (min-width: @tablet-width) {
     width: 157px;
     min-height: 80px;
@@ -54,9 +71,14 @@
     flex-direction: column;
     justify-content: space-between;
   }
+
+  @media (min-width: @desktop-width) {
+    align-items: start;
+  }
 }
 
-.invitation__text {
+.invitation__text,
+.invitation__text-city {
   margin: 0;
   color: @paragraph-color;
   font-family: @font-text;
@@ -66,16 +88,12 @@
 
   @media (min-width: @tablet-width) {
     text-align: right;
+    font-size: 16px;
   }
-}
 
-.invitation__text-city {
-  color: @paragraph-color;
-  font-family: @font-text;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-  text-align: left;
+  @media (min-width: @desktop-width) {
+    text-align: left;
+  }
 }
 
 .invitation__map-wrapper iframe {
