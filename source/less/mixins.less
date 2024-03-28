@@ -1,13 +1,24 @@
 // Сброс маркеров у списков (ul)
-.list-reset () {
+.list-reset() {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-// Декоративные полосы у заголовков на мобильной и планшетной версиях
+// Размер шрифтов для мобильной версии
+.fonts-text-mobile() {
+  font-size: 14px;
+  line-height: 18px;
+}
 
-.decoration-line-mobile () {
+// Размер шрифтов для планшетной версии
+.fonts-text-tablet() {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+// Декоративные полосы у заголовков на мобильной и планшетной версиях
+.decoration-line-mobile() {
   &::after {
     @media (max-width: @mobile-width-only) {
       content: "";
@@ -35,7 +46,7 @@
 }
 
 // Декоративные полосы у заголовков на десктопной версии
-.decoration-line () {
+.decoration-line() {
   &::before,
   &::after {
     content: "";
