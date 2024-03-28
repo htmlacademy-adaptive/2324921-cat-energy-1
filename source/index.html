@@ -23,12 +23,14 @@
     <div class="main-header__wrapper">
       <div class="main-header__logo-wrapper">
         <a class="main-header__logo" href="index.html">
+
           <picture>
             <source media="(min-width: 1300px)" width="70" height="59" srcset="img/logotypes/main-logo-desktop.svg">
             <source media="(min-width: 768px)" width="60" height="50" srcset="img/logotypes/main-logo-tablet.svg">
             <img src="img/logotypes/main-logo-mobile.svg" width="33" height="38"
               alt="Логотип Cat energy - стилизованный кот в костюме супергероя">
           </picture>
+
         </a>
         <a class="main-header__logo-text main-logo-text" href="index.html">
           <img src="img/logotypes/main-logo-text.svg" width="101" height="18" alt="Текст-заголовок логотипа Cat energy">
@@ -73,11 +75,14 @@
         </p>
         <picture>
           <source media="(min-width: 1300px)"
-            srcset="img/index-photo-product-desktop.png 1x, img/index-photo-product-desktop@2x.png 2x">
+            srcset="img/index-photo-product-desktop@1x.png 1x, img/index-photo-product-desktop@2x.png 2x" width="552"
+            height="499">
           <source media="(min-width: 768px)"
-            srcset="img/index-photo-product-tablet.jpg 1x, img/index-photo-product-tablet@2x.jpg 2x">
+            srcset="img/index-photo-product-tablet@1x.jpg 1x, img/index-photo-product-tablet@2x.jpg 2x" width="709"
+            height="609">
           <img class="intro__img" src="img/index-photo-product-mobile.png"
-            srcset="img/index-photo-product-mobile.png 1x, img/index-photo-product-mobile@2x.png 2x" width="280" height="270" alt="Питание для котов cat energy">
+            srcset="img/index-photo-product-mobile@1x.png 1x, img/index-photo-product-mobile@2x.png 2x" width="280"
+            height="270" alt="Питание для котов cat energy">
         </picture>
         <a class="button intro__button" href="#">подобрать программу
         </a>
@@ -183,8 +188,15 @@
           </p>
         </div>
         <div class="stats-example__slider-wrapper">
-          <img class="stats-example__slider stats-example__slider--images" width="280" height="260"
-            src="img/cat-slider-tablet.png" alt="Толстый и худой котик">
+
+          <picture>
+            <source media="(min-width: 768px)"
+              srcset="img/index/cat-slider-tablet@1x.png 1x, img/index/cat-slider-tablet@2x.png 2x" width="560" height="512">
+            <img class="stats-example__slider stats-example__slider--images" src="img/index/cat-slider-mobile@1x.png 1x"
+              srcset="img/index/cat-slider-mobile@1x.png 1x, img/index/cat-slider-mobile@2x.png 2x" width="280" height="260"
+              alt="Толстый и худой котик">
+          </picture>
+
         </div>
       </div>
     </section>
