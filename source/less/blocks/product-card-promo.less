@@ -1,13 +1,12 @@
 // Promo
 .product-card-promo {
-  background-image: url("../img/photo-promo.jpg");
+  background-image: url("../img/catalog/photo-cat-promo@1x.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
-  @media (min-width: @desktop-width) {
-    margin: 0;
-    grid-column: 2/3;
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/catalog/photo-cat-promo@2x.jpg");
   }
 }
 
