@@ -28,7 +28,7 @@
       @media (min-resolution: 2dppx) {
         background-image:  linear-gradient(rgba(104, 183, 56, 0.85),
         rgba(104, 183, 56, 0.85)),
-          url("../img/bg-index-cat-desktop @2x.jpg");
+          url("../img/bg-index-cat-desktop@2x.jpg");
         // background-size: 720px auto;
         background-size: cover;
       }
@@ -139,40 +139,21 @@
   }
 }
 
-.intro__img {
+picture {
   z-index: 5;
   margin-bottom: 3px;
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/index-photo-product-mobile@2x.png");
-    background-size: 280px auto;
-    background-repeat: no-repeat;
-  }
 
   @media (min-width: @tablet-width) {
     grid-column: 1/2;
     grid-row: 5/8;
     width: 709px;
     margin-top: 20px;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/index-photo-product-tablet@2x.jpg");
-      background-size: 768px auto;
-    }
   }
 
   @media (min-width: @desktop-width) {
-    // background-color: #68b738;
     grid-column: 3/5;
     grid-row: 1/8;
-    min-width: 552px;
-    margin: 0;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/index-photo-product-desktop@2x.png");
-      // background-size: 1338px auto;
-      background-position: center;
-    }
+    width: 552px;
   }
 }
 
