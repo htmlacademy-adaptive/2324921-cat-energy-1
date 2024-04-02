@@ -144,6 +144,8 @@
 }
 
 .programm__link {
+  display: flex;
+  align-items: center;
   margin: 0;
   color: @title-color;
   font-family: @font-title;
@@ -158,11 +160,6 @@
     line-height: 30px;
   }
 
-  &::after {
-    content: url("../img/programms/icon-arrow.svg");
-    margin-left: 15px;
-  }
-
   &:hover {
     opacity: 0.6;
   }
@@ -170,4 +167,8 @@
   &:active {
     opacity: 0.3;
   }
+}
+
+.programm__link-icon {
+  margin-left: 25px;
 }
