@@ -54,7 +54,7 @@
     }
   }
 
-  &--mass::before {
+  &--pro::before {
     position: absolute;
     content: url("../img/programms/cat-stay.svg");
     top: 24px;
@@ -144,6 +144,8 @@
 }
 
 .programm__link {
+  display: flex;
+  align-items: center;
   margin: 0;
   color: @title-color;
   font-family: @font-title;
@@ -158,11 +160,6 @@
     line-height: 30px;
   }
 
-  &::after {
-    content: url("../img/programms/icon-arrow.svg");
-    margin-left: 15px;
-  }
-
   &:hover {
     opacity: 0.6;
   }
@@ -170,4 +167,15 @@
   &:active {
     opacity: 0.3;
   }
+}
+
+.programm__link-icon {
+  margin-left: 15px;
+
+  // &:hover {
+  //   color: #d9d9d9;
+  //   width: 32px;
+  //   margin-left: 35px;
+  //   transform: translateX(50%);
+  // }
 }
