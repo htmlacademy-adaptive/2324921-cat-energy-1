@@ -7,10 +7,12 @@ import rename from 'gulp-rename';  // добавлен для ренейма ф�
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 import htmlmin from 'gulp-htmlmin';
+import terser from 'gulp-terser';
+import gulpSquoosh from 'gulp-squoosh';
 
 // Styles
 
-export const styles = () => {
+const styles = () => {
   return gulp.src('source/less/style.less', { sourcemaps: true })
     .pipe(plumber())
     .pipe(less())
@@ -19,24 +21,66 @@ export const styles = () => {
       csso()  //style.css[prefix] -> style.css[prefix, min]
     ]))
     .pipe(rename('style.min.css'))
-    .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
+    .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 }
 
 // HTML
 
-export const html = () => {
+const html = () => {
   return gulp.src ('source/*.html')
   .pipe(htmlmin({ collapseWhitespace: true }))
-  .pipe(gulp.dest('source'));
+  .pipe(gulp.dest('build/html'));
 }
+
+// Scripts
+
+const script = () => {
+  return gulp.src ('source/*.js')
+.pipe(terser())
+.pipe(gulp.dest('build/js'));
+}
+
+// Images
+
+const optimazeImages = () => {
+  return gulp.src ('source/img/**/*.{jpg,png}')
+  .pipe(gulpSquoosh())
+  .pipe(gulp.dest('build/img'));
+}
+
+ const copyImages = () => {
+  return gulp.src ('source/img/**/*.{jpg,png}')
+  .pipe(gulp.dest('build/img'));
+}
+
+// WebP
+export const createWebp = () => {
+  return gulp.src ('source/img/**/*.{jpg,png}')
+  .pipe(gulpSquoosh({
+    webp: {}
+  }))
+  .pipe(gulp.dest('build/img'));
+}
+
+// function images() {
+//   return src('src/images/**/*.png')
+//     .pipe(
+//       squoosh({
+//         oxipng: {},
+//         webp: {},
+//         avif: {},
+//       })
+//     )
+//     .pipe(dest('dist/images'));
+// }
 
 // Server
 
 const server = (done) => {
   browser.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -54,5 +98,5 @@ const watcher = () => {
 
 
 export default gulp.series(
-  styles, server, watcher
+  html, styles, script, server, watcher
 );
