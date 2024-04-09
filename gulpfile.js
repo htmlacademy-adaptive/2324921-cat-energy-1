@@ -121,13 +121,13 @@ const server = (done) => {
 
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
-  gulp.watch('source/*.html', gulp.series(html, reload));
+  gulp.watch('source/*.html', gulp.series(html,reload));
   gulp.watch('source/scripts.js', gulp.series(scripts));
 }
 
 // Build
 
-export const build = gulp.series(
+const build = gulp.series(
   clean,
   copy,
   optimazeImages,
