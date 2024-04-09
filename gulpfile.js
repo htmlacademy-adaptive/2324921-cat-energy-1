@@ -8,7 +8,7 @@ import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
-import gulpSquoosh from 'gulp-squoosh';
+import squoosh from 'gulp-libsquoosh';
 
 // Styles
 
@@ -45,11 +45,11 @@ const script = () => {
 
 const optimazeImages = () => {
   return gulp.src ('source/img/**/*.{jpg,png}')
-  .pipe(gulpSquoosh())
+  .pipe(squoosh())
   .pipe(gulp.dest('build/img'));
 }
 
- const copyImages = () => {
+export const copyImages = () => {
   return gulp.src ('source/img/**/*.{jpg,png}')
   .pipe(gulp.dest('build/img'));
 }
@@ -57,23 +57,12 @@ const optimazeImages = () => {
 // WebP
 export const createWebp = () => {
   return gulp.src ('source/img/**/*.{jpg,png}')
-  .pipe(gulpSquoosh({
+  .pipe(squoosh({
     webp: {}
   }))
   .pipe(gulp.dest('build/img'));
 }
 
-// function images() {
-//   return src('src/images/**/*.png')
-//     .pipe(
-//       squoosh({
-//         oxipng: {},
-//         webp: {},
-//         avif: {},
-//       })
-//     )
-//     .pipe(dest('dist/images'));
-// }
 
 // Server
 
