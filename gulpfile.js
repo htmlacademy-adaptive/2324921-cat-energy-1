@@ -9,6 +9,9 @@ import browser from 'browser-sync';
 import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
+import svgo from 'gulp-svgo';
+import svgstore from 'gulp-svgstore';
+import del from 'del';
 
 // Styles
 
@@ -49,13 +52,14 @@ const optimazeImages = () => {
   .pipe(gulp.dest('build/img'));
 }
 
-export const copyImages = () => {
+ const copyImages = () => {
   return gulp.src ('source/img/**/*.{jpg,png}')
   .pipe(gulp.dest('build/img'));
 }
 
 // WebP
-export const createWebp = () => {
+
+const createWebp = () => {
   return gulp.src ('source/img/**/*.{jpg,png}')
   .pipe(squoosh({
     webp: {}
@@ -63,6 +67,42 @@ export const createWebp = () => {
   .pipe(gulp.dest('build/img'));
 }
 
+// SVG
+
+const svg = () => {
+ gulp.src (['source/img/*.svg', '!source/img/social-icons/*.svg'])
+  .pipe(svgo())
+  .pipe(gulp.dest('build/img'));
+}
+
+const sprite = () => {
+ return gulp.src ('source/img/social-icons/*.svg')
+  .pipe(svgo())
+  .pipe(svgstore({
+    inlineSvg: true  // будет использоваться не в стилях, а в разметке (инлайново)
+  }))
+  .pipe(rename('sprite.svg'))
+  .pipe(gulp.dest('build/img'));
+}
+
+// Copy
+
+const copy = (done) => {
+  gulp.src ([
+    'source/fonts/**/*.{woff2,woff}',
+    'source/*.ico', 'source/*.webmanifest',
+  ], {
+    base:'source'
+  })
+  .pipe(gulp.dest('build'))
+  done();
+}
+
+// Clean
+
+export const clean = () => {
+  return del ('build');
+}
 
 // Server
 
