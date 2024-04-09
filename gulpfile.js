@@ -38,7 +38,7 @@ const html = () => {
 
 // Scripts
 
-const script = () => {
+const scripts = () => {
   return gulp.src ('source/*.js')
 .pipe(terser())
 .pipe(gulp.dest('build/js'));
@@ -70,7 +70,7 @@ const createWebp = () => {
 // SVG
 
 const svg = () => {
-gulp.src (['source/img/*.svg', '!source/img/social-icons/*.svg'])
+return gulp.src (['source/img/*.svg', '!source/img/social-icons/*.svg'])
  .pipe(svgo())
  .pipe(gulp.dest('build/img'));
 }
@@ -99,8 +99,8 @@ const copy = (done) => {
 
 // Clean
 
-export const clean = () => {
-  return del.sinc('build');
+const clean = () => {
+  return del('build');
 };
 
 // Server
@@ -121,10 +121,41 @@ const server = (done) => {
 
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
-  gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/*.html', gulp.series(html, reload));
+  gulp.watch('source/scripts.js', gulp.series(scripts));
 }
 
+// Build
+
+export const build = gulp.series(
+  clean,
+  copy,
+  optimazeImages,
+  gulp.parallel(
+    styles,
+    html,
+    scripts,
+    svg,
+    sprite,
+    createWebp
+  ),
+);
+
+// Default
 
 export default gulp.series(
-  html, styles, script, server, watcher
-);
+  clean,
+  copy,
+  copyImages,
+  gulp.parallel(
+    styles,
+    html,
+    scripts,
+    svg,
+    sprite,
+    createWebp
+  ),
+  gulp.series(
+    server,
+    watcher
+  ));
