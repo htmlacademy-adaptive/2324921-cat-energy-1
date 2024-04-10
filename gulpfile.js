@@ -117,12 +117,19 @@ const server = (done) => {
   done();
 }
 
+// Reload
+
+const reload = (done) => {
+  browser.reload();
+  done();
+  };
+
 // Watcher
 
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
-  gulp.watch('source/*.html', gulp.series(html,reload));
-  gulp.watch('source/scripts.js', gulp.series(scripts));
+  gulp.watch('source/*.html', gulp.series(html));
+  gulp.watch('source/**/*.js', gulp.series(scripts));
 }
 
 // Build
@@ -157,5 +164,6 @@ export default gulp.series(
   ),
   gulp.series(
     server,
+    reload,
     watcher
   ));
