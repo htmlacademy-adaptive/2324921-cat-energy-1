@@ -34,7 +34,7 @@ const styles = () => {
 const html = () => {
   return gulp.src ('source/*.html')
   .pipe(htmlmin({ collapseWhitespace: true }))
-  .pipe(gulp.dest('build/html'));
+  .pipe(gulp.dest('build'));
 }
 
 // Scripts
@@ -42,7 +42,7 @@ const html = () => {
 const scripts = () => {
   return gulp.src ('source/*.js')
 .pipe(terser())
-.pipe(gulp.dest('build/js'));
+.pipe(gulp.dest('build'));
 }
 
 // Images
