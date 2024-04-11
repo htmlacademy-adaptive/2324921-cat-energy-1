@@ -11,7 +11,8 @@ import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgo';
 import svgstore from 'gulp-svgstore';
-import del from 'del';
+// import del from 'del';
+import deleteAsync from 'del';
 
 // Styles
 
@@ -99,8 +100,12 @@ const copy = (done) => {
 
 // Clean
 
-const clean = () => {
-  return del('build');
+// const clean = () => {
+//   return del('build');
+// };
+
+export const clean = () => {
+  return deleteAsync('build');
 };
 
 // Server
@@ -129,7 +134,8 @@ const reload = (done) => {
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
   gulp.watch('source/*.html', gulp.series(html));
-  gulp.watch('source/**/*.js', gulp.series(scripts));
+  gulp.watch('source/*.js', gulp.series(scripts));
+  // gulp.watch('source/*.html').on('change', browser.reload);
 }
 
 // Build
@@ -145,8 +151,7 @@ const build = gulp.series(
     svg,
     sprite,
     createWebp
-  ),
-);
+  ));
 
 // Default
 
@@ -164,6 +169,6 @@ export default gulp.series(
   ),
   gulp.series(
     server,
-    reload,
-    watcher
+    watcher,
+    reload
   ));
