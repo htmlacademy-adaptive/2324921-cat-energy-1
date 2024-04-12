@@ -71,11 +71,11 @@ const createWebp = () => {
 // SVG
 
 const svg = () => {
-return gulp.src (['source/img/*.svg', '!source/img/social-icons/*.svg'])
+return gulp.src (['source/img/**/*.svg', '!source/img/social-icons/*.svg'])
  .pipe(svgo())
  .pipe(gulp.dest('build/img'));
 }
-const sprite = () => {
+export const sprite = () => {
  return gulp.src ('source/img/social-icons/*.svg')
   .pipe(svgo())
   .pipe(svgstore({
@@ -135,12 +135,11 @@ const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
   gulp.watch('source/*.html', gulp.series(html));
   gulp.watch('source/*.js', gulp.series(scripts));
-  // gulp.watch('source/*.html').on('change', browser.reload);
 }
 
 // Build
 
-const build = gulp.series(
+export const build = gulp.series(
   clean,
   copy,
   optimazeImages,
