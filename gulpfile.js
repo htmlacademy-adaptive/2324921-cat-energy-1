@@ -40,7 +40,7 @@ const html = () => {
 // Scripts
 
 const scripts = () => {
-  return gulp.src ('source/*.js')
+  return gulp.src ('source/**/*.js')
 .pipe(terser())
 .pipe(gulp.dest('build'));
 }
@@ -82,7 +82,9 @@ export const sprite = () => {
     inlineSvg: true  // будет использоваться не в стилях, а в разметке (инлайново)
   }))
   .pipe(rename('sprite.svg'))
-  .pipe(gulp.dest('build/img'));
+  .pipe(gulp.dest('build/img'))
+  .pipe(browser.stream());
+
 }
 
 // Copy
