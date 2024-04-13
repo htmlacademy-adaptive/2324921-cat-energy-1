@@ -102,9 +102,6 @@ const copy = (done) => {
 
 // Clean
 
-// const clean = () => {
-//   return del('build');
-// };
 
 export const clean = () => {
   return deleteAsync('build');
