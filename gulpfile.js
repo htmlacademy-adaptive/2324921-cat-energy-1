@@ -71,12 +71,12 @@ const createWebp = () => {
 // SVG
 
 const svg = () => {
-return gulp.src (['source/img/**/*.svg', '!source/img/social-icons/*.svg'])
+return gulp.src (['source/img/**/*.svg', '!source/img/icons/*.svg'])
  .pipe(svgo())
  .pipe(gulp.dest('build/img'));
 }
 export const sprite = () => {
- return gulp.src ('source/img/social-icons/*.svg')
+ return gulp.src ('source/img/icons/*.svg')
   .pipe(svgo())
   .pipe(svgstore({
     inlineSvg: true  // будет использоваться не в стилях, а в разметке (инлайново)
