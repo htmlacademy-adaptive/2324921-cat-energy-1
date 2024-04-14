@@ -121,10 +121,10 @@
 
           <!--  Контактные данные -->
 
-          <fieldset class="form__group-reset form__contacts-group">
-            <legend class="form__contacts-title">Контактные данные
-              (владельца кота)</legend>
-            <div class="form__contacts-group-wrapper">
+          <div class="form__contacts-group-wrapper">
+            <fieldset class="form__group-reset form__contacts-group">
+              <legend class="form__contacts-title">Контактные данные
+                (владельца кота)</legend>
               <ul class="form__list form__contacts-list">
                 <li class="form__contacts-item">
                   <label class="form__label form__contacts-label" for="email">E-mail:*</label>
@@ -137,39 +137,46 @@
                     placeholder="Укажите номер телефона" id="number" maxlength="21" required>
                 </li>
               </ul>
-            </div>
-          </fieldset>
+            </fieldset>
+          </div>
 
-          <fieldset class="form__group-reset form__comment">
-            <div class="form__comment-container">
-              <label class="form__label" for="message">Комментарий</label>
+          <!-- Комментарий -->
+
+          <div class="form__comment-wrapper">
+            <fieldset class="form__group-reset form__comment">
+              <legend class="form__comment-title" for="message">Комментарий</legend>
               <textarea class="form__comment-text" name="comment" placeholder="Расскажите обо всех повадках кота"
                 id="message"></textarea>
-            </div>
-          </fieldset>
-          <fieldset class="form__group-reset form__additional-group">
-            <legend class="form__additional-title">Дополнительно</legend>
-            <ul class="form__list form__additional-list form__additional-list--checkbox">
-              <li class="form__additional-item">
-                <input class="form__additional-field" type="checkbox" name="sweetener" id="sweetener" checked>
-                <label class="form__label checkbox-group__label" for="sweetener">Сахарозаменитель</label>
-              </li>
-              <li class="form__additional-item">
-                <input class="form__additional-field" type="checkbox" name="water" id="water">
-                <label class="form__label checkbox-group__label" for="water">Питьевая вода</label>
-              </li>
-              <li class="form__additional-item">
-                <input class="form__additional-field" type="checkbox" name="milk" id="milk">
-                <label class="form__label checkbox-group__label" for="milk">Молоко</label>
-              </li>
-              <li class="form__additional-item">
-                <input class="form__additional-field" type="checkbox" name="vitamins" id="vitamins">
-                <label class="form__label checkbox-group__label" for="vitamins">Витамины</label>
-              </li>
-            </ul>
-          </fieldset>
-          <div class="form__submit-container">
-            <button class="form__submit button" type="submit">Отправить</button>
+            </fieldset>
+          </div>
+
+          <!-- Дополнительно -->
+          <div class="form__additional-group-wrapper">
+            <fieldset class="form__group-reset form__additional-group">
+              <legend class="form__additional-title">Дополнительно</legend>
+              <ul class="form__list form__additional-list form__additional-list--checkbox">
+                <li class="form__additional-item">
+                  <input class="form__additional-field" type="checkbox" name="sweetener" id="sweetener" checked>
+                  <label class="form__label checkbox-group__label" for="sweetener">Сахарозаменитель</label>
+                </li>
+                <li class="form__additional-item">
+                  <input class="form__additional-field" type="checkbox" name="water" id="water">
+                  <label class="form__label checkbox-group__label" for="water">Питьевая вода</label>
+                </li>
+                <li class="form__additional-item">
+                  <input class="form__additional-field" type="checkbox" name="milk" id="milk">
+                  <label class="form__label checkbox-group__label" for="milk">Молоко</label>
+                </li>
+                <li class="form__additional-item">
+                  <input class="form__additional-field" type="checkbox" name="vitamins" id="vitamins">
+                  <label class="form__label checkbox-group__label" for="vitamins">Витамины</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+
+          <div class="form__submit-wrapper">
+            <button class="button form__submit-button" type="submit">Отправить заявку</button>
             <p class="form__note">* — Обязательные поля</p>
           </div>
         </form>
