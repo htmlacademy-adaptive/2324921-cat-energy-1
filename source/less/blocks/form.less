@@ -7,25 +7,84 @@
 }
 
 .form-field {
+  min-height: 45px;
   width: 100%;
+  padding: 14px 15px;
+  border: 1px solid #cdcdcd;
 }
 
-.form__data-group {
-  margin: 0;
-  padding: 0;
-  border: none;
+.form__group-reset {
+  .fieldset-reset();
 }
 
-.form__data-list {
+// Данные питомца
+.form__data-group-wrapper {
+  padding-bottom: 15px;
+}
+
+.form__list {
   .list-reset();
+}
+
+.form__data-list,
+.form__contacts-list {
   display: grid;
   grid-template-columns: 2fr;
+  row-gap: 14px;
 }
 
-.form__data-item {
+.form__data-item,
+.form__contacts-item {
   display: flex;
+  align-items: center;
 }
 
-.form__data-label {
-  min-width: 100px;
+.form__data-label,
+.form__contacts-label {
+  margin-right: 13px;
+  white-space: nowrap;
+}
+
+.form__data-field,
+.form__contacts-field {
+  .fonts-text-form-mobile();
+  font-family: @font-title;
+  font-weight: 400;
+  color: @paragraph-color;
+  text-transform: uppercase;
+}
+
+// Выберите программу
+.form__programm-group-wrapper {
+  .item-current-top();
+  .item-current-bottom();
+  position: relative;
+  padding: 19px 0 22px;
+}
+
+.form__programm-list {
+  display: grid;
+  grid-template-columns: 2fr;
+  row-gap: 19px;
+}
+
+// Контактные данные
+.form__contacts-group-wrapper {
+  // padding: 26px 0 24px;
+  // position: relative;
+}
+
+.form__contacts-group {
+  position: relative;
+}
+
+.form__contacts-title {
+  .decoration-line-mobile();
+  padding-top: 26px;
+  color: @title-color;
+  font-family: @font-title;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 26px;
+  margin-bottom: 35px;
 }
