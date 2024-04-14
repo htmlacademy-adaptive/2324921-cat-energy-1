@@ -1,3 +1,35 @@
-.program-selection {
-  //
+// .program-selection {
+//   // margin: 0 auto;
+// }
+
+.program-selection__wrapper {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 20px 36px;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.program-selection__title {
+  margin: 27px 0 37px;
+  color: @title-color;
+  font-family: @font-title;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+}
+
+.program-selection__text {
+  .fonts-text-mobile();
+  margin: 0 0 39px;
+  width: 270px;
+  font-family: @font-title;
+  color: @title-color;
+  font-weight: 400;
+  text-transform: uppercase;
 }
