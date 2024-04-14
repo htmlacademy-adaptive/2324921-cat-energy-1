@@ -1,0 +1,126 @@
+.slider {
+  .list-reset();
+  position: relative;
+  // overflow: hidden;
+}
+
+.slider__item {
+  display: flex;
+  justify-content: center;
+}
+
+.slider__item--before {
+  position: absolute;
+  left: 50%;
+  top: 1px;
+  transform: translate(-100%, 0);
+  width: 50%;
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+  }
+}
+
+.slider__item--after {
+  position: absolute;
+  left: 50%;
+  transform: translate(0, 0);
+  top: 1px;
+  width: 50%;
+}
+
+.slider__box {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 256px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    height: 512px;
+  }
+}
+
+.slider__item img {
+  position: absolute;
+  transform: translate(-50%, 0);
+}
+
+.slider__item--before img {
+  left: 100%;
+  width: 280px;
+  height: 256px;
+}
+
+.slider__item--after img {
+  left: 0;
+  width: 280px;
+  height: 256px;
+}
+
+@media (min-width: @tablet-width) {
+  .slider__item--before img,
+  .slider__item--after img {
+    width: 560px;
+    height: 512px;
+  }
+}
+
+.slider-control {
+  display: flex;
+  justify-content: center;
+}
+
+.slider-control__bar {
+  position: relative;
+  width: 4px;
+  height: 257px;
+  background-color: @icon-color;
+
+  @media (min-width: @tablet-width) {
+    height: 512px;
+  }
+
+  &:hover {
+    transition: all 0.2s ease;
+    background-color: @accent-color;
+  }
+
+  &:active {
+    background-color: @accent-color;
+    opacity: 0.8;
+  }
+}
+
+.slider-control__toggle {
+  position: absolute;
+  top: 108px;
+  left: -18px;
+  border: 2px solid @icon-color;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: @text-color;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    top: 236px;
+  }
+}
+
+.slider-control__icon-arrows {
+  color: @icon-color;
+}
+
+.slider-control__bar:hover .slider-control__toggle {
+  transition: all 0.2s ease;
+  border-color: @accent-color;
+}
+
+.slider-control__bar:hover .slider-control__icon-arrows {
+  color: @accent-color;
+  transition: all 0.2s ease;
+}
