@@ -100,20 +100,30 @@
           <!-- Выберите программу -->
 
           <div class="form__programm-group-wrapper">
-            <fieldset class="form__group-reset form__programm-group">
+            <fieldset class="form__group-reset control-group">
               <legend class="visually-hidden">Выберите программу</legend>
               <ul class="form__list form__programm-list form__programm-list--radio">
                 <li class="form__programm-item">
-                  <input class="radio-group__input" type="radio" name="programm" id="slimming" value="slimming" checked>
-                  <label class="form__label radio-group__label" for="slimming">Похудение</label>
+                  <label class="control-group__label" for="slimming">
+                  <input class="visually-hidden control-group__input" type="radio" name="programm" id="slimming" value="slimming" checked>
+                  <span class="control-group__mark"></span>
+                 <span class="control-group__text">Похудение</span>
+                  </label>
                 </li>
                 <li class="form__programm-item">
-                  <input class="radio-group__input" type="radio" name="programm" id="weight-gain" value="weight-gain">
-                  <label class="form__label radio-group__label" for="weight-gain">Набор массы</label>
+                  <label class="control-group__label" for="weight-gain">
+                    <input class="visually-hidden control-group__input" type="radio" name="programm" id="weight-gain" value="weight-gain">
+                    <span class="control-group__mark"></span>
+                    <span class="control-group__text">Набор массы</span>
+
+                  </label>
                 </li>
                 <li class="form__programm-item">
-                  <input class="radio-group__input" type="radio" name="programm" id="advice" value="advice">
-                  <label class="form__label radio-group__label" for="advice">Не знаю (Нужен ваш совет)</label>
+                  <label class="control-group__label" for="advice">
+                    <input class="visually-hidden control-group__input" type="radio" name="programm" id="advice" value="advice">
+                    <span class="control-group__mark"></span>
+                   <span class="control-group__text">Не знаю (Нужен ваш совет)</span>
+                  </label>
                 </li>
               </ul>
             </fieldset>
@@ -151,25 +161,38 @@
           </div>
 
           <!-- Дополнительно -->
+
           <div class="form__additional-group-wrapper">
-            <fieldset class="form__group-reset form__additional-group">
+            <fieldset class="form__group-reset form__additional-group control-group">
               <legend class="form__additional-title">Дополнительно</legend>
               <ul class="form__list form__additional-list form__additional-list--checkbox">
                 <li class="form__additional-item">
-                  <input class="form__additional-field" type="checkbox" name="sweetener" id="sweetener" checked>
-                  <label class="form__label checkbox-group__label" for="sweetener">Сахарозаменитель</label>
+                  <label class="control-group__label" for="sweetener">
+                  <input class="visually-hidden form__additional-field control-group__input" type="checkbox" name="sweetener" id="sweetener" checked>
+                    <span class="control-group__mark"></span>
+                    <span class="control-group__text">Сахарозаменитель</span>
+                  </label>
                 </li>
                 <li class="form__additional-item">
-                  <input class="form__additional-field" type="checkbox" name="water" id="water">
-                  <label class="form__label checkbox-group__label" for="water">Питьевая вода</label>
+                  <label class="control-group__label" for="water">
+                  <input class="visually-hidden form__additional-field control-group__input" type="checkbox" name="water" id="water">
+                    <span class="control-group__mark"></span>
+                    <span class="control-group__text">Питьевая вода</span>
+                  </label>
                 </li>
                 <li class="form__additional-item">
-                  <input class="form__additional-field" type="checkbox" name="milk" id="milk">
-                  <label class="form__label checkbox-group__label" for="milk">Молоко</label>
+                  <label class="control-group__label" for="milk">
+                  <input class="visually-hidden form__additional-field control-group__input" type="checkbox" name="milk" id="milk">
+                   <span class="control-group__mark"></span>
+                   <span class="control-group__text">Молоко</span>
+                  </label>
                 </li>
                 <li class="form__additional-item">
-                  <input class="form__additional-field" type="checkbox" name="vitamins" id="vitamins">
-                  <label class="form__label checkbox-group__label" for="vitamins">Витамины</label>
+                  <label class="control-group__label" for="vitamins">
+                  <input class="visually-hidden form__additional-field control-group__input" type="checkbox" name="vitamins" id="vitamins">
+                   <span class="control-group__mark"></span>
+                   <span class="control-group__text">Витамины</span>
+                </label>
                 </li>
               </ul>
             </fieldset>
