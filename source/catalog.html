@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="css/style.min.css" as="style">
+  <link rel="preload" href="js/script.min.js" as="script">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font">
+  <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" as="font">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32.png">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/svg+xml" href="images/favicons/icon.svg">
@@ -24,12 +29,13 @@
           <picture>
             <source media="(min-width: 1300px)" width="70" height="59" srcset="img/logotypes/main-logo-desktop.svg">
             <source media="(min-width: 768px)" width="60" height="50" srcset="img/logotypes/main-logo-tablet.svg">
-            <img src="img/logotypes/main-logo-mobile.svg" width="33" height="38"
+            <img src="img/logotypes/main-logo-mobile.svg" width="33" height="38" loading="lazy"
               alt="Логотип Cat energy - стилизованный кот в костюме супергероя">
           </picture>
         </a>
         <a class="main-header__logo-text main-logo-text" href="index.html">
-          <img src="img/logotypes/main-logo-text.svg" width="101" height="18" alt="Текст-заголовок логотипа Cat energy">
+          <img src="img/logotypes/main-logo-text.svg" width="101" height="18" loading="lazy"
+            alt="Текст-заголовок логотипа Cat energy">
         </a>
       </div>
       <button class="main-header__toggle" type="button">
@@ -78,7 +84,7 @@
                     width="161" height="172">
                   <img src="img/catalog/mobile/chicken-500g@1x.png 1x"
                     srcset="img/catalog/mobile/chicken-500g@1x.png 1x, img/catalog/mobile/chicken-500g@2x.png 2x"
-                    width="68" height="78" alt="Питание для котиков с курицей">
+                    width="68" height="78" loading="lazy" alt="Питание для котиков с курицей">
                 </picture>
               </div>
 
@@ -127,7 +133,7 @@
                     width="168" height="206">
                   <img src="img/catalog/mobile/chicken-1000g@1x.png 1x"
                     srcset="img/catalog/mobile/chicken-1000g@1x.png 1x, img/catalog/mobile/chicken-1000g@2x.png 2x"
-                    width="84" height="100" alt="Питание для котиков с курицей">
+                    width="84" height="100" loading="lazy" alt="Питание для котиков с курицей">
                 </picture>
               </div>
 
@@ -222,7 +228,7 @@
                     width="168" height="206">
                   <img src="img/catalog/mobile/fish-1000g@1x.png 1x" width="84" height="100"
                     srcset="img/catalog/mobile/fish-1000g@1x.png 1x, img/catalog/mobile/fish-1000g@2x.png 2x"
-                    alt="Питание для котиков с рыбой">
+                    loading="lazy" alt="Питание для котиков с рыбой">
                 </picture>
               </div>
 
@@ -267,7 +273,7 @@
                     width="161" height="172">
                   <img src="img/catalog/mobile/buckwheat-500g@1x.png 1x"
                     srcset="img/catalog/mobile/buckwheat-500g@1x.png 1x, img/catalog/mobile/buckwheat-500g@2x.png 2x"
-                    width="68" height="78" alt="Питание для котиков с гречкой">
+                    width="68" height="78" loading="lazy" alt="Питание для котиков с гречкой">
                 </picture>
               </div>
             </a>
@@ -315,7 +321,7 @@
                     width="161" height="172">
                   <img src="img/catalog/mobile/buckwheat-1000g@1x.png 1x" width="84" height="100"
                     srcset="img/catalog/mobile/buckwheat-1000g@1x.png 1x, img/catalog/mobile/buckwheat-1000g@2x.png 2x"
-                    alt="Питание для котиков с гречкой">
+                    loading="lazy" alt="Питание для котиков с гречкой">
                 </picture>
               </div>
 
@@ -361,7 +367,7 @@
                     height="172">
                   <img src="img/catalog/mobile/rise-500g@1x.png 1x"
                     srcset="img/catalog/mobile/rise-500g@1x.png 1x, img/catalog/mobile/rise-500g@2x.png 2x" width="68"
-                    height="78" alt="Питание для котиков с рисом">
+                    height="78" loading="lazy" alt="Питание для котиков с рисом">
                 </picture>
               </div>
 
@@ -522,13 +528,14 @@
     <div class="main-footer__wrapper">
       <div class="main-footer__logo-wrapper">
         <a class="main-footer__logo-link main-logo-text" href="#">
-          <img src="img/logotypes/main-logo-text.svg" width="101" height="18" alt="Заголовок логотипа">
+          <img src="img/logotypes/main-logo-text.svg" width="101" height="18" loading="lazy" alt="Заголовок логотипа">
         </a>
       </div>
       <div class="main-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" aria-label="Вконтакте сайта htmlacademy">
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy"
+              aria-label="Вконтакте сайта htmlacademy">
               <span class="visually-hidden">Мы в Вконтакте</span>
               <svg class="social__icon" width="27" height="17">
                 <use xlink:href="img/sprite.svg#icon-social-vk"></use>
@@ -536,7 +543,8 @@
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru" aria-label="Youtube cайта htmlacademy">
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru"
+              aria-label="Youtube cайта htmlacademy">
               <span class="visually-hidden">Мы в Ютубе</span>
               <svg class="social__icon" width="24" height="19">
                 <use xlink:href="img/sprite.svg#icon-social-youtube"></use>
@@ -544,7 +552,8 @@
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy" aria-label="Телеграм сайта htmlacademy">
+            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy"
+              aria-label="Телеграм сайта htmlacademy">
               <span class="visually-hidden">Мы в Телеграме</span>
               <svg class="social__icon" width="20" height="18">
                 <use xlink:href="img/sprite.svg#icon-social-telegram"></use>
@@ -554,7 +563,8 @@
         </ul>
       </div>
       <div class="main-footer__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт htmlacademy">HTML Academy
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт htmlacademy">HTML
+          Academy
           <svg class="social-icon" width="27" height="34">
             <use xlink:href="img/sprite.svg#icon-social-academy"></use>
           </svg>
@@ -563,7 +573,7 @@
     </div>
   </footer>
 
-  <script src="js/scripts.js"></script>
+  <script src="js/script.min.js"></script>
 
 </body>
 
