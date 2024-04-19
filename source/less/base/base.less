@@ -20,11 +20,11 @@ img {
   height: auto;
 }
 
-// Возможно сделать отдельным блоком
+// Возможно добавить в миксины
 .button {
-  padding: 10px 20px;
+  padding: 10px 20px;   //для главной padding: 15px 20px;  "button-styles-index()"
   width: 100%;
-  min-height: 40px;
+  min-height: 40px;   //для главной страницы - min-height: 54px;  "button-styles-catalog()"
   background-color: @accent-color;
   color: @text-color;
   font-family: @font-title;
@@ -33,6 +33,7 @@ img {
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
+  border: none;
 
   &:hover {
     background-color: #5eaa2f;

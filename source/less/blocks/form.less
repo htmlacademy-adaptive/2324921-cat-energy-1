@@ -7,25 +7,153 @@
 }
 
 .form-field {
+  min-height: 45px;
   width: 100%;
+  padding: 14px 15px;
+  border: 1px solid #cdcdcd;
 }
 
-.form__data-group {
-  margin: 0;
-  padding: 0;
-  border: none;
+.form__group-reset {
+  .fieldset-reset();
 }
 
-.form__data-list {
+// Данные питомца
+.form__data-group-wrapper {
+  padding-bottom: 15px;
+}
+
+.form__list {
   .list-reset();
+}
+
+.form__data-list,
+.form__contacts-list {
   display: grid;
   grid-template-columns: 2fr;
+  row-gap: 14px;
 }
 
-.form__data-item {
+.form__data-item,
+.form__contacts-item {
   display: flex;
+  align-items: center;
 }
 
-.form__data-label {
-  min-width: 100px;
+.form__data-label,
+.form__contacts-label {
+  margin-right: 13px;
+  white-space: nowrap;
+}
+
+.form__data-field,
+.form__contacts-field {
+  .fonts-text-form-mobile();
+  font-family: @font-title;
+  color: @paragraph-color;
+  text-transform: uppercase;
+}
+
+// Выберите программу
+.form__programm-group-wrapper {
+  .item-current-top();
+  .item-current-bottom();
+  position: relative;
+  padding: 19px 0 22px;
+}
+
+.form__programm-list {
+  display: grid;
+  grid-template-columns: 2fr;
+  row-gap: 25px;
+}
+
+// Контактные данные
+.form__contacts-group-wrapper {
+  .decoration-line-mobile();
+  padding: 25px 0 0;
+  position: relative;
+}
+
+.form__contacts-title {
+  .text-subtitle-form();
+  margin: 0 70px 35px 0;
+  padding: 0;
+  color: @title-color;
+  font-family: @font-title;
+  display: inline-block;
+  background-color: @text-color;
+  position: relative;
+  z-index: 1;
+}
+
+
+// Комментарий
+.form__comment-wrapper {
+  .decoration-line-mobile();
+  padding: 25px 0 0;
+  position: relative;
+}
+
+.form__comment {
+  display: grid;
+}
+
+.form__comment-title {
+  .text-subtitle-form();
+  color: @title-color;
+  font-family: @font-title;
+  padding: 0 20px 0 0;
+  margin-bottom: 38px;
+  background-color: @text-color;
+  position: relative;
+  z-index: 1;
+}
+
+
+.form__comment-text {
+  .fonts-text-form-mobile();
+  min-height: 150px;
+  padding: 14px;
+  border: 1px solid #e7e7e7;
+  color: @paragraph-color;
+  font-family: @font-title;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.form__additional-group-wrapper {
+  .decoration-line-mobile();
+  padding: 25px 0 34px;
+  position: relative;
+}
+
+.form__additional-title {
+  .text-subtitle-form();
+  color: @title-color;
+  font-family: @font-title;
+  padding: 0 20px 0 0;
+  margin-bottom: 35px;
+  background-color: @text-color;
+  position: relative;
+  z-index: 1;
+}
+
+.form__additional-list {
+  display: grid;
+  row-gap: 13px;
+}
+
+.form__additional-item {
+  min-height: 30px;
+}
+
+.form__note {
+  margin: 0;
+  padding: 21px 0 32px;
+  color: @title-color;
+  font-family: @font-text;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: center;
 }

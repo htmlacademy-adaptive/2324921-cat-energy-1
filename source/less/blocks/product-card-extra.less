@@ -7,6 +7,10 @@
   flex-direction: column;
   justify-content: flex-end;
 
+  @media (max-width: @mobile-width-only) {
+    .item-current-bottom();
+  }
+
   @media (min-width: @tablet-width) {
     padding: 10px 37px 40px;
     border: 2px solid #ebebeb;

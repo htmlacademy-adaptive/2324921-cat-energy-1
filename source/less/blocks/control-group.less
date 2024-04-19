@@ -1,0 +1,45 @@
+.control-group__label {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 45px;
+}
+
+.control-group__mark {
+  position: absolute;
+  left: 0;
+  border: 1px solid #bababa;
+  width: 30px;
+  height: 30px;
+}
+
+.control-group__input[type="radio"] + .control-group__mark {
+  border-radius: 50%;
+}
+
+.control-group__input[type="radio"]:checked + .control-group__mark::before {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 14px;
+  top: 7px;
+  left: 7px;
+  background-color: @accent-color;
+  border-radius: 50%;
+}
+
+.control-group__input[type="checkbox"]:checked + .control-group__mark::before {
+  position: absolute;
+  content: url("../img/icon-tick.svg");
+  top: 7px;
+  left: 7px;
+  z-index: 1;
+}
+
+.control-group__text {
+  .fonts-text-form-mobile();
+  color: @paragraph-color;
+  font-family: @font-title;
+  font-weight: 400;
+  text-transform: uppercase;
+}

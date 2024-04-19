@@ -1,19 +1,22 @@
-// .program-selection {
-//   // margin: 0 auto;
-// }
+.program-selection {
+  overflow: hidden;
+}
 
-.program-selection__wrapper {
+.program-selection__container {
   width: 320px;
   margin: 0 auto;
-  padding: 0 20px 36px;
+  padding: 0 20px;
 
   @media (min-width: @tablet-width) {
     width: 768px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1300px;
   }
 }
+
 
 .program-selection__title {
   margin: 27px 0 37px;

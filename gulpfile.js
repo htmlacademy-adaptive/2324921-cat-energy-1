@@ -36,12 +36,13 @@ const html = () => {
   .pipe(gulp.dest('build'));
 }
 
-// Scripts
+// Script
 
-const scripts = () => {
+export const script = () => {
   return gulp.src ('source/**/*.js')
 .pipe(terser())
-.pipe(gulp.dest('build'));
+.pipe(rename('script.min.js'))
+.pipe(gulp.dest('build/js'));
 }
 
 // Images
@@ -132,7 +133,7 @@ const reload = (done) => {
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
   gulp.watch('source/*.html', gulp.series(html));
-  gulp.watch('source/*.js', gulp.series(scripts));
+  gulp.watch('source/*.js', gulp.series(script));
 }
 
 // Build
@@ -144,7 +145,7 @@ export const build = gulp.series(
   gulp.parallel(
     styles,
     html,
-    scripts,
+    script,
     svg,
     sprite,
     createWebp
@@ -159,7 +160,7 @@ export default gulp.series(
   gulp.parallel(
     styles,
     html,
-    scripts,
+    script,
     svg,
     sprite,
     createWebp
