@@ -12,6 +12,20 @@
   border: none;
 }
 
+// Размер шрифтов всех главных заголовков (мобилка)
+.fonts-title-main-mobile() {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+}
+
+// Размер шрифтов всех главных заголовков (от планшета и выше)
+.fonts-title-main() {
+  font-size: 60px;
+  line-height: 60px;
+}
+
+
 // Размерр шрифтов подзаголовков в форме
 .text-subtitle-form() {
   font-size: 24px;
@@ -101,5 +115,29 @@
     width: 500%;
     height: 1px;
     background-color: @accent-color;
+  }
+}
+
+// Кнопка на главной странице
+.accent-button() {
+  padding: 10px 20px;   //для главной padding: 15px 20px;  "button-styles-index()"
+  width: 100%;
+  min-height: 40px;   //для главной страницы - min-height: 54px;  "button-styles-catalog()"
+  background-color: @accent-color;
+  color: @text-color;
+  font-family: @font-title;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: #ffffff57;
   }
 }

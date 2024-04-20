@@ -15,7 +15,7 @@
 
   @media (min-width: @desktop-width) {
     width: 1300px;
-    padding: 0 40px;
+    padding: 0 40px 71px;
   }
 }
 
@@ -68,8 +68,8 @@
 
     @media (min-width: @desktop-width) {
       content: url("../img/programms/cat-stay-desktop.svg");
-      top: 41px;
-      left: 32px;
+      top: 48px;
+      left: 33px;
     }
   }
 
@@ -116,8 +116,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    text-align: center;
-    margin: 0 0 73px 85px;
+    margin: 0 0 73px 162px;
   }
 }
 
@@ -134,20 +133,18 @@
   @media (min-width: @tablet-width) {
     .fonts-text-tablet();
     width: 340px;
-    height: 96px;
   }
 
   @media (min-width: @desktop-width) {
     width: 457px;
-    margin-bottom: 23px;
+    margin-bottom: 10px;
   }
 }
 
 .programm__link {
+  position: relative;
   display: flex;
   align-items: center;
-  margin: 0;
-  color: @title-color;
   font-family: @font-title;
   font-size: 16px;
   font-weight: 400;
@@ -169,8 +166,17 @@
   }
 }
 
+// .programm__link::after {
+//   position: absolute;
+//   content: url("../img/icon-arrow.svg");
+//   width: 32px;
+//   height: 12px;
+//   top: 0;
+//   right: 0;
+// }
+
 .programm__link-icon {
-  margin-left: 15px;
+  margin-left: 27px;
 
   // &:hover {
   //   color: #d9d9d9;
