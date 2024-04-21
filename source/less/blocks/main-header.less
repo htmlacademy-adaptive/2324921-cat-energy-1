@@ -44,8 +44,12 @@
   padding: 14px 0;
 
   @media (min-width: @tablet-width) {
-    width: 202px;
+    width: 176px;
     padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 202px;
   }
 }
 
@@ -64,6 +68,10 @@
 
 .main-logo-text {
   @media (min-width: @tablet-width) {
+    min-width: 103px;
+  }
+
+  @media (min-width: @desktop-width) {
     min-width: 118px;
   }
 }
@@ -86,7 +94,7 @@
   width: 24px;
   height: 24px;
   top: 21px;
-  right: 20px;
+  right: 18px;
   z-index: 2;
   background-color: #ffffff;
   display: block;

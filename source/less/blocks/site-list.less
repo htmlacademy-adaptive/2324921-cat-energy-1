@@ -1,5 +1,5 @@
 .site-list a {
-  padding: 23px 0;
+  padding: 23px 0 22px;
   display: block;
   font-family: @font-title;
   font-size: 20px;
@@ -17,24 +17,20 @@
   @media (min-width: @desktop-width) {
     font-size: 20px;
     line-height: 30px;
-    // color: #ffffff;
   }
 }
 
 .site-list {
   @media (min-width: @tablet-width) {
+    width: 436px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: space-between;
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
-    justify-content: space-between;
     margin: 0 auto;
     width: 475px;
-    font-size: 20px;
-    line-height: 30px;
   }
 }
 
@@ -58,7 +54,7 @@
     @media (min-width: @tablet-width) {
       content: "";
       position: absolute;
-      bottom: 14px;
+      bottom: 10px;
       right: 0;
       left: 0;
       height: 2px;
