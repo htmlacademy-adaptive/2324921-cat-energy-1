@@ -12,7 +12,7 @@
 
 .programm-process__wrapper {
   width: 320px;
-  padding: 0 20px;
+  padding: 20px 20px 0;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
@@ -27,7 +27,7 @@
 }
 
 .programm-process__title {
-  margin: 0;
+  margin: 0 0 42px;
   color: @title-color;
   font-family: @font-title;
   font-size: 36px;
@@ -58,29 +58,13 @@
   }
 }
 
-.programm-process__description {
-  .fonts-text-mobile();
-  color: @paragraph-color;
-  font-family: @font-text;
-  font-weight: 400;
-  text-align: left;
-  margin: 0;
-  padding-left: 80px;
-
-  @media (min-width: @tablet-width) {
-    .fonts-text-tablet();
-    margin: 0;
-    padding-left: 0;
-  }
-}
-
 .programm-process__item {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 60px;
-  padding-bottom: 20px;
+  padding-bottom: 25px;
 
   &:last-child {
     @media (max-width: @mobile-width-only) {
@@ -160,5 +144,21 @@
     background-image: url("../img/programms/number-block-4.svg");
     background-position: 127px 40px;
     background-repeat: no-repeat;
+  }
+}
+
+.programm-process__description {
+  .fonts-text-mobile();
+  color: @paragraph-color;
+  font-family: @font-text;
+  font-weight: 400;
+  text-align: left;
+  margin: 0;
+  padding-left: 80px;
+
+  @media (min-width: @tablet-width) {
+    .fonts-text-tablet();
+    margin: 0;
+    padding-left: 0;
   }
 }

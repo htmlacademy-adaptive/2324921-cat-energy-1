@@ -24,9 +24,8 @@
 }
 
 .invitation__content-wrapper {
-  width: 320px;
   margin: 0;
-  padding: 26px 20px;
+  padding: 24px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -41,9 +40,9 @@
 
   @media (min-width: @desktop-width) {
     width: 565px;
-    min-height: 200px;
+    min-height: 190px;
     background-color: @text-color;
-    padding: 60px 80px;
+    padding: 56px 80px;
   }
 }
 
@@ -105,7 +104,11 @@
   border: none;
   width: 100%;
   display: block;
-  height: 400px;
+  height: 362px;
+
+  @media (min-width: @tablet-width) {
+    height: 400px;
+  }
 }
 
 .invitation__map-images {
