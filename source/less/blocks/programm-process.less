@@ -17,7 +17,7 @@
 
   @media (min-width: @tablet-width) {
     width: 768px;
-    padding: 0 30px;
+    padding: 40px 30px 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -36,9 +36,6 @@
 
   @media (min-width: @tablet-width) {
     .fonts-title-main();
-  }
-
-  @media (min-width: @desktop-width) {
     margin-bottom: 33px;
   }
 }
@@ -48,13 +45,14 @@
 
   @media (min-width: @tablet-width) {
     display: grid;
-    justify-content: space-between;
-    grid-template-columns: repeat(2, 248px);
-    // gap: 37px 137px;
+    justify-content: start;
+    grid-template-columns: repeat(2, 247px);
+    gap: 37px 137px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 247px);
+    gap: 78px;
   }
 }
 
