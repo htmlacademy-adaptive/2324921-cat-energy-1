@@ -24,6 +24,10 @@
   display: grid;
   gap: 20px;
 
+  @media (min-width: @tablet-width) {
+    gap: 30px;
+  }
+
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(2, 570px);
     gap: 20px 80px;

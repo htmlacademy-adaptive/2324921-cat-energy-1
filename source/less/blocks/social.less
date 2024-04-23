@@ -1,18 +1,28 @@
 .social__list {
   .list-reset;
-  width: 134px;
+  min-width: 134px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    width: 0;
+  }
 }
 
 .social__item {
+  display: flex;
+  align-items: center;
+}
+
+.social__link {
   padding: 5px;
 }
 
 .social__link svg {
   color: @icon-color;
+  display: block;
 }
 
 .social__link:hover svg {

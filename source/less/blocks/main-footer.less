@@ -17,20 +17,22 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 55px 30px;
+    padding: 35px 30px 55px;
   }
 
   @media (min-width: @desktop-width) {
     width: 1300px;
-    padding: 50px 40px;
+    padding: 56px 40px;
   }
 }
 
 .main-footer__logo-wrapper {
-  min-width: 130px;
-
   @media (max-width: @mobile-width-only) {
     min-height: 44px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 160px;
   }
 }
 
