@@ -146,7 +146,7 @@
 }
 
 .programm__link {
-  position: relative;
+  // position: relative;
   display: flex;
   align-items: center;
   font-family: @font-title;
@@ -172,26 +172,24 @@
   }
 }
 
-// .programm__link::after {
-//   position: absolute;
-//   content: url("../img/icon-arrow.svg");
-//   width: 32px;
-//   height: 12px;
-//   top: 0;
-//   right: 0;
-// }
-
-.programm__link-icon {
-  margin-left: 18px;
+.programm__link::after {
+  content: "";
+  display: inline-block;
+  background-image: url("../img/icon-arrow.svg");
+  background-position: -8px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 15px;
+  width: 32px;
+  height: 12px;
+  transition: background-position 0.2s;
 
   @media (min-width: @tablet-width) {
-    margin-left: 26px;
+    margin-left: 25px;
   }
+}
 
-  // &:hover {
-  //   color: #d9d9d9;
-  //   width: 32px;
-  //   margin-left: 35px;
-  //   transform: translateX(50%);
-  // }
+.programm__link:hover::after {
+  // width: 32px;
+  background-position: 0;
 }
