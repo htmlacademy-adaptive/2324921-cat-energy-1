@@ -25,7 +25,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    margin-bottom: 80px;
+    margin-bottom: 84px;
     position: relative;
   }
 
@@ -47,7 +47,7 @@
 
   @media (min-width: @tablet-width) {
     content: url("../img/catalog/icon-plus-tablet.svg");
-    bottom: 110px;
+    bottom: 116px;
     right: 54px;
     width: 60px;
   }
@@ -96,6 +96,11 @@
 .product-card-extra__button {
   background-color: @extra-button-color;
   color: @paragraph-color;
+
+  @media (min-width: @tablet-width) {
+    min-height: 42px;
+  }
+
 
   &:hover {
     background: #ebebeb;
