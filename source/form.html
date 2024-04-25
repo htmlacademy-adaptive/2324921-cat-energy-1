@@ -69,17 +69,16 @@
 
     <section class="program-selection">
       <div class="program-selection__container">
-        <h1 class="program-selection__title">Подбор программы</h1>
-        <p class="program-selection__text">Заполните анкету, и мы подберем
-          программу питания для вашего кота
-        </p>
-
         <form class="form" action="https://echo.htmlacademy.ru/" method="post">
 
           <!-- Данные питомца -->
           <div class="data-programm-group-container">
 
             <div class="form__data-group-wrapper">
+              <h1 class="program-selection__title">Подбор программы</h1>
+              <p class="program-selection__text">Заполните анкету, и мы подберем
+                программу питания для вашего кота
+              </p>
               <fieldset class="form__group-reset form__data-group ">
                 <legend class="visually-hidden">Введите данные питомца</legend>
                 <ul class="form__list form__data-list">
@@ -209,18 +208,50 @@
                 </li>
               </ul>
             </fieldset>
-          </div>
-
-          <div class="form__submit-wrapper">
-            <button class="button form__submit-button" type="submit">Отправить заявку</button>
-            <p class="form__note">* — Обязательные поля</p>
+            <div class="form__submit-wrapper">
+              <button class="button form__submit-button" type="submit">Отправить заявку</button>
+              <p class="form__note">* — Обязательные поля</p>
+            </div>
           </div>
         </form>
       </div>
     </section>
   </main>
 
+  <!--  Блок "Приглашение к сотруднечиству с картой" -->
+
+  <section class="invitation invitation--bg-color">
+    <h2 class="visually-hidden">Приглашение к сотрудничеству и карта с местоположением. </h2>
+    <div class="invitation__wrapper">
+      <div class="invitation__container">
+        <div class="invitation__content-wrapper">
+          <p class="invitation__subtitle ">
+            приглашаем <br>
+            к сотрудничеству
+            дилеров!
+          </p>
+          <div class="invitation__text-wrapper">
+            <p class="invitation__text">
+              ул. Большая Конюшенная, д. 19/8
+            </p>
+            <span class="invitation__text-city">
+              Санкт-Петербург
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="invitation__map-wrapper">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.2738725013924!2d30.3210116966363!3d59.938166461211026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1709559703245!5m2!1sru!2sru"
+        width="766" height="560" allowfullscreen
+        title="Офис компании по адресу: ул. Большая Конюшенная, д. 19/8, Санкт-Петербург"></iframe>
+    </div>
+  </section>
+  </main>
+
   <!-- Footer -->
+
   <footer class="main-footer">
     <div class="main-footer__wrapper">
       <div class="main-footer__logo-wrapper">

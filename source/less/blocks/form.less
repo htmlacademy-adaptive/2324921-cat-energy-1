@@ -18,8 +18,19 @@
 }
 
 // Данные питомца
+
 .form__data-group-wrapper {
-  padding-bottom: 15px;
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 20px 21px;
+
+  @media (min-width: @tablet-width) {
+    // padding-bottom: 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    // padding-bottom: 93px;
+  }
 }
 
 .form__list {
@@ -30,7 +41,7 @@
 .form__contacts-list {
   display: grid;
   grid-template-columns: 2fr;
-  row-gap: 14px;
+  row-gap: 11px;
 }
 
 .form__data-item,
@@ -57,8 +68,10 @@
 .form__programm-group-wrapper {
   .item-current-top();
   .item-current-bottom();
+  width: 320px;
+  margin: 0 auto;
+  padding: 30px 20px 25px;
   position: relative;
-  padding: 19px 0 22px;
 }
 
 .form__programm-list {
@@ -70,13 +83,15 @@
 // Контактные данные
 .form__contacts-group-wrapper {
   .decoration-line-mobile();
-  padding: 25px 0 0;
+  width: 320px;
+  margin: 0 auto;
+  padding: 26px 20px 0;
   position: relative;
 }
 
 .form__contacts-title {
   .text-subtitle-form();
-  margin: 0 70px 35px 0;
+  margin: 0 70px 33px 0;
   padding: 0;
   color: @title-color;
   font-family: @font-title;
@@ -90,7 +105,9 @@
 // Комментарий
 .form__comment-wrapper {
   .decoration-line-mobile();
-  padding: 25px 0 0;
+  width: 320px;
+  margin: 0 auto;
+  padding: 25px 20px 0;
   position: relative;
 }
 
@@ -100,12 +117,12 @@
 
 .form__comment-title {
   .text-subtitle-form();
+  position: relative;
   color: @title-color;
+  background-color: @text-color;
   font-family: @font-title;
   padding: 0 20px 0 0;
-  margin-bottom: 38px;
-  background-color: @text-color;
-  position: relative;
+  margin-bottom: 36px;
   z-index: 1;
 }
 
@@ -123,7 +140,9 @@
 
 .form__additional-group-wrapper {
   .decoration-line-mobile();
-  padding: 25px 0 34px;
+  width: 320px;
+  margin: 0 auto;
+  padding: 25px 20px 3px;
   position: relative;
 }
 
@@ -140,7 +159,8 @@
 
 .form__additional-list {
   display: grid;
-  row-gap: 13px;
+  row-gap: 14px;
+  margin-bottom: 25px;
 }
 
 .form__additional-item {
