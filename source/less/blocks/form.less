@@ -9,9 +9,43 @@
 .form-field {
   min-height: 45px;
   width: 100%;
-  padding: 14px 15px;
-  border: 1px solid #cdcdcd;
+  padding: 14px 40px 14px 15px;
+  border: 1px solid #e7e7e7;
+
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+
+  &:focus-visible,
+  &:active {
+    outline: solid 2px;
+    outline-color: @paragraph-color;
+  }
 }
+
+.form-field:hover + .form__icon {
+  color: @accent-color;
+  transition: all 0.2s ease;
+}
+
+// Error
+
+.form-field-error {
+  min-height: 45px;
+  width: 100%;
+  padding: 14px 40px 14px 15px;
+  border: 1px solid #e7e7e7;
+}
+
+.form-field-error:active {
+  outline: #ff8282 solid 2px;
+  // border: 2px solid #ff8282;
+}
+
+
+// .form-field--error:hover svg {
+//   // color: #ff8282;
+// }
 
 .form__group-reset {
   .fieldset-reset();
@@ -50,6 +84,20 @@
   align-items: center;
 }
 
+// Иконки в форме
+.form__icon {
+  position: relative;
+}
+
+.form-icon-email,
+.form-icon-phone {
+  position: absolute;
+  top: -7px;
+  left: -31px;
+  width: 20px;
+  height: 16px;
+}
+
 .form__data-label,
 .form__contacts-label {
   margin-right: 13px;
@@ -63,6 +111,7 @@
   color: @paragraph-color;
   text-transform: uppercase;
 }
+
 
 // Выберите программу
 .form__programm-group-wrapper {
@@ -100,7 +149,6 @@
   position: relative;
   z-index: 1;
 }
-
 
 // Комментарий
 .form__comment-wrapper {
