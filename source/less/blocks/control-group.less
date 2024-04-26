@@ -8,7 +8,7 @@
 .control-group__mark {
   position: absolute;
   left: 0;
-  border: 1px solid #bababa;
+  border: 1px solid #cdcdcd;
   width: 30px;
   height: 30px;
 }
@@ -26,6 +26,7 @@
   left: 7px;
   background-color: @accent-color;
   border-radius: 50%;
+  transition: all 0.2s ease;
 }
 
 .control-group__input[type="checkbox"]:checked + .control-group__mark::before {
@@ -43,3 +44,24 @@
   font-weight: 400;
   text-transform: uppercase;
 }
+
+// Состояния
+.control-group__label:hover .control-group__mark {
+  border-color: #bababa;
+}
+
+.control-group__input:focus-visible + .control-group__mark {
+  outline: 2px solid #444444;
+}
+
+.control-group__input:disabled + .control-group__mark {
+  opacity: 0.3;
+}
+
+.control-group__input:disabled ~ label {
+  opacity: 0.3;
+}
+
+// .control-group__label:disabled {
+//   opacity: 0.3;
+// }

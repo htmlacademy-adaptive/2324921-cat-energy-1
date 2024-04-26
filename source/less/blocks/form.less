@@ -1,54 +1,13 @@
+.form__group-reset {
+  .fieldset-reset();
+}
+
 .form__label {
   .fonts-text-form-mobile();
   color: @paragraph-color;
   font-family: @font-title;
   font-weight: 400;
   text-transform: uppercase;
-}
-
-.form-field {
-  min-height: 45px;
-  width: 100%;
-  padding: 14px 40px 14px 15px;
-  border: 1px solid #e7e7e7;
-
-  &:hover {
-    border: 1px solid #cdcdcd;
-  }
-
-  &:focus-visible,
-  &:active {
-    outline: solid 2px;
-    outline-color: @paragraph-color;
-  }
-}
-
-.form-field:hover + .form__icon {
-  color: @accent-color;
-  transition: all 0.2s ease;
-}
-
-// Error
-
-.form-field-error {
-  min-height: 45px;
-  width: 100%;
-  padding: 14px 40px 14px 15px;
-  border: 1px solid #e7e7e7;
-}
-
-.form-field-error:active {
-  outline: #ff8282 solid 2px;
-  // border: 2px solid #ff8282;
-}
-
-
-// .form-field--error:hover svg {
-//   // color: #ff8282;
-// }
-
-.form__group-reset {
-  .fieldset-reset();
 }
 
 // Данные питомца
@@ -224,4 +183,56 @@
   font-weight: 400;
   line-height: 16px;
   text-align: center;
+}
+
+
+// Состояния
+.form-field {
+  min-height: 45px;
+  width: 100%;
+  padding: 14px 40px 14px 15px;
+  border: 1px solid #e7e7e7;
+
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+
+  &:focus-visible,
+  &:active {
+    outline: solid 2px;
+    outline-color: @paragraph-color;
+  }
+}
+
+.form-field:hover + .form__icon,
+.form-field:focus-visible + .form__icon {
+  color: @accent-color;
+  transition: all 0.2s ease;
+}
+
+.form-field:disabled,
+.form-field:disabled + .form__icon {
+  opacity: 0.2;
+}
+
+.form__comment-text:focus-visible {
+  outline: 2px solid #444444;
+}
+
+// Error
+
+.form-field-error {
+  min-height: 45px;
+  width: 100%;
+  padding: 14px 40px 14px 15px;
+  border: 2px solid #ff8282;
+}
+
+.form-field-error:active {
+  outline: #ff8282 solid 2px;
+}
+
+
+.form-field-error + .form__icon {
+  color: #ff8282;
 }
