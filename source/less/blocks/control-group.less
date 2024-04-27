@@ -1,8 +1,18 @@
 .control-group__label {
+  .fonts-text-form-mobile();
   display: flex;
   align-items: center;
   position: relative;
   padding-left: 45px;
+  color: @paragraph-color;
+  font-family: @font-title;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    .fonts-text-form-tablet();
+    padding-left: 60px;
+  }
 }
 
 .control-group__mark {
@@ -11,6 +21,15 @@
   border: 1px solid #cdcdcd;
   width: 30px;
   height: 30px;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    //
+  }
 }
 
 .control-group__input[type="radio"] + .control-group__mark {
@@ -27,6 +46,13 @@
   background-color: @accent-color;
   border-radius: 50%;
   transition: all 0.2s ease;
+
+  @media (min-width: @tablet-width) {
+    top: 10px;
+    left: 10px;
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .control-group__input[type="checkbox"]:checked + .control-group__mark::before {
@@ -37,15 +63,15 @@
   z-index: 1;
 }
 
-.control-group__text {
-  .fonts-text-form-mobile();
-  color: @paragraph-color;
-  font-family: @font-title;
-  font-weight: 400;
-  text-transform: uppercase;
-}
+// .control-group__text {
+//   .fonts-text-form-mobile();
+//   color: @paragraph-color;
+//   font-family: @font-title;
+//   font-weight: 400;
+//   text-transform: uppercase;
+// }
 
-// Состояния
+// Состояния радиокнопок и чекбоксов
 .control-group__label:hover .control-group__mark {
   border-color: #bababa;
 }

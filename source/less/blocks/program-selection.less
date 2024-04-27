@@ -5,20 +5,43 @@
 .program-selection__container {
   @media (min-width: @tablet-width) {
     width: 768px;
-    display: grid;
+    margin: 0 auto;
+    padding: 0 40px;
   }
 
   @media (min-width: @desktop-width) {
     width: 1300px;
+    display: grid;
   }
 }
 
+// Данные питомца
+.program-selection__data-group-wrapper {
+  width: 320px;
+  margin: 0 auto;
+  padding: 25px 20px 21px;
+
+  @media (min-width: @tablet-width) {
+    width: 628px;
+    padding: 55px 0 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    // padding-bottom: 93px;
+    width: 1300px;
+  }
+}
 
 .program-selection__title {
   .fonts-title-main-mobile();
-  margin: 27px 0 37px;
+  margin: 0 auto 37px;
   color: @title-color;
   font-family: @font-title;
+
+  @media (min-width: @tablet-width) {
+    .fonts-title-main();
+    margin: 0 auto 55px;
+  }
 }
 
 .program-selection__text {
@@ -29,4 +52,11 @@
   color: @title-color;
   font-weight: 400;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    .fonts-text-form-tablet();
+    min-width: 320px;
+    margin-bottom: 65px;
+    // margin: 0 0 0 40px;
+  }
 }
