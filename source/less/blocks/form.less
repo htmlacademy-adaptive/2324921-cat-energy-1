@@ -25,8 +25,14 @@
   row-gap: 14px;
 
   @media (min-width: @tablet-width) {
+    width: 628px;
+    margin: 0 auto;
     row-gap: 20px;
   }
+}
+
+.form__contacts-list {
+  margin-top: 33px;
 }
 
 .form__data-item,
@@ -122,7 +128,7 @@
 }
 
 // Контактные данные
-.form-decoration-line {
+.decoration-line {
   overflow: hidden;
   position: relative;
   .decoration-line-mobile();
@@ -136,8 +142,8 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
-    width: 628px;
-    padding: 67px 0 20px;
+    width: 708px;
+    padding: 24px 0 40px;
   }
 
   @media (min-width: @desktop-width) {
@@ -147,7 +153,8 @@
 
 .form__contacts-title {
   .text-subtitle-form();
-  margin: 0 70px 33px 0;
+  // margin: 0 70px 33px 0;
+  margin: 0 70px 0 0;
   padding: 0;
   color: @title-color;
   font-family: @font-title;
@@ -158,20 +165,23 @@
 
   @media (min-width: @tablet-width) {
     .fonts-title-main-mobile();
+    padding: 0 40px;
+    margin-bottom: 75px;
   }
 }
 
 // Комментарий
+
 .form__comment-wrapper {
-  .decoration-line-mobile();
   width: 320px;
   margin: 0 auto;
   padding: 25px 20px 0;
   position: relative;
-}
 
-.form__comment {
-  display: grid;
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    padding: 26px 0 30px;
+  }
 }
 
 .form__comment-title {
@@ -181,20 +191,36 @@
   background-color: @text-color;
   font-family: @font-title;
   padding: 0 20px 0 0;
-  margin-bottom: 36px;
+  // margin-bottom: 36px;
   z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    .fonts-title-main-mobile();
+    padding: 0 40px;
+    margin-bottom: 87px;
+  }
 }
 
 
 .form__comment-text {
   .fonts-text-form-mobile();
+  width: 100%;
   min-height: 150px;
   padding: 14px;
+  margin-top: 36px;
   border: 1px solid #e7e7e7;
   color: @paragraph-color;
   font-family: @font-title;
   font-weight: 400;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    .fonts-text-form-tablet();
+    width: 628px;
+    min-height: 175px;
+    padding: 10px 20px;
+    margin-left: 40px;
+  }
 }
 
 .form__additional-group-wrapper {
@@ -213,12 +239,13 @@
   }
 }
 
+// Дополнительно
 .form__additional-title {
   .text-subtitle-form();
   color: @title-color;
   font-family: @font-title;
   padding: 0 20px 0 0;
-  margin-bottom: 38px;
+  // margin-bottom: 38px;
   background-color: @text-color;
   position: relative;
   z-index: 1;
@@ -227,7 +254,8 @@
 .form__additional-list {
   display: grid;
   row-gap: 13px;
-  margin-bottom: 28px;
+  margin: 38px 0 28px;
+  // margin-bottom: 28px;
 }
 
 .form__additional-item {

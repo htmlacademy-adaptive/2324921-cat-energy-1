@@ -68,171 +68,167 @@
     <!-- Form -->
 
     <form class="program-selection__form form" action="https://echo.htmlacademy.ru/" method="post">
+
+      <!-- Данные питомца -->
       <section class="program-selection">
+
         <div class="program-selection__container">
-
-          <!-- Данные питомца -->
-
-          <div class="program-selection__data-group">
-
-            <div class="program-selection__data-group-wrapper">
-              <h1 class="program-selection__title">Подбор программы</h1>
-              <p class="program-selection__text">Заполните анкету, и мы подберем
-                программу питания для вашего кота
-              </p>
-              <fieldset class="form__group-reset form__data-group ">
-                <legend class="visually-hidden">Введите данные питомца</legend>
-                <ul class="form__list form__data-list">
-                  <li class="form__data-item">
-                    <label class="form__label form__data-label" for="name">Имя:*</label>
-                    <!--использовать допкласс "form-field-error" для вывода состояния ошибки в плейсхолдере-->
-                    <input class="form__data-field form-field" type="text" name="name" value="Барсик"
-                      placeholder="Укажите имя" id="name" required>
-                  </li>
-                  <li class="form__data-item">
-                    <label class="form__label form__data-label" for="weight">Вес (кг):*</label>
-                    <input class="form__data-field form-field" type="number" name="weight" value="7"
-                      placeholder="Укажите вес" id="weight" min="0" max="50">
-                  </li>
-                  <li class="form__data-item">
-                    <label class="form__label form__data-label" for="age">Возраст (лет):</label>
-                    <input class="form__data-field form-field" type="number" name="age" value="7"
-                      placeholder="Укажите возраст" id="age" min="0" max="30">
-                  </li>
-                </ul>
-              </fieldset>
-            </div>
-
-            <!-- Выберите программу -->
-
-            <div class="form__programm-group-wrapper">
-              <fieldset class="form__group-reset control-group">
-                <legend class="visually-hidden">Выберите программу</legend>
-                <ul class="form__list form__programm-list form__programm-list--radio">
-                  <li class="form__programm-item">
-                    <label class="control-group__label" for="slimming">
-                      <input class="visually-hidden control-group__input" type="radio" name="programm" id="slimming"
-                        value="slimming" checked>
-                      <span class="control-group__mark"></span>
-                      <span class="control-group__text">Похудение</span>
-                    </label>
-                  </li>
-                  <li class="form__programm-item">
-                    <label class="control-group__label" for="weight-gain">
-                      <input class="visually-hidden control-group__input" type="radio" name="programm" id="weight-gain"
-                        value="weight-gain">
-                      <span class="control-group__mark"></span>
-                      <span class="control-group__text">Набор массы</span>
-
-                    </label>
-                  </li>
-                  <li class="form__programm-item">
-                    <label class="control-group__label" for="advice">
-                      <input class="visually-hidden control-group__input" type="radio" name="programm" id="advice"
-                        value="advice">
-                      <span class="control-group__mark"></span>
-                      <span class="control-group__text">Не знаю (Нужен ваш совет)</span>
-                    </label>
-                  </li>
-                </ul>
-              </fieldset>
-            </div>
+          <div class="program-selection__wrapper">
+            <h1 class="program-selection__title">Подбор программы</h1>
+            <p class="program-selection__text">Заполните анкету, и мы подберем
+              программу питания для вашего кота
+            </p>
+            <fieldset class="form__group-reset form__data-group ">
+              <legend class="visually-hidden">Введите данные питомца</legend>
+              <ul class="form__list form__data-list">
+                <li class="form__data-item">
+                  <label class="form__label form__data-label" for="name">Имя:*</label>
+                  <!--использовать допкласс "form-field-error" для вывода состояния ошибки в плейсхолдере-->
+                  <input class="form__data-field form-field" type="text" name="name" value="Барсик"
+                    placeholder="Укажите имя" id="name" required>
+                </li>
+                <li class="form__data-item">
+                  <label class="form__label form__data-label" for="weight">Вес (кг):*</label>
+                  <input class="form__data-field form-field" type="number" name="weight" value="7"
+                    placeholder="Укажите вес" id="weight" min="0" max="50">
+                </li>
+                <li class="form__data-item">
+                  <label class="form__label form__data-label" for="age">Возраст (лет):</label>
+                  <input class="form__data-field form-field" type="number" name="age" value="7"
+                    placeholder="Укажите возраст" id="age" min="0" max="30">
+                </li>
+              </ul>
+            </fieldset>
           </div>
 
-          <!--  Контактные данные -->
-          <section class="form__contacts-group form-decoration-line">
-            <div class="form__contacts-group-wrapper">
-              <fieldset class="form__group-reset form__contacts-group">
-                <legend class="form__contacts-title">Контактные данные
-                  (владельца кота)</legend>
-                <ul class="form__list form__contacts-list">
-                  <li class="form__contacts-item">
-                    <label class="form__label form__contacts-label" for="email">E-mail:*</label>
-                    <!--использовать допкласс "form-field-error" для вывода состояния ошибки в плейсхолдере-->
-                    <input class="form__contacts-field form-field" type="email" name="mail" value="kuklachev@gmail.com"
-                      placeholder="e-mail" id="email" required>
-                    <span class="form__icon">
-                      <svg class="form-icon-email" width="17" height="13">
-                        <use xlink:href="img/sprite.svg#icon-mail"></use>
-                      </svg>
-                    </span>
-                  </li>
-                  <li class="form__contacts-item form__contacts-item--phone">
-                    <label class="form__label form__contacts-label" for="number">Телефон:*</label>
-                    <input class="form__contacts-field form-field" type="tel" name="phone" value="8 (960) 900-60-90"
-                      placeholder="Укажите номер телефона" id="number" maxlength="17" required>
-                    <span class="form__icon">
-                      <svg class="form-icon-phone" width="15" height="15">
-                        <use xlink:href="img/sprite.svg#icon-phone"></use>
-                      </svg>
-                    </span>
-                  </li>
-                </ul>
-              </fieldset>
-            </div>
-          </section>
+          <!-- Выберите программу -->
 
-          <!-- Комментарий -->
-          <section class="form__comment">
-            <div class="form__comment-wrapper">
-              <fieldset class="form__group-reset form__comment">
-                <legend class="form__comment-title" for="message">Комментарий</legend>
-                <textarea class="form__comment-text" name="comment" placeholder="Расскажите обо всех повадках кота"
-                  id="message"></textarea>
-              </fieldset>
-            </div>
-          </section>
+          <div class="form__programm-group-wrapper">
+            <fieldset class="form__group-reset control-group">
+              <legend class="visually-hidden">Выберите программу</legend>
+              <ul class="form__list form__programm-list form__programm-list--radio">
+                <li class="form__programm-item">
+                  <label class="control-group__label" for="slimming">
+                    <input class="visually-hidden control-group__input" type="radio" name="programm" id="slimming"
+                      value="slimming" checked>
+                    <span class="control-group__mark"></span>
+                    <span class="control-group__text">Похудение</span>
+                  </label>
+                </li>
+                <li class="form__programm-item">
+                  <label class="control-group__label" for="weight-gain">
+                    <input class="visually-hidden control-group__input" type="radio" name="programm" id="weight-gain"
+                      value="weight-gain">
+                    <span class="control-group__mark"></span>
+                    <span class="control-group__text">Набор массы</span>
 
-          <!-- Дополнительно -->
-          <section class="form__additional-group">
-            <div class="form__additional-group-wrapper">
-              <fieldset class="form__group-reset form__additional-group control-group">
-                <legend class="form__additional-title">Дополнительно</legend>
-                <ul class="form__list form__additional-list form__additional-list--checkbox">
-                  <li class="form__additional-item">
-                    <label class="control-group__label" for="sweetener">
-                      <input class="visually-hidden form__additional-field control-group__input" type="checkbox"
-                        name="sweetener" id="sweetener" checked>
-                      <span class="control-group__mark"></span>
-                      <span class="control-group__text">Сахарозаменитель</span>
-                    </label>
-                  </li>
-                  <li class="form__additional-item">
-                    <label class="control-group__label" for="water">
-                      <input class="visually-hidden form__additional-field control-group__input" type="checkbox"
-                        name="water" id="water">
-                      <span class="control-group__mark"></span>
-                      <span class="control-group__text">Питьевая вода</span>
-                    </label>
-                  </li>
-                  <li class="form__additional-item">
-                    <label class="control-group__label" for="milk">
-                      <input class="visually-hidden form__additional-field control-group__input" type="checkbox"
-                        name="milk" id="milk">
-                      <span class="control-group__mark"></span>
-                      <span class="control-group__text">Молоко</span>
-                    </label>
-                  </li>
-                  <li class="form__additional-item">
-                    <label class="control-group__label" for="vitamins">
-                      <input class="visually-hidden form__additional-field control-group__input" type="checkbox"
-                        name="vitamins" id="vitamins">
-                      <span class="control-group__mark"></span>
-                      <span class="control-group__text">Витамины</span>
-                    </label>
-                  </li>
-                </ul>
-              </fieldset>
-              <div class="form__submit-wrapper">
-                <button class="button form__submit-button" type="submit">Отправить заявку</button>
-                <p class="form__note">* — Обязательные поля</p>
-              </div>
-            </div>
-          </section>
+                  </label>
+                </li>
+                <li class="form__programm-item">
+                  <label class="control-group__label" for="advice">
+                    <input class="visually-hidden control-group__input" type="radio" name="programm" id="advice"
+                      value="advice">
+                    <span class="control-group__mark"></span>
+                    <span class="control-group__text">Не знаю (Нужен ваш совет)</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+        </div>
+      </section>
 
+      <!--  Контактные данные -->
+      <section class="form__contacts-group decoration-line">
+        <div class="form__contacts-group-wrapper">
+          <fieldset class="form__group-reset form__contacts-group">
+            <legend class="form__contacts-title">Контактные данные
+              (владельца кота)</legend>
+            <ul class="form__list form__contacts-list">
+              <li class="form__contacts-item">
+                <label class="form__label form__contacts-label" for="email">E-mail:*</label>
+                <!--использовать допкласс "form-field-error" для вывода состояния ошибки в плейсхолдере-->
+                <input class="form__contacts-field form-field" type="email" name="mail" value="kuklachev@gmail.com"
+                  placeholder="e-mail" id="email" required>
+                <span class="form__icon">
+                  <svg class="form-icon-email" width="17" height="13">
+                    <use xlink:href="img/sprite.svg#icon-mail"></use>
+                  </svg>
+                </span>
+              </li>
+              <li class="form__contacts-item form__contacts-item--phone">
+                <label class="form__label form__contacts-label" for="number">Телефон:*</label>
+                <input class="form__contacts-field form-field" type="tel" name="phone" value="8 (960) 900-60-90"
+                  placeholder="Укажите номер телефона" id="number" maxlength="17" required>
+                <span class="form__icon">
+                  <svg class="form-icon-phone" width="15" height="15">
+                    <use xlink:href="img/sprite.svg#icon-phone"></use>
+                  </svg>
+                </span>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+      </section>
+
+      <!-- Комментарий -->
+      <section class="form__comment decoration-line">
+        <div class="form__comment-wrapper">
+          <fieldset class="form__group-reset form__comment">
+            <legend class="form__comment-title" for="message">Комментарий</legend>
+            <textarea class="form__comment-text" name="comment" placeholder="Расскажите обо всех повадках кота"
+              id="message"></textarea>
+          </fieldset>
+        </div>
+      </section>
+
+      <!-- Дополнительно -->
+      <section class="form__additional-group">
+        <div class="form__additional-group-wrapper">
+          <fieldset class="form__group-reset form__additional-group control-group">
+            <legend class="form__additional-title">Дополнительно</legend>
+            <ul class="form__list form__additional-list form__additional-list--checkbox">
+              <li class="form__additional-item">
+                <label class="control-group__label" for="sweetener">
+                  <input class="visually-hidden form__additional-field control-group__input" type="checkbox"
+                    name="sweetener" id="sweetener" checked>
+                  <span class="control-group__mark"></span>
+                  <span class="control-group__text">Сахарозаменитель</span>
+                </label>
+              </li>
+              <li class="form__additional-item">
+                <label class="control-group__label" for="water">
+                  <input class="visually-hidden form__additional-field control-group__input" type="checkbox"
+                    name="water" id="water">
+                  <span class="control-group__mark"></span>
+                  <span class="control-group__text">Питьевая вода</span>
+                </label>
+              </li>
+              <li class="form__additional-item">
+                <label class="control-group__label" for="milk">
+                  <input class="visually-hidden form__additional-field control-group__input" type="checkbox" name="milk"
+                    id="milk">
+                  <span class="control-group__mark"></span>
+                  <span class="control-group__text">Молоко</span>
+                </label>
+              </li>
+              <li class="form__additional-item">
+                <label class="control-group__label" for="vitamins">
+                  <input class="visually-hidden form__additional-field control-group__input" type="checkbox"
+                    name="vitamins" id="vitamins">
+                  <span class="control-group__mark"></span>
+                  <span class="control-group__text">Витамины</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <div class="form__submit-wrapper">
+            <button class="button form__submit-button" type="submit">Отправить заявку</button>
+            <p class="form__note">* — Обязательные поля</p>
+          </div>
+        </div>
+      </section>
     </form>
-    </div>
-    </section>
   </main>
 
   <!--  Блок "Приглашение к сотруднечиству с картой" -->
