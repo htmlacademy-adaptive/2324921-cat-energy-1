@@ -72,15 +72,17 @@
     }
   }
 
-  &::after {
-    position: absolute;
-    content: counter(number);
-    font-family: "Oswald", sans-serif;
-    font-size: 280px;
-    line-height: 280px;
-    color: @extra-button-color;
-    top: 0;
-    right: 0;
+  @media (min-width: @tablet-width) {
+    &::after {
+      position: absolute;
+      content: counter(number);
+      font-family: "Oswald", sans-serif;
+      font-size: 280px;
+      line-height: 280px;
+      color: @extra-button-color;
+      top: 0;
+      right: 0;
+    }
   }
 
   &--eco::before {

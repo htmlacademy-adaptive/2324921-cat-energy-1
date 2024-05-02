@@ -41,18 +41,26 @@
 
   &--slim::before {
     position: absolute;
-    content: url("../img/programms/cat-sit.svg");
+    content: "";
+    background-image: url("../img/programms/cat-sit.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 50px;
+    height: 53px;
     top: 21px;
     left: 20px;
 
     @media (min-width: @tablet-width) {
       width: 200px;
-      height: 211px;
+      height: 207px;
       top: 80px;
       left: 445px;
     }
 
     @media (min-width: @desktop-width) {
+      width: 100px;
+      height: 106px;
       top: 41px;
       left: 52px;
     }
@@ -60,7 +68,13 @@
 
   &--pro::before {
     position: absolute;
-    content: url("../img/programms/cat-stay.svg");
+    content: "";
+    background-image: url("../img/programms/cat-stay.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 70px;
+    height: 50px;
     top: 24px;
     left: 12px;
 
@@ -72,6 +86,8 @@
     }
 
     @media (min-width: @desktop-width) {
+      width: 134px;
+      height: 100px;
       top: 48px;
       left: 33px;
     }
