@@ -25,8 +25,6 @@
   row-gap: 14px;
 
   @media (min-width: @tablet-width) {
-    width: 628px;
-    margin: 0 auto;
     row-gap: 20px;
   }
 }
@@ -36,6 +34,14 @@
 
   @media (min-width: @tablet-width) {
     margin-top: 77px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1300px;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
   }
 }
 
@@ -113,12 +119,14 @@
   @media (min-width: @tablet-width) {
     width: 628px;
     margin: 0 auto;
-    padding: 24px 27px;
+    padding: 28px 27px;
     border: 1px solid #e7e7e7;
   }
 
   @media (min-width: @desktop-width) {
-    //
+    min-height: 196px;
+    width: 570px;
+    align-self: end;
   }
 }
 
@@ -133,14 +141,17 @@
 }
 
 // Контактные данные
-.decoration-line {
-  overflow: hidden;
-  position: relative;
+
+.form__contacts {
   .decoration-line-mobile();
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 5px;
+  }
 }
 
 .form__contacts-group-wrapper {
-  // .decoration-line-mobile();
   width: 320px;
   margin: 0 auto;
   padding: 26px 20px 0;
@@ -177,6 +188,11 @@
 
 // Комментарий
 
+.form__comment {
+  .decoration-line-mobile();
+  position: relative;
+}
+
 .form__comment-wrapper {
   width: 320px;
   margin: 0 auto;
@@ -187,6 +203,15 @@
     width: 708px;
     padding: 26px 0 34px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 1300px;
+    padding: 26px 0 34px;
+  }
+}
+
+.form__comment-group {
+  display: flex;
 }
 
 .form__comment-title {
@@ -195,17 +220,13 @@
   color: @title-color;
   background-color: @text-color;
   font-family: @font-title;
-  // padding: 0 20px 0 0;
-  // margin-bottom: 36px;
   z-index: 1;
 
   @media (min-width: @tablet-width) {
     .fonts-title-main-mobile();
     padding: 0 40px;
-    // margin-bottom: 87px;
   }
 }
-
 
 .form__comment-text {
   .fonts-text-form-mobile();
@@ -227,9 +248,23 @@
     // margin-left: 40px;
     margin: 87px 0 0 40px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    margin-top: 78px;
+  }
 }
 
 // Дополнительно
+.form__additional {
+  .decoration-line-mobile();
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    margin-top: 10px;
+  }
+}
+
 .form__additional-group-wrapper {
   width: 320px;
   margin: 0 auto;
@@ -320,6 +355,7 @@
 
 
 // Состояния
+
 .form-field:hover {
   border: 1px solid #cdcdcd;
 }

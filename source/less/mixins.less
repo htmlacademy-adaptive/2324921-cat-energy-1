@@ -106,22 +106,26 @@
       height: 2px;
       background-color: @accent-color;
     }
-
-    @media (min-width: @desktop-width) {
-      content: none;
-    }
   }
 }
 
 // Декоративные полосы у заголовков на десктопной версии
-.decoration-line() {
-  &::before,
+.decoration-line-desktop() {
   &::after {
     content: "";
     position: absolute;
-    top: 22px;
+    top: 45px;
+    width: 10%;
+    height: 2px;
+    background-color: @accent-color;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 45px;
     width: 500%;
-    height: 1px;
+    height: 2px;
     background-color: @accent-color;
   }
 }

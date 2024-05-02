@@ -1,5 +1,4 @@
 .site-list a {
-  padding: 23px 0 22px;
   display: block;
   font-family: @font-title;
   font-size: 20px;
@@ -7,6 +6,11 @@
   line-height: 20px;
   text-transform: uppercase;
   border-bottom: 1px solid #e6e6e6;
+
+  @media (max-width: @mobile-width-only) {
+    padding: 23px 0 22px;
+    outline-offset: unset;
+  }
 
   @media (min-width: @tablet-width) {
     border: none;
@@ -40,6 +44,7 @@
 
   @media (min-width: @tablet-width) {
     // margin-right: 32px;
+    padding: 15px 0;
   }
 
   &:last-child {
@@ -54,7 +59,7 @@
     @media (min-width: @tablet-width) {
       content: "";
       position: absolute;
-      bottom: 13px;
+      bottom: 4px;
       right: 0;
       left: 0;
       height: 2px;
@@ -71,6 +76,7 @@
 
 .site-list__link {
   min-width: 55px;
+  outline-offset: 5px;
 }
 
 .site-list__link--bg-index {
