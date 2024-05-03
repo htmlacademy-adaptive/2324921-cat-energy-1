@@ -85,8 +85,26 @@
     }
   }
 
-  &--eco::before {
-    background-image: url("../img/programms/icon-eco.svg");
+  &--eco {
+    position: relative;
+    counter-increment: number 1;
+
+    @media (min-width: @tablet-width) {
+      &::after {
+        position: absolute;
+        content: counter(number);
+        font-family: "Oswald", sans-serif;
+        font-size: 280px;
+        line-height: 280px;
+        color: @extra-button-color;
+        top: 0;
+        right: 23px;
+      }
+    }
+
+    &::before {
+      background-image: url("../img/programms/icon-eco.svg");
+    }
   }
 
   &--quickly::before {
@@ -100,6 +118,7 @@
   &--change::before {
     background-image: url("../img/programms/icon-clock.svg");
   }
+
 
   @media (min-width: @tablet-width) {
     padding: 130px 5px 37px 0;
@@ -142,5 +161,13 @@
     .fonts-text-tablet();
     margin: 0;
     padding-left: 0;
+  }
+}
+
+.programm-process__description br {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: initial;
   }
 }

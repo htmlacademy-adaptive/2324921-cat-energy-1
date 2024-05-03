@@ -9,12 +9,12 @@
 
   @media (min-width: @desktop-width) {
     width: 1300px;
-    padding: 0 40px;
+    padding: 55px 40px 30px;
   }
 }
 
-.main-header--opened,
-.main-header--closed-line {
+
+.main-header--bb-line {
   @media (max-width: @mobile-width-only) {
     border-bottom: 1px solid #e6e6e6;
   }
@@ -146,11 +146,12 @@
   .main-header--opened .main-nav__wrapper {
     width: 100%;
     position: absolute;
-    top: 67px;
+    top: 66px;
     right: 0;
     z-index: 10;
     text-align: center;
     background-color: #ffffff;
+    border-top: 1px solid #e6e6e6;
   }
 
   .main-header--nojs .main-header__toggle {

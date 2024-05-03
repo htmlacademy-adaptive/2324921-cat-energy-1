@@ -14,7 +14,7 @@
     @media (min-width: @desktop-width) {
       content: "";
       position: absolute;
-      top: -50px;
+      top: 0;
       width: 50%;
       height: 697px;
       right: 0;
@@ -68,7 +68,7 @@
     width: 1300px;
     padding: 0 40px;
     grid-template-columns: 80px 367px 50px 502px;
-    grid-template-rows: 102px auto 40px auto 51px auto;
+    grid-template-rows: 79px auto 40px auto 51px auto;
   }
 }
 
@@ -148,6 +148,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin: 0;
     grid-column: 3/5;
     grid-row: 1/8;
   }
