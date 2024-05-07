@@ -32,7 +32,7 @@
     display: grid;
     align-items: end;
     grid-template-columns: 1fr;
-    grid-template-rows: 196px 24px auto 14px auto 30px auto;
+    grid-template-rows: 196px 24px auto 11px auto 32px auto;
     justify-items: center;
 
     &:not(:last-child) {
@@ -42,7 +42,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-rows: 196px 10px auto 14px auto 30px auto;
+    grid-template-rows: 196px 15px auto 13px auto 32px auto;
   }
 }
 
@@ -125,8 +125,15 @@
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 20px;
-    margin-bottom: 6px;
-    margin-top: 4px;
+    // margin-bottom: 6px;
+    // margin-top: 5px;
+    margin: 5px 0 6px;
+  }
+
+  @media (min-width: @desktop-width) {
+    // margin-bottom: 6px;
+    // margin-top: 7px;
+    margin: 7px 0 6px;
   }
 }
 
