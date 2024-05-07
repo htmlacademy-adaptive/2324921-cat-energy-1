@@ -85,13 +85,13 @@
               srcset="img/index/index-photo-product-mobile@1x.webp 1x, img/index/index-photo-product-mobile@2x.webp 2x">
 
             <source media="(min-width: 1300px)"
-              srcset="img/index/index-photo-product-desktop@1x.webp 1x, img/index/index-photo-product-desktop@2x.webp 2x"
+              srcset="img/index/index-photo-product-desktop@1x.png 1x, img/index/index-photo-product-desktop@2x.png 2x"
               width="552" height="499">
             <source media="(min-width: 768px)"
-              srcset="img/index/index-photo-product-tablet@1x.webp 1x, img/index/index-photo-product-tablet@2x.webp 2x"
+              srcset="img/index/index-photo-product-tablet@1x.img 1x, img/index/index-photo-product-tablet@2x.img 2x"
               width="709" height="609">
-            <img class="intro__img" src="img/index/index-photo-product-mobile@1x.webp"
-              srcset="img/index/index-photo-product-mobile@1x.webp 1x, img/index/index-photo-product-mobile@2x.webp 2x"
+            <img class="intro__img" src="img/index/index-photo-product-mobile@1x.png"
+              srcset="img/index/index-photo-product-mobile@1x.png 1x, img/index/index-photo-product-mobile@2x.png 2x"
               width="280" height="270" loading="lazy" alt="Питание для котов cat energy">
           </picture>
         </div>
@@ -203,12 +203,16 @@
           <li class="stats-example__item-picture slider__item slider__item--before">
             <div class="slider__box slider__box--before">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/index/image-cat-tablet-befor@1x.webp 1x, img/index/image-cat-tablet-befor@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/index/image-cat-mobile-befor@1x.webp 1x, img/index/image-cat-mobile-befor@2x.webp 2x">
                 <source media="(min-width: 768px)"
-                  srcset="img/index/image-cat-tablet-befor@1x.webp 1x, img/index/image-cat-tablet-befor@2x.webp 2x"
+                  srcset="img/index/image-cat-tablet-befor@1x.png 1x, img/index/image-cat-tablet-befor@2x.png 2x"
                   width="560" height="512">
                 <img class="stats-example__cat-img" width="280" height="256"
-                  src="img/index/image-cat-mobile-befor@1x.webp 1x"
-                  srcset="img/index/image-cat-mobile-befor@1x.webp 1x, img/index/image-cat-mobile-befor@2x.webp 2x"
+                  src="img/index/image-cat-mobile-befor@1x.png 1x"
+                  srcset="img/index/image-cat-mobile-befor@1x.png 1x, img/index/image-cat-mobile-befor@2x.png 2x"
                   loading="lazy" alt="Толстый кот">
               </picture>
             </div>
@@ -216,12 +220,16 @@
           <li class="stats-example__item-picture slider__item slider__item--after">
             <div class="slider__box slider__box--after">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/index/image-cat-tablet-after@1x.webp 1x, img/index/image-cat-tablet-after@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/index/image-cat-mobile-after@1x.webp 1x, img/index/image-cat-mobile-after@2x.webp 2x">
                 <source media="(min-width: 768px)"
-                  srcset="img/index/image-cat-tablet-after@1x.webp 1x, img/index/image-cat-tablet-after@2x.webp 2x"
+                  srcset="img/index/image-cat-tablet-after@1x.png 1x, img/index/image-cat-tablet-after@2x.png 2x"
                   width="560" height="512">
                 <img class="stats-example__cat-img" width="280" height="256"
-                  src="img/index/image-cat-mobile-after@1x.webp 1x.webp"
-                  srcset="img/index/image-cat-mobile-after@1x.webp 1x, img/index/image-cat-mobile-after@2x.webp 2x"
+                  src="img/index/image-cat-mobile-after@1x.png 1x"
+                  srcset="img/index/image-cat-mobile-after@1x.png 1x, img/index/image-cat-mobile-after@2x.png 2x"
                   loading="lazy" alt="Тощий кот">
               </picture>
             </div>
@@ -273,8 +281,15 @@
               srcset="img/map-nojs/map-nojs-desktop@1x.webp 1x, img/map-nojs/map-nojs-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)"
               srcset="img/map-nojs/map-nojs-tablet@1x.webp 1x, img/map-nojs/map-nojs-tablet@2x.webp 2x">
-            <img src="img/map-nojs/map-nojs-mobile@1x.webp 1x"
-              srcset="img/map-nojs/map-nojs-mobile@1x.webp 1x, img/map-nojs/map-nojs-mobile@2x.webp 2x" width="320"
+            <source type="image/webp"
+              srcset="img/map-nojs/map-nojs-mobile@1x.webp 1x, img/map-nojs/map-nojs-mobile@2x.webp 2x">
+
+            <source type="image/webp" media="(min-width: 1300px)"
+              srcset="img/map-nojs/map-nojs-desktop@1x.jpg 1x, img/map-nojs/map-nojs-desktop@2x.jpg 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/map-nojs/map-nojs-tablet@1x.jpg 1x, img/map-nojs/map-nojs-tablet@2x.jpg 2x">
+            <img src="img/map-nojs/map-nojs-mobile@1x.jpg 1x"
+              srcset="img/map-nojs/map-nojs-mobile@1x.jpg 1x, img/map-nojs/map-nojs-mobile@2x.jpg 2x" width="320"
               height="362" loading="lazy"
               alt="Локация Кэт энерджи по адресу: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
           </noscript>
