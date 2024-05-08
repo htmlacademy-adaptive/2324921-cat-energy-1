@@ -9,20 +9,18 @@
   <link rel="preload" href="css/style.min.css" as="style">
   <link rel="preload" href="js/script.min.js" as="script">
   <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font">
-  <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" as="font">
   <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32.png">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/svg+xml" href="images/favicons/icon.svg">
-  <link rel="apple-touch-icon" hrefc:\Users\baran\Downloads\Котяра до и после\apple.png="images/favicons/apple.png">
+  <link rel="apple-touch-icon" href="images/favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
 
   <!-- Шапка -->
-  <header class="main-header main-header--closed main-header--nojs main-header--closed-line">
-    <!-- Добавить допкласс main-nav--opened для открытия меню без js-->
+  <header class="main-header main-header--closed main-header--nojs main-header--bb-line">
     <div class="main-header__wrapper">
       <div class="main-header__logo-wrapper">
         <a class="main-header__logo" href="index.html">
@@ -46,8 +44,7 @@
     <nav class="main-nav">
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item"> <!-- Добавить допкласс site-list__item--active,
-            чтобы активное меню отображалось при закрытом списке -->
+          <li class="site-list__item">
             <a class="site-list__link" href="index.html">Главная
             </a>
           </li>
@@ -66,7 +63,7 @@
   </header>
 
   <!-- Главная 'Каталог продукции' -->
-  <main class="main-container main-inner">
+  <main class="main-container">
     <section class="catalog">
 
       <div class="catalog__wrapper">
@@ -79,9 +76,16 @@
 
               <div class="product-card__image-wrapper">
                 <picture>
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/catalog/tablet/chicken-500g@1x.webp 1x, img/catalog/tablet/chicken-500g@2x.webp 2x"
+                    width="194" height="172">
+                  <source type="image/webp"
+                    srcset="img/catalog/mobile/chicken-500g@1x.webp 1x, img/catalog/mobile/chicken-500g@2x.webp 2x"
+                    width="68" height="78">
+
                   <source media="(min-width: 768px)"
                     srcset="img/catalog/tablet/chicken-500g@1x.png 1x, img/catalog/tablet/chicken-500g@2x.png 2x"
-                    width="161" height="172">
+                    width="194" height="172">
                   <img src="img/catalog/mobile/chicken-500g@1x.png 1x"
                     srcset="img/catalog/mobile/chicken-500g@1x.png 1x, img/catalog/mobile/chicken-500g@2x.png 2x"
                     width="68" height="78" loading="lazy" alt="Питание для котиков с курицей">
@@ -125,6 +129,16 @@
 
               <div class="product-card__image-wrapper">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1300px)"
+                    srcset="img/catalog/desktop/chicken-1000g@1x.webp 1x, img/catalog/desktop/chicken-1000g@2x.webp 2x"
+                    width="172" height="196">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/catalog/tablet/chicken-1000g@1x.webp 1x, img/catalog/tablet/chicken-1000g@2x.webp 2x"
+                    width="168" height="206">
+                  <source type="image/webp"
+                    srcset="img/catalog/mobile/chicken-1000g@1x.webp 1x, img/catalog/mobile/chicken-1000g@2x.webp 2x"
+                    width="84" height="100">
+
                   <source media="(min-width: 1300px)"
                     srcset="img/catalog/desktop/chicken-1000g@1x.png 1x, img/catalog/desktop/chicken-1000g@2x.png 2x"
                     width="172" height="196">
@@ -174,6 +188,13 @@
 
               <div class="product-card__image-wrapper">
                 <picture>
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/catalog/tablet/fish-500g@1x.webp 1x, img/catalog/tablet/fish-500g@2x.webp 2x"
+                    width="161" height="172">
+                  <source type="image/webp"
+                    srcset="img/catalog/mobile/fish-500g@1x.webp 1x, img/catalog/mobile/fish-500g@2x.webp 2x" width="68"
+                    height="78">
+
                   <source media="(min-width: 768px)"
                     srcset="img/catalog/tablet/fish-500g@1x.png 1x, img/catalog/tablet/fish-500g@2x.png 2x" width="161"
                     height="172">
@@ -220,15 +241,25 @@
 
               <div class="product-card__image-wrapper">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1300px)"
+                    srcset="img/catalog/desktop/fish-1000g@1x.webp 1x, img/catalog/desktop/fish-1000g@2x.webp 2x"
+                    width="172" height="196">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/catalog/tablet/fish-1000g@1x.webp 1x, img/catalog/tablet/fish-1000g@2x.webp 2x"
+                    width="168" height="206">
+                  <source type="image/webp"
+                    srcset="img/catalog/mobile/fish-1000g@1x.webp 1x, img/catalog/mobile/fish-1000g@2x.webp 2x"
+                    width="84" height="100">
+
                   <source media="(min-width: 1300px)"
                     srcset="img/catalog/desktop/fish-1000g@1x.png 1x, img/catalog/desktop/fish-1000g@2x.png 2x"
                     width="172" height="196">
                   <source media="(min-width: 768px)"
                     srcset="img/catalog/tablet/fish-1000g@1x.png 1x, img/catalog/tablet/fish-1000g@2x.png 2x"
                     width="168" height="206">
-                  <img src="img/catalog/mobile/fish-1000g@1x.png 1x" width="84" height="100"
-                    srcset="img/catalog/mobile/fish-1000g@1x.png 1x, img/catalog/mobile/fish-1000g@2x.png 2x"
-                    loading="lazy" alt="Питание для котиков с рыбой">
+                  <img src="img/catalog/mobile/fish-1000g@1x.png 1x"
+                    srcset="img/catalog/mobile/fish-1000g@1x.png 1x, img/catalog/mobile/fish-1000g@2x.png 2x" width="84"
+                    height="100" loading="lazy" alt="Питание для котиков с рыбой">
                 </picture>
               </div>
 
@@ -268,6 +299,13 @@
             <a class="product-card__link" href="#">
               <div class="product-card__image-wrapper">
                 <picture>
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/catalog/tablet/buckwheat-500g@1x.webp 1x, img/catalog/tablet/buckwheat-500g@2x.webp 2x"
+                    width="161" height="172">
+                  <source type="image/webp"
+                    srcset="img/catalog/mobile/buckwheat-500g@1x.webp 1x, img/catalog/mobile/buckwheat-500g@2x.webp 2x"
+                    width="68" height="78">
+
                   <source media="(min-width: 768px)"
                     srcset="img/catalog/tablet/buckwheat-500g@1x.png 1x, img/catalog/tablet/buckwheat-500g@2x.png 2x"
                     width="161" height="172">
@@ -277,7 +315,7 @@
                 </picture>
               </div>
             </a>
-            <a class="product-card__link-text" href="#">Cat Energy PRO 500 г
+            <a class="product-card__link-text" href="#">Cat Energy Slim 500 г
             </a>
             <div class="product-card__content-wrapper">
               <div class="product-card__content">
@@ -313,6 +351,16 @@
 
               <div class="product-card__image-wrapper">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1300px)"
+                    srcset="img/catalog/desktop/buckwheat-1000g@1x.webp 1x, img/catalog/desktop/buckwheat-1000g@2x.webp 2x"
+                    width="172" height="196">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/catalog/tablet/buckwheat-1000g@1x.webp 1x, img/catalog/tablet/buckwheat-1000g@2x.webp 2x"
+                    width="168" height="206">
+                  <source type="image/webp"
+                    srcset="img/catalog/mobile/buckwheat-1000g@1x.webp 1x, img/catalog/mobile/buckwheat-1000g@2x.webp 2x"
+                    width="84" height="100">
+
                   <source media="(min-width: 1300px)"
                     srcset="img/catalog/desktop/buckwheat-1000g@1x.png 1x, img/catalog/desktop/buckwheat-1000g@2x.png 2x"
                     width="172" height="196">
@@ -326,7 +374,7 @@
               </div>
 
             </a>
-            <a class="product-card__link-text" href="#">Cat Energy PRO 1000 г
+            <a class="product-card__link-text" href="#">Cat Energy Slim 1000 г
             </a>
             <div class="product-card__content-wrapper">
               <div class="product-card__content">
@@ -342,7 +390,7 @@
                   Вкус
                 </p>
                 <p class="product-card__description">
-                  Курица
+                  Гречка
                 </p>
               </div>
               <div class="product-card__content">
@@ -362,6 +410,13 @@
 
               <div class="product-card__image-wrapper">
                 <picture>
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/catalog/tablet/rise-500g@1x.webp 1x, img/catalog/tablet/rise-500g@2x.webp 2x"
+                    width="161" height="172">
+                  <source type="image/webp"
+                    srcset="img/catalog/mobile/rise-500g@1x.webp 1x, img/catalog/mobile/rise-500g@2x.webp 2x"
+                    width="68" height="78">
+
                   <source media="(min-width: 768px)"
                     srcset="img/catalog/tablet/rise-500g@1x.png 1x, img/catalog/tablet/rise-500g@2x.png 2x" width="161"
                     height="172">
@@ -372,7 +427,7 @@
               </div>
 
             </a>
-            <a class="product-card__link-text" href="#">Cat Energy PRO 500 г
+            <a class="product-card__link-text" href="#">Cat Energy Slim 500 г
             </a>
             <div class="product-card__content-wrapper">
               <div class="product-card__content">
@@ -406,7 +461,7 @@
           <li class="product-card__item product-card-extra">
             <div class="product-card-extra__content-wrapper">
               <a class="product-card-extra__link" href="#">
-                <h3 class="product-card-extra__title">Показать еще 100500 товаров</h3>
+                <p class="product-card-extra__title">Показать еще 100500 товаров</p>
               </a>
               <p class="product-card-extra__description">На самом деле вкусов гораздо больше!
               </p>
@@ -418,20 +473,20 @@
     </section>
 
     <!-- Блок доптоваров -->
-    <section class="product-card-additional product-card-additional-line">
+    <section class="product-card-additional">
       <div class="product-card-additional__container">
         <h2 class="product-card-additional__title">Дополнительные товары
         </h2>
         <div class="product-card-additional__catalog-wrapper">
           <ul class="product-card-additional__list">
             <li class="product-card-additional__item">
-              <h3 class="product-card-additional__subtitle">Сахарозаменитель
-              </h3>
+              <p class="product-card-additional__subtitle">Сахарозаменитель
+              </p>
               <div class="product-card-additional__content">
-                <p class="product-card-additional__text">
+                <p class="product-card-additional__info">
                   1 упаковка (100 г)
                 </p>
-                <p class="product-card-additional__text">
+                <p class="product-card-additional__info">
                   200 ₽
                 </p>
               </div>
@@ -439,13 +494,13 @@
             </li>
 
             <li class="product-card-additional__item">
-              <h3 class="product-card-additional__subtitle">Питьевая вода
-              </h3>
+              <p class="product-card-additional__subtitle">Питьевая вода
+              </p>
               <div class="product-card-additional__content">
-                <p class="product-card-additional__text">
+                <p class="product-card-additional__info">
                   5 литров
                 </p>
-                <p class="product-card-additional__text">
+                <p class="product-card-additional__info">
                   50 ₽
                 </p>
               </div>
@@ -453,13 +508,13 @@
             </li>
 
             <li class="product-card-additional__item">
-              <h3 class="product-card-additional__subtitle">Молоко
-              </h3>
+              <p class="product-card-additional__subtitle">Молоко
+              </p>
               <div class="product-card-additional__content">
-                <p class="product-card-additional__text">
+                <p class="product-card-additional__info">
                   1 литр
                 </p>
-                <p class="product-card-additional__text">
+                <p class="product-card-additional__info">
                   100 ₽
                 </p>
               </div>
@@ -467,13 +522,13 @@
             </li>
 
             <li class="product-card-additional__item">
-              <h3 class="product-card-additional__subtitle">Витамины
-              </h3>
+              <p class="product-card-additional__subtitle">Витамины
+              </p>
               <div class="product-card-additional__content">
-                <p class="product-card-additional__text">
+                <p class="product-card-additional__info">
                   1 упаковка (30 г)
                 </p>
-                <p class="product-card-additional__text">
+                <p class="product-card-additional__info">
                   300 ₽
                 </p>
               </div>
@@ -484,7 +539,7 @@
             <div class="product-card-promo__wrapper">
               <p class="product-card-promo__description">
                 Закажите все<br> и получите чехол для
-                кота в подарок
+                кота в подарок!
               </p>
             </div>
           </div>
@@ -493,7 +548,7 @@
     </section>
 
     <!--  Блок "Приглашение к сотруднечиству с картой" -->
-    <section class="invitation">
+    <section class="invitation invitation--bg-color">
       <h2 class="visually-hidden">Приглашение к сотрудничеству и карта с местоположением. </h2>
       <div class="invitation__wrapper">
         <div class="invitation__container">
@@ -528,7 +583,7 @@
     <div class="main-footer__wrapper">
       <div class="main-footer__logo-wrapper">
         <a class="main-footer__logo-link main-logo-text" href="#">
-          <img src="img/logotypes/main-logo-text.svg" width="101" height="18" loading="lazy" alt="Заголовок логотипа">
+          <img src="img/logotypes/main-logo-text.svg" width="128" height="24" loading="lazy" alt="Заголовок логотипа">
         </a>
       </div>
       <div class="main-footer__social social">

@@ -9,7 +9,6 @@
   <link rel="preload" href="css/style.min.css" as="style">
   <link rel="preload" href="js/script.min.js" as="script">
   <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font">
-  <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" as="font">
   <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32.png">
   <link rel="icon" href="favicon.ico">
@@ -22,7 +21,6 @@
 
   <!-- Шапка -->
   <header class="main-header main-header--closed main-header--nojs">
-    <!-- Добавить допкласс main-nav--opened для открытия меню без js-->
     <div class="main-header__wrapper">
       <div class="main-header__logo-wrapper">
         <a class="main-header__logo" href="index.html">
@@ -48,8 +46,7 @@
     <nav class="main-nav">
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item-current site-list__item-current--bg-index"> <!-- Добавить допкласс site-list__item--active,
-              чтобы активное меню отображалось при закрытом списке -->
+          <li class="site-list__item site-list__item-current site-list__item-current--bg-index">
             <a class="site-list__link site-list__link--bg-index" href="#">Главная
             </a>
           </li>
@@ -91,7 +88,7 @@
               srcset="img/index/index-photo-product-desktop@1x.png 1x, img/index/index-photo-product-desktop@2x.png 2x"
               width="552" height="499">
             <source media="(min-width: 768px)"
-              srcset="img/index/index-photo-product-tablet@1x.jpg 1x, img/index/index-photo-product-tablet@2x.jpg 2x"
+              srcset="img/index/index-photo-product-tablet@1x.img 1x, img/index/index-photo-product-tablet@2x.img 2x"
               width="709" height="609">
             <img class="intro__img" src="img/index/index-photo-product-mobile@1x.png"
               srcset="img/index/index-photo-product-mobile@1x.png 1x, img/index/index-photo-product-mobile@2x.png 2x"
@@ -115,11 +112,7 @@
               Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim
               поможет вашему питомцу сбросить лишний вес.
             </p>
-            <a class="programm__link" href="#">каталог slim
-              <svg class="programm__link-icon" width="32" height="12">
-                <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
-              </svg>
-            </a>
+            <a class="programm__link" href="Catalog.html">каталог slim</a>
           </li>
           <li class="programm__item programm__item--pro">
             <h3 class="programm__title">Набор массы</h3>
@@ -127,11 +120,7 @@
               Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить
               необходимые мышцы!
             </p>
-            <a class="programm__link" href="#">каталог pro
-              <svg class="programm__link-icon" width="32" height="12">
-                <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
-              </svg>
-            </a>
+            <a class="programm__link" href="Catalog.html">каталог pro</a>
           </li>
         </ul>
       </div>
@@ -161,7 +150,7 @@
           </li>
           <li class="programm-process__item programm-process__item--change">
             <p class="programm-process__description">
-              Уже через месяц наслаждайтесь изменениями к лучшему вашего
+              Уже через месяц наслаждайтесь изменениями к лучшему&nbsp;<br> вашего
               питомца!
             </p>
           </li>
@@ -214,11 +203,15 @@
           <li class="stats-example__item-picture slider__item slider__item--before">
             <div class="slider__box slider__box--before">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/index/image-cat-tablet-befor@1x.webp 1x, img/index/image-cat-tablet-befor@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/index/image-cat-mobile-befor@1x.webp 1x, img/index/image-cat-mobile-befor@2x.webp 2x">
                 <source media="(min-width: 768px)"
                   srcset="img/index/image-cat-tablet-befor@1x.png 1x, img/index/image-cat-tablet-befor@2x.png 2x"
                   width="560" height="512">
                 <img class="stats-example__cat-img" width="280" height="256"
-                  src="img/index/image-cat-mobile-befor@1x.png 1x.png"
+                  src="img/index/image-cat-mobile-befor@1x.png 1x"
                   srcset="img/index/image-cat-mobile-befor@1x.png 1x, img/index/image-cat-mobile-befor@2x.png 2x"
                   loading="lazy" alt="Толстый кот">
               </picture>
@@ -227,11 +220,15 @@
           <li class="stats-example__item-picture slider__item slider__item--after">
             <div class="slider__box slider__box--after">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/index/image-cat-tablet-after@1x.webp 1x, img/index/image-cat-tablet-after@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/index/image-cat-mobile-after@1x.webp 1x, img/index/image-cat-mobile-after@2x.webp 2x">
                 <source media="(min-width: 768px)"
                   srcset="img/index/image-cat-tablet-after@1x.png 1x, img/index/image-cat-tablet-after@2x.png 2x"
                   width="560" height="512">
                 <img class="stats-example__cat-img" width="280" height="256"
-                  src="img/index/image-cat-mobile-after@1x.png 1x.png"
+                  src="img/index/image-cat-mobile-after@1x.png 1x"
                   srcset="img/index/image-cat-mobile-after@1x.png 1x, img/index/image-cat-mobile-after@2x.png 2x"
                   loading="lazy" alt="Тощий кот">
               </picture>
@@ -278,6 +275,25 @@
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.2738725013924!2d30.3210116966363!3d59.938166461211026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1709559703245!5m2!1sru!2sru"
           width="766" height="560" allowfullscreen
           title="Офис компании по адресу: ул. Большая Конюшенная, д. 19/8, Санкт-Петербург"></iframe>
+        <picture>
+          <noscript>
+            <source type="image/webp" media="(min-width: 1300px)"
+              srcset="img/map-nojs/map-nojs-desktop@1x.webp 1x, img/map-nojs/map-nojs-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/map-nojs/map-nojs-tablet@1x.webp 1x, img/map-nojs/map-nojs-tablet@2x.webp 2x">
+            <source type="image/webp"
+              srcset="img/map-nojs/map-nojs-mobile@1x.webp 1x, img/map-nojs/map-nojs-mobile@2x.webp 2x">
+
+            <source type="image/webp" media="(min-width: 1300px)"
+              srcset="img/map-nojs/map-nojs-desktop@1x.jpg 1x, img/map-nojs/map-nojs-desktop@2x.jpg 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/map-nojs/map-nojs-tablet@1x.jpg 1x, img/map-nojs/map-nojs-tablet@2x.jpg 2x">
+            <img src="img/map-nojs/map-nojs-mobile@1x.jpg 1x"
+              srcset="img/map-nojs/map-nojs-mobile@1x.jpg 1x, img/map-nojs/map-nojs-mobile@2x.jpg 2x" width="320"
+              height="362" loading="lazy"
+              alt="Локация Кэт энерджи по адресу: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+          </noscript>
+        </picture>
       </div>
     </section>
   </main>
@@ -287,7 +303,7 @@
     <div class="main-footer__wrapper">
       <div class="main-footer__logo-wrapper">
         <a class="main-footer__logo-link main-logo-text" href="#">
-          <img src="img/logotypes/main-logo-text.svg" width="101" height="18" loading="lazy" alt="Заголовок логотипа">
+          <img src="img/logotypes/main-logo-text.svg" width="128" height="24" loading="lazy" alt="Заголовок логотипа">
         </a>
       </div>
       <div class="main-footer__social social">

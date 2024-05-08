@@ -15,7 +15,7 @@
 
   @media (min-width: @desktop-width) {
     width: 1300px;
-    padding: 0 40px;
+    padding: 0 40px 71px;
   }
 }
 
@@ -23,6 +23,10 @@
   .list-reset();
   display: grid;
   gap: 20px;
+
+  @media (min-width: @tablet-width) {
+    gap: 30px;
+  }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(2, 570px);
@@ -37,18 +41,26 @@
 
   &--slim::before {
     position: absolute;
-    content: url("../img/programms/cat-sit.svg");
+    content: "";
+    background-image: url("../img/programms/cat-sit.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 50px;
+    height: 53px;
     top: 21px;
     left: 20px;
 
     @media (min-width: @tablet-width) {
-      content: url("../img/programms/cat-sit-tablet.svg");
-      top: 92px;
-      left: 446px;
+      width: 200px;
+      height: 207px;
+      top: 80px;
+      left: 445px;
     }
 
     @media (min-width: @desktop-width) {
-      content: url("../img/programms/cat-sit-desktop.svg");
+      width: 100px;
+      height: 106px;
       top: 41px;
       left: 52px;
     }
@@ -56,26 +68,33 @@
 
   &--pro::before {
     position: absolute;
-    content: url("../img/programms/cat-stay.svg");
+    content: "";
+    background-image: url("../img/programms/cat-stay.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 70px;
+    height: 50px;
     top: 24px;
     left: 12px;
 
     @media (min-width: @tablet-width) {
-      content: url("../img/programms/cat-stay-tablet.svg");
-      top: 92px;
-      left: 420px;
+      width: 268px;
+      height: 200px;
+      top: 90px;
+      left: 410px;
     }
 
     @media (min-width: @desktop-width) {
-      content: url("../img/programms/cat-stay-desktop.svg");
-      top: 41px;
-      left: 32px;
+      width: 134px;
+      height: 100px;
+      top: 48px;
+      left: 33px;
     }
   }
 
   @media (min-width: @tablet-width) {
-    padding: 77px 63px 57px 52px;
-    height: 374px;
+    padding: 75px 300px 60px 52px;
   }
 
   @media (min-width: @desktop-width) {
@@ -98,7 +117,7 @@
 }
 
 .programm__title {
-  margin: 0 0 30px 80px;
+  margin: 0 0 30px 70px;
   color: @title-color;
   font-family: @font-title;
   font-size: 24px;
@@ -108,16 +127,14 @@
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    width: 340px;
-    margin: 0 0 30px 0;
+    margin: 0 0 24px 0;
     text-align: left;
     font-size: 36px;
     line-height: 36px;
   }
 
   @media (min-width: @desktop-width) {
-    text-align: center;
-    margin: 0 0 73px 85px;
+    margin: 0 0 73px 162px;
   }
 }
 
@@ -125,7 +142,7 @@
   .fonts-text-mobile();
   min-width: 227px;
   min-height: 90px;
-  margin: 0 0 42px;
+  margin: 0 0 41px;
   color: @paragraph-color;
   font-family: @font-text;
   font-weight: 400;
@@ -134,20 +151,18 @@
   @media (min-width: @tablet-width) {
     .fonts-text-tablet();
     width: 340px;
-    height: 96px;
+    margin-bottom: 53px;
   }
 
   @media (min-width: @desktop-width) {
     width: 457px;
-    margin-bottom: 23px;
+    margin-bottom: 10px;
   }
 }
 
 .programm__link {
   display: flex;
   align-items: center;
-  margin: 0;
-  color: @title-color;
   font-family: @font-title;
   font-size: 16px;
   font-weight: 400;
@@ -169,13 +184,23 @@
   }
 }
 
-.programm__link-icon {
+.programm__link::after {
+  content: "";
+  display: inline-block;
+  background-image: url("../img/icon-arrow.svg");
+  background-position: -8px;
+  background-repeat: no-repeat;
   margin-left: 15px;
+  width: 32px;
+  height: 12px;
+  transition: background-position 0.2s;
 
-  // &:hover {
-  //   color: #d9d9d9;
-  //   width: 32px;
-  //   margin-left: 35px;
-  //   transform: translateX(50%);
-  // }
+  @media (min-width: @tablet-width) {
+    margin-left: 25px;
+  }
+}
+
+.programm__link:hover::after {
+  width: 32px;
+  background-position: 0;
 }
