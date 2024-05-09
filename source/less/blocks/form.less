@@ -212,6 +212,7 @@
 
 .form__comment-group {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .form__comment-title {
@@ -220,6 +221,8 @@
   color: @title-color;
   background-color: @text-color;
   font-family: @font-title;
+  margin: 0;
+  display: inline-block;
   z-index: 1;
 
   @media (min-width: @tablet-width) {
@@ -286,7 +289,8 @@
   color: @title-color;
   font-family: @font-title;
   padding: 0 20px 0 0;
-  // margin-bottom: 38px;
+  margin: 0;
+  display: inline-block;
   background-color: @text-color;
   position: relative;
   z-index: 1;
