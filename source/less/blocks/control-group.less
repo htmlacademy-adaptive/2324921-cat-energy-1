@@ -1,16 +1,32 @@
 .control-group__label {
+  .fonts-text-form-mobile();
   display: flex;
   align-items: center;
   position: relative;
   padding-left: 45px;
+  color: @paragraph-color;
+  font-family: @font-title;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    .fonts-text-form-tablet();
+    padding-left: 60px;
+  }
 }
 
 .control-group__mark {
   position: absolute;
+  top: -4px;
   left: 0;
-  border: 1px solid #bababa;
+  border: 1px solid #cdcdcd;
   width: 30px;
   height: 30px;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .control-group__input[type="radio"] + .control-group__mark {
@@ -26,20 +42,52 @@
   left: 7px;
   background-color: @accent-color;
   border-radius: 50%;
+  transition: all 0.2s ease;
+
+  @media (min-width: @tablet-width) {
+    top: 10px;
+    left: 10px;
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .control-group__input[type="checkbox"]:checked + .control-group__mark::before {
   position: absolute;
-  content: url("../img/icon-tick.svg");
+  content: "";
+  background-image: url("../img/icon-tick.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 18px;
+  height: 18px;
   top: 7px;
   left: 7px;
   z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    width: 26px;
+    height: 26px;
+  }
 }
 
-.control-group__text {
-  .fonts-text-form-mobile();
-  color: @paragraph-color;
-  font-family: @font-title;
-  font-weight: 400;
-  text-transform: uppercase;
+// Состояния радиокнопок и чекбоксов
+.control-group__label:hover .control-group__mark {
+  border-color: #bababa;
 }
+
+.control-group__input:focus-visible + .control-group__mark {
+  outline: 2px solid #444444;
+}
+
+.control-group__input:disabled + .control-group__mark {
+  opacity: 0.3;
+}
+
+.control-group__input:disabled ~ label {
+  opacity: 0.3;
+}
+
+// .control-group__label:disabled {
+//   opacity: 0.3;
+// }

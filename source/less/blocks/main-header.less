@@ -4,17 +4,17 @@
   @media (min-width: @tablet-width) {
     display: flex;
     width: 768px;
-    padding: 0 30px;
+    padding: 23px 30px 0;
   }
 
   @media (min-width: @desktop-width) {
     width: 1300px;
-    padding: 0 40px;
+    padding: 55px 40px 30px;
   }
 }
 
-.main-header--opened,
-.main-header--closed-line {
+
+.main-header--bb-line {
   @media (max-width: @mobile-width-only) {
     border-bottom: 1px solid #e6e6e6;
   }
@@ -44,8 +44,12 @@
   padding: 14px 0;
 
   @media (min-width: @tablet-width) {
-    width: 205px;
+    width: 176px;
     padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 202px;
   }
 }
 
@@ -59,6 +63,19 @@
 
   @media (min-width: @desktop-width) {
     min-height: 59px;
+  }
+}
+
+.main-logo-text {
+  display: inline-block;
+  outline-offset: 5px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 103px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 118px;
   }
 }
 
@@ -80,7 +97,7 @@
   width: 24px;
   height: 24px;
   top: 21px;
-  right: 20px;
+  right: 21px;
   z-index: 2;
   background-color: #ffffff;
   display: block;
@@ -116,15 +133,11 @@
 }
 
 @media (max-width: @mobile-width-only) {
-  .main-header--closed .site-list__item {
+  .main-header--closed .main-nav__wrapper {
     display: none;
-
-    &--active {
-      display: block;
-    }
   }
 
-  .main-header--closed .site-list__item--active a {
+  .main-header--closed .site-list__item a {
     padding-right: 70px;
     padding-left: 70px;
     text-align: center;
@@ -133,15 +146,12 @@
   .main-header--opened .main-nav__wrapper {
     width: 100%;
     position: absolute;
-    top: 67px;
+    top: 66px;
     right: 0;
     z-index: 10;
     text-align: center;
     background-color: #ffffff;
-  }
-
-  .main-header--closed .main-nav__wrapper {
-    display: none;
+    border-top: 1px solid #e6e6e6;
   }
 
   .main-header--nojs .main-header__toggle {
@@ -151,19 +161,9 @@
   .main-header--nojs .main-nav__wrapper {
     position: static;
     min-height: 0;
-  }
-
-  .main-header--nojs .site-list__item {
     display: block;
   }
-
-  .main-header--nojs .site-list__item--active a {
-    padding-right: 21px;
-    padding-left: 21px;
-    text-align: center;
-  }
 }
-
 
 .main-header--opened .main-header__toggle {
   background-color: #ffffff;
