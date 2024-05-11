@@ -43,3 +43,19 @@
     line-height: 60px;
   }
 }
+
+.catalog__product-card-list {
+  .list-reset();
+  display: grid;
+  justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 63px 80px;
+  }
+}
