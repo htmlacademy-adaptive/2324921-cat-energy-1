@@ -75,7 +75,8 @@
   }
 }
 
-.main-logo-text {
+.main-header__logo-text,
+.main-footer__logo-text {
   display: inline-block;
   outline-offset: 5px;
 
@@ -161,6 +162,7 @@
     text-align: center;
     background-color: #ffffff;
     border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
   }
 
   .main-header--nojs .main-header__toggle {
@@ -172,6 +174,10 @@
     min-height: 0;
     display: block;
   }
+}
+
+.main-header--nojs .main-nav {
+  border-top: 1px solid #e6e6e6;
 }
 
 .main-header--opened .main-header__toggle {
