@@ -13,7 +13,6 @@
   }
 }
 
-
 .main-header--bb-line {
   @media (max-width: @mobile-width-only) {
     border-bottom: 1px solid #e6e6e6;
@@ -75,6 +74,15 @@
   }
 }
 
+.main-header__logo:hover {
+  transition: all 0.3s ease;
+  opacity: 0.8;
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
 .main-header__logo-text,
 .main-footer__logo-text {
   display: inline-block;
@@ -87,13 +95,10 @@
   @media (min-width: @desktop-width) {
     min-width: 118px;
   }
-}
 
-.main-header__logo,
-.main-logo-text {
   &:hover {
     transition: all 0.3s ease;
-    opacity: 0.7;
+    opacity: 0.8;
   }
 
   &:active {
