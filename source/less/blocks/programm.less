@@ -36,7 +36,7 @@
 
 .programm__item {
   position: relative;
-  padding: 30px 20px 22px 20px;
+  padding: 30px 20px 18px;
   background-color: #f2f2f2;
 
   &--slim::before {
@@ -98,7 +98,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 77px 61px 59px 52px;
+    padding: 77px 20px 59px 52px;
   }
 }
 
@@ -161,14 +161,13 @@
 }
 
 .programm__link {
-  display: flex;
-  align-items: center;
   font-family: @font-title;
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
   text-align: left;
   text-transform: uppercase;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -186,17 +185,19 @@
 
 .programm__link::after {
   content: "";
-  display: inline-block;
+  position: absolute;
+  bottom: 6px;
   background-image: url("../img/icon-arrow.svg");
   background-position: -8px;
   background-repeat: no-repeat;
-  margin-left: 15px;
+  margin-left: 16px;
   width: 32px;
   height: 12px;
   transition: background-position 0.2s;
 
   @media (min-width: @tablet-width) {
     margin-left: 25px;
+    bottom: 9px;
   }
 }
 
