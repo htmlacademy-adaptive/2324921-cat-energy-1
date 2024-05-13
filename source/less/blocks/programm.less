@@ -22,7 +22,8 @@
 .programm__list {
   .list-reset();
   display: grid;
-  gap: 20px;
+  // gap: 20px;
+  gap: 24px;
 
   @media (min-width: @tablet-width) {
     gap: 30px;
@@ -36,7 +37,7 @@
 
 .programm__item {
   position: relative;
-  padding: 30px 20px 18px;
+  padding: 28px 20px 17px;
   background-color: #f2f2f2;
 
   &--slim::before {
@@ -99,20 +100,6 @@
 
   @media (min-width: @desktop-width) {
     padding: 77px 20px 59px 52px;
-  }
-}
-
-@media (max-width: @mobile-width-only) {
-  .programm__item {
-    &::after {
-      position: absolute;
-      content: "";
-      bottom: 58px;
-      left: 20px;
-      width: 240px;
-      height: 1px;
-      background-color: #d9d9d9;
-    }
   }
 }
 
@@ -180,6 +167,19 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .programm__link {
+    &::before {
+      position: absolute;
+      content: "";
+      top: -16px;
+      width: 240px;
+      height: 1px;
+      background-color: #d9d9d9;
+    }
   }
 }
 
